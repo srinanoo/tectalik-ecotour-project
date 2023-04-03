@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecotour</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        border-color: white;
+    }
+
+    body {
+        margin: 20px;
+        padding:0px;
+    }
+
+    img {
+        max-width: 100%;
+    }
+    .photo {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    .photoA {
+        text-align: center;
+        color: white;
+        background-color: rgba (50%, 50%, 50%, 0.5);
+    }
+
+    .grid-footerA {
+        display: flex;
+        background-color: #9bcd52;
+        justify-content: center;
+        align-items: center;
+        font-size: large;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .column{
+        width:50%;
+    }
+
+    .grid-footerB {
+        background-color: #4b5b34;
+        padding: 40px;
+        font-size: 10px;
+        
+        text-align: center;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    .footerC{
+        width:80%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(5, 20%);
+        justify-content: space-between;
+
+    }
+    .row2{
+        color:white"
+    }
+
+    .item2 {
+        color: white
+    }
+
+    .grid-content {
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+    }
+
+    .column1 {
+        width: 75%;
+        color: #43621e;
+        text-align: center;
+    }
+
+    .image {
+        text-align: left;
+    }
+
+    .imageA {
+        display: flex;
+    }
+
+    .contentA {
+        display: grid;
+        grid-template-columns: 33.333333% 33.33333% 33.333333%;
+    }
+
+    .photoA>div>div{
+        width:50%;
+    }
+    .photoB{
+        justify-content: right;
+        display:grid;
+        width:35%;
+    }
+    .box{
+        width: 45%;
+    }
+    .About{
+        width:80%;
+        margin: auto;
+        display:flex;
+        flex-wrap:wrap ;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        color: rgb(89, 85, 85);;
+    }
+    .About>div{
+        width:50%;
+    }
+    .display{
+        width: 100%;
+        height:100vh;
+        position: relative;
+        background-image: url(images/img.avif);
+        background-size: cover;
+        color:white;
+    }
+        .display .inner{
+        position: absolute;
+        width:100%;
+        /* transform: translate(-50% -50%);
+        top:50%;
+        left:50%; */
+        /* border-bottom: 4px solid;
+        border-top: 4px solid; */
+    
+    }
+    .display .inner p{
+        color:#84877e;
+        font-size: 20px;
+        font-family: arial;
+        text-align: center;
+    }
+    .aside{
+        background-color: #eeeeee;
+        width:80%;
+        margin: auto;
+        display:flex;
+        flex-wrap:wrap ;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-size: 15px;
+        justify-content: space-between;
+
+    }
+    .aside>div{
+        width:50%;
+        color: rgb(89, 85, 85);;
+        
+    }
+    .pictures{
+        display:flex;
+        padding: 10px;
+    }
+    .pictures>div{
+        padding:2px;
+    }
+    .article{
+        width:80%;
+        text-align: center;
+        margin:auto;
+        
+       
+    }
+    .about{
+        margin: 50px;
+        text-align: center;
+        color: rgb(89, 85, 85);
+    }
+    .grid{
+        width: 100%;
+        height:250px;
+        position: relative;
+        background-image: url(images/a1.1.avif);
+        background-size: cover;
+    }
+    .grid .inside{
+        position: absolute;
+        width:100%;
+    }
+    .grid .inside p{
+        color:white;
+        font-size: 20px;
+        font-family: arial;
+        text-align:left;
+    }
+    .row1{
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+
+</style>
+
+<body>
+    <div class="grid-header">
+        <div class="row1">
+            <div>
+                <button>&#x2630</button>
+            </div>
+            <div>
+                <img src="images/logoETB-1.avif" alt="">
+            </div>
+            <div>
+                <a href="#call"><i class="fa-solid fa-phone"></i>&emsp;Get in touch</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="grid">
+        <div class="inside">
+            <p  style="width:50%;margin: 30px; left: 30px;" >ONE ISLAND-MANY FACES</p>
+            <p  style="width:50%;margin: 30px; left: 30px;" > Andaman & Nicobar Islands</p>
+        </div>
+
+    </div>
+
+
+    <div class="article">
+        <div class="about">
+            <h4>Paradise Andaman</h4>
+            <p>Both Andaman and Nicobar are home to about 300 islands and are known for their beautiful white-sand beaches, tropical rainforests, mangrove rainforests, and palm-lined beaches.</p><br>
+            <p> Beautiful coral reefs are also present here which house Sharks, Rays, and all sorts of marine life thus a paradise for diving and snorkeling.</p>            
+        </div>
+
+    </div>
+
+
+    <div class="pictures">
+        <div style="width: 33.333333% ;">
+            <img src="images/p1.avif" alt="">
+        </div>
+        <div style="width:33.333333%;">
+            <img src="images/p3.1.avif" alt="" height="290px;">
+        </div>
+        <div style="width:33.333333%;">
+            <img src="images/p2.avif" alt="">
+        </div>
+
+
+    </div>
+    
+
+    <div class="aside">
+        <div>
+            <h4>Geography</h4>
+            <p>Andaman and Nicobar Island topography shows a typical character, with the presence of a number of islands in a long and broken chain. The topography of Andaman and Nicobar Islands appears to be a north-south arc, situated between the 16° and 14° latitude, and 92° and 94° East longitude.</p>
+            <p>The topography of Andaman and Nicobar Islands is, geologically, a part of land mass of South-east Asia, including Malaysia, North-east India, Burma, Thailand and Indonesia.</p>
+            <p>Andaman and Nicobar Islands contains a group of 3000 islands, which includes both islands and islets in the archipelago. Ritchie Archipelago and Labyrinth Islands are the two important islets in Andaman and Nicobar Islands. The topography in Andaman and Nicobar Islands comprises of a long range of hills with evergreen forests. The islands holds a series of ridges and mountains, with moderate elevation and slopes: flat lands are sparse in Andaman and Nicobar Islands.</p>
+
+        </div>
+        <div>
+            <img src="images/a&n.avif.avif" style="height:50%;margin-top: 30px;"><br><br>
+            <div style="font-size: 10px;background-color: white; margin-top: 65px;">
+                The Andaman and Nicobar Islands is a union territory of India consisting of 572 islands, of which 37 are inhabited, at the junction of the Bay of Bengal and the Andaman Sea.The territory's capital is the city of Port Blair.
+            </div>
+
+        </div>
+
+    </div>
+  
+    
+    <div class="display"> 
+        <div class="inner">
+            <p style="width:50%;margin: auto; margin-top: 350px;" >TAKE VACATIONS, GO AS MANY PLACES AS YOU CAN. YOU CAN ALWAYS MAKE MONEY , YOU CAN'T ALWAYS MAKE MEMORIES. </p>
+        </div>
+
+    </div>
+    
+     
+    <div class="About">
+        <div >
+            <h4>History</h4>
+            <p>The Andaman and Nicobar Islands are fascinating Indian destinations. </p>
+            <p>They are located in the Bay of Bengal and are made up of more than 500 islands. The capital city is Port Blair, and the total population is around 380,000 people and an area of approximately, 8249 km sq.</p>
+        </div>
+        <div>
+            <p>The culture and history of the Andaman and Nicobar Islands are unique and interesting, and the tourism industry is growing rapidly. In this blog post, we will provide a short note on the Andaman and Nicobar Islands,their capital city, culture, history, and tourism industry.</p>
+            <p>The culture of the Andaman and Nicobar Islands is a blend of Indian, British, and indigenous influences.</p>
+        </div>
+    </div>
+    
+    
+    <div class="photoA" style=" display:flex;background-image: url(images/pexels-pixabay-86695.avif);">
+        <div class="box">
+            <h3>What to see and what to do ?</h3>
+            <p>It’s the favorite activity of all wildlife enthusiasts and water babies in Andaman, and these islands tend to be the best place to try this delightful feat. Just hop into your boat that will sail slowly over the brightest blue ocean and meet the friendliest creatures on earth while they prance, play, and chatter around you in the water.</p>
+        </div>
+        <div class="photoB">
+                <img src="images/a1.avif">
+        </div>
+        
+            
+        </div>
+    </div>
+
+    
+    <div class="grid-content">
+        <div class="column1">
+            <p>Enjoy your vacation joyfully</p>
+            <input type="button" value="SEE ALL YOUR OPINIONS" style="background-color:#9bcd52;color: white;">
+
+        </div>
+        <div class="image">
+            <img src="images/face3.avif" alt="" style="border-radius: 50% ;width:25%;"><br>
+            <div class="imageA">
+
+
+                <div class="imageB" style="width:9%;">
+                    <i style="font-size:24px;color: #495c31;" class="fa">&#xf10e;</i>
+                </div>
+                <div>
+                    <p style="color:#84877e">LUCIA JOHNSON</p>
+                    <p style="color:#767676"> A ros sodales proin pretium nulla a arcu molestie .</p>
+                    <p style="color:#d6d6d6">A proin ullamcorper justo risus , soddales vulputate magna ullamcorper ut
+                        morbi
+                        venetais </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="grid-footerA">
+        <div class="column" >
+            <p style="color: white;">
+                <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Book Now
+            </p>
+            <p style="color:#43621e;">Enjoy your weekend happily</p>
+        </div>
+        <div class="column2" style="text-align: center;">
+            <input type="button" value="CHECK THE DATES" style="background-color:white;color: rgb(89, 85, 85);">
+        </div>
+    </div>
+
+
+    <div class="grid-footerB">
+        <div class="footerC">
+            <div class="foot">
+                <img src="images/logoETB-1.avif" alt="" >
+
+                <p>Ecotour Barahona is your facourite specialist for authentic , unique and memorable round trips , day
+                    trips snd activities in Southwest of Dominician Republic .</p>
+                    
+                <img src="images/dr.avif">
+
+                <p>Travel environmentally friendly with us and discover the
+                            main
+                            destinations of Dominican Republic.</p>
+            </div>
+            <div>
+                <p style="color: #9bcd52">ABOUT US </p>
+                <div style="color:White">
+                    <p>ABOUT ECOTOUR</p>
+                    <p>BARAHONA</p>
+                    <p>OUR TEAM</p>
+                    <p>GUESTBOOK</p>
+                    <p>IMPRINT</p>
+
+                </div>
+            </div>
+
+            <div>
+                <p style="color:#9bcd52;">CUSTOMER SERVICE</p>
+                <div style="color:white">
+                    <p>BOOKING CONDITIONS</p>
+                    <p>CONTACT-US</p>
+                    <p>FAQ'S</p>
+                    <p>LEGAL NOTICE</p>
+                    <p>PRIVACY POLICY</p>
+
+                </div>
+            </div>
+
+        
+            <div>
+                <p style="color:#9bcd52;">RESERVATIONS & BOOKINGS </p>
+                <div style="color:white">
+                    <p> MONDAY TO FRIDAY</p>
+                    <p>From 8:00 am to 8:00pm</p>
+                    <p>SATURDAY TO SUNDAY</p>
+                    <p>From 9:00 am to 5:00pm</p>
+                    <p>Atlantic Standard Time </p>
+                    <p>+1 (809) 856 2260</p>
+                </div>
+
+            </div>
+            <div class="item1" width="40%">
+                <p style="color:#9bcd52;line-height: 1;">FOLLOW US </p>
+                <div class="item2">
+                    <i class="fa-brands fa-facebook-f"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-google-plus-g"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
