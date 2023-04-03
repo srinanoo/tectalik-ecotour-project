@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="About ecotour">
+    <meta name="keywords" content="ecotour hourseride  tours">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destination-page</title>
+    <style>
+        @font-face {
+            font-family: funer;
+            src: url(fonts/NotoSansZanabazarSquare-Regular.ttf);
+        }
+
+        * {
+            box-sizing: border-box;
+
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .box {
+            width: 80%;
+            margin: auto;
+        }
+
+        .row1 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .row1>div {
+            width: 30%
+        }
+
+        .row1>div:first-child>button {
+            border: 0;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        .row1 a {
+            border: rgb(162 205 93) 1px solid;
+            padding: 0px 20px;
+            background-color: white;
+            cursor: pointer;
+            font-variant: small-caps;
+            font-size: medium;
+            font-weight: 600;
+            font-family: funer;
+            color: rgb(100 78 60);
+
+        }
+
+        .row1>div:last-child {
+            text-align: right;
+            color: black;
+        }
+
+        .main {
+            background-image: url(images/header-bg.avif);
+            background-size: cover;
+            height: 50vh;
+            position: relative;
+            color: white;
+        }
+
+        .main::before {
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url(images/splash1.avif);
+            background-position: bottom;
+            mix-blend-mode: screen;
+
+        }
+
+        .main>div {
+            background-color: rgba(0, 0, 0, 0.525);
+            height: 50vh;
+            padding: 40px 0;
+
+        }
+
+        .main h3 {
+            font-variant: small-caps;
+            font-weight: 400;
+            font-family: funer;
+            font-size: 2.2rem;
+            margin-bottom: 0;
+        }
+
+        .main h1 {
+            margin: 0;
+            font-family: serif;
+            font-size: 4rem;
+            font-weight: 400;
+        }
+
+        .sec1 {
+            width: 50%;
+            margin: auto;
+            padding: 30px 0;
+            text-align: center;
+        }
+
+        .sec1 h2,
+        .sec6 h3 {
+            color: rgb(75 90 52);
+            font-family: serif;
+            font-size: 2rem;
+        }
+
+        .sec1 p {
+            line-height: 2;
+            color: rgb(140 140 140);
+            font-family: funer;
+        }
+
+        .sec2 {
+            display: grid;
+            padding-top: 20px;
+            grid-template-columns: repeat(3, 33%);
+            justify-content: space-between;
+        }
+
+        .sec2 img {
+            width: 100%;
+            display: block;
+        }
+
+        .sec3 {
+            background-color: rgb(238 238 238);
+            padding: 50px 0;
+        }
+
+        .sec3>div {
+            display: grid;
+            grid-template-columns: repeat(2, 48%);
+            justify-content: space-between;
+        }
+
+        .sec3 h3 {
+            font-family: serif;
+            font-size: 2rem;
+            grid-column: span 2;
+            margin-bottom: 0;
+        }
+
+        .sec3 p,
+        .sec5 p,
+        .sec6 p {
+            color: rgb(67, 62, 62);
+            font-family: funer;
+            line-height: 1.5;
+            font-size: 0.9rem;
+        }
+
+        .row2 {
+            background-color: aliceblue;
+            display: inline-block;
+            margin-left: 50px;
+            padding: 20px 50px;
+        }
+
+        .sec3 h5 {
+            color: rgb(164 164 164);
+            font-weight: 100;
+            font-family: funer;
+            line-height: 1.5;
+            margin: 0;
+            font-size: x-small;
+        }
+
+        .overlap {
+            position: relative;
+        }
+
+        .overlap>div:first-child {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+
+        }
+
+        .sec4 {
+            background-image: url(images/boat.avif);
+            height: 70vh;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            margin-bottom: 50px;
+            color: white;
+            position: relative;
+            background-position: center;
+        }
+
+        .sec4::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(images/both.avif);
+            background-size: cover;
+            mix-blend-mode: screen;
+        }
+
+        .sec4>div {
+            width: 50%;
+            margin: auto;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 100;
+            /* height: 60vh; */
+            /* padding-top: 100px; */
+        }
+
+        .sec4 h3 {
+            font-weight: 100;
+        }
+
+        .sec5 {
+            display: grid;
+            grid-template-columns: repeat(2, 46%);
+            justify-content: space-between;
+            padding-bottom: 50px;
+        }
+
+        .sec5 h3 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin: 0;
+        }
+
+        .sec6 {
+            background-image: url(images/cloud.avif);
+            height: 80vh;
+            background-size: cover;
+            position: relative;
+        }
+
+        .sec6::before {
+            content: '';
+            position: absolute;
+            background-image: url(images/splash2.avif);
+            background-size: cover;
+            background-position: top;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: screen;
+
+        }
+
+        .sec6>div {
+            height: 80vh;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            align-items: center;
+        }
+
+        .sec6>div>div:first-child {
+            background-color: white;
+            position: relative;
+            left: 5rem;
+        }
+
+        .sec6>div>div:first-child>div {
+            padding: 10px 30px;
+        }
+
+        .sec6 h3 {
+            margin-bottom: 0;
+        }
+
+        .sec6 ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+            display: flex;
+            justify-content: end;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            display: inline-block;
+            background-color: rgb(155 205 82);
+            padding: 0 20px;
+            font-family: funer;
+            font-variant: small-caps;
+        }
+
+        .sec6 h4 {
+            margin: 0;
+            color: rgb(115 115 115);
+            font-family: funer;
+            line-height: 1.5;
+        }
+
+        .sec7 {
+            background-color: rgb(176 218 106);
+            padding: 60px 0;
+        }
+
+        .sec7>div {
+            width: 50%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 50% 20%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .sec7>div>div:first-child {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .sec7>div>div:first-child>div:first-child {
+            width: 20%;
+        }
+
+        .sec7 h3 {
+            color: white;
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .sec7 h4 {
+            font-size: 2rem;
+            margin: 0;
+            font-weight: 200;
+            color: rgb(62, 95, 62);
+        }
+
+        .sec7 a {
+            background-color: aliceblue;
+            color: rgb(31, 72, 38);
+            font-weight: 600;
+        }
+
+        footer {
+            background-color: rgb(75 91 52);
+            font-family: funer;
+            line-height: 1.5;
+            position: relative;
+            padding: 100px 0;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            background-image: url(images/footer.avif);
+            background-size: cover;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            mix-blend-mode: screen;
+
+        }
+
+        footer>div {
+            display: grid;
+            grid-template-columns: repeat(5, 17%);
+            justify-content: space-between;
+        }
+
+        footer p {
+            color: white;
+            font-size: small;
+        }
+
+        footer h4 {
+            color: rgb(176 218 106);
+        }
+
+        footer ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            color: white;
+        }
+
+        footer li {
+            padding: 10px 0;
+        }
+
+        footer i {
+            margin-right: 10px;
+            color: white;
+        }
+
+        @media (max-width:576px) {
+            html {
+                font-size: 10px;
+            }
+
+            .row1>div:first-child {
+                width: 10%;
+            }
+
+            .row1>div:nth-child(2) {
+                width: 70%;
+            }
+
+            .row1>div:nth-child(3) {
+                margin-top: 10px;
+                width: 100%;
+            }
+
+            .main {
+                background-position: center;
+            }
+
+            .sec1,
+            .sec4>div,
+            .sec7>div {
+                width: 80%;
+            }
+
+            .sec2 {
+                grid-template-columns: repeat(1, 80%);
+                justify-content: center;
+                row-gap: 20px;
+            }
+
+            .sec3>div,
+            .sec5,
+            .sec6>div,
+            .sec7>div {
+                grid-template-columns: 100%;
+                row-gap: 20px;
+            }
+
+            .sec3 h3 {
+                grid-column: span 1;
+            }
+
+            .sec6>div>div:first-child {
+                left: 0;
+            }
+
+            .sec7 {
+                padding: 50px 0 20px;
+            }
+
+            footer>div {
+                grid-template-columns: repeat(2, 45%);
+            }
+
+            footer>div>div:first-child {
+                grid-column: span 2;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="box">
+        <div class="row1">
+            <div>
+                <button>&#x2630</button>
+            </div>
+            <div>
+                <img src="images/logoETB-1.webp" alt="">
+            </div>
+            <div>
+                <a href="#call"><i class="fa-solid fa-phone"></i>&emsp;get in touch</a>
+            </div>
+        </div>
+    </header>
+    <div class="main">
+        <div>
+            <div class="box">
+                <h3>one island - two faces</h3>
+                <h1>Hispaniola</h1>
+            </div>
+        </div>
+    </div>
+    <div class="sec1">
+        <h2>Caribbean Paradise</h2>
+        <p>Hispaniola is the 22nd-largest island in the world, located in the Caribbean island group, the Greater
+            Antilles.It is the second largest island in the Caribbean after Cuba , and the tenth most populous island in
+            the world.
+        </p>
+        <p>
+            Hispaniola is the site of the first permanent European settlement in the Americas, founded by Christopher
+            Columbus on his voyages in 1492 and 1493.
+        </p>
+    </div>
+    <div class="sec2">
+        <div><img src="images/r1.avif" alt=""></div>
+        <div><img src="images/r2.avif" alt=""></div>
+        <div><img src="images/r3.avif" alt=""></div>
+    </div>
+    <div class="sec3">
+        <div class="box">
+            <h3>Geography</h3>
+            <div>
+                <p>Hispaniola is the second largest island of the West Indies, with an area of about 76,129 km². The
+                    name given to the island was Columbus. Hispaniola means "small Spain". The Tainos called the island
+                    "Quisqueya", Mother Earth.
+                </p>
+                <p>From a geological point of view, the island of Hispaniola is part of two branches of the North
+                    American cordillera system and is about 660 km long, 250 km wide and extends west-easterly. In the
+                    west, the island of Hispaniola is separated by the approximately 90 km wide Windward Passage from
+                    Cuba and in the east by the Mona Passage of Puerto Rico, which is up to 110 km wide.
+                </p>
+                <p>
+                    On the island of Hispaniola lie five large mountain chains. The highest mountains of the Caribbean
+                    are in the Dominican Republic. The highest mountain is the Pico Duarte with 3,098 meters above sea
+                    level. Also the deepest point of the Caribbean lies on Hispaniola: the salt lake Enriquillo in the
+                    southwest of the Dominican Republic.
+                </p>
+                <p>
+                    Hispaniola offers four vegetation zones and five climatic zones. More than 5,000 plant species, many
+                    of them endemic, make the island a paradise for nature lovers. The animal world is also convincing,
+                    although it is not possible to affect large animals except for a few species. For this, the bird
+                    world is represented even more arsenically.
+                </p>
+            </div>
+            <div>
+                <img src="images/map.avif" alt="">
+                <div class="overlap">
+                    <div>
+                        <img src="images/icon.png" alt="">
+                    </div>
+                    <div class="row2">
+                        <h5>The island of Hispaniola is divided into the two countries Dominican Republic and Haiti. 2/3
+                            the
+                            island belongs to the territory of the Dominican Republic and to Haiti. Although both
+                            countries
+                            are on an island, the landscape, cultural and social differences are huge.
+                        </h5>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="sec4">
+        <div>
+            <h3>The varied climate, geography, as well as plants and fauna found in the counrtry should not only attract
+                you to visit, but invite you to explore...</h3>
+        </div>
+    </div>
+    <div class="sec5 box">
+
+        <div>
+            <h3>History</h3>
+            <p>
+                The Island of Hispaniola (La Isla Española) was the first colony in th New World settled by Spain.
+            </p>
+            <p>As such, it served as the logistical base for the conquest of most of the Western Hemisphere.
+                Christopher Columbus first sighted the island in 1492 toward the end of his first voyage to "the
+                Indies."
+            </p>
+        </div>
+        <div>
+            <p>
+                For two centuries the Spanish ruled the island until western Hispaniola (present-day Haiti) came
+                under French control in 1697. The east still remained under Spanish control. This created a division
+                that still exists today, with the Dominican Republic and Haiti sharing the island
+            </p>
+            <p>
+                Finally, and after decades of unstable political situations, on 27 February 1844, the territory of
+                Santo Domingo recovered its sovereignty and declared its independence as the Dominican Republic.
+            </p>
+        </div>
+    </div>
+    <div class="sec6">
+        <div class="box">
+            <div>
+                <div>
+                    <h3>What to see an what to do!</h3>
+                    <p>Wild mountain streams, hidden caves and dreamy waterfalls can be visited on guided tours in the
+                        mountains. Walks through tropical mountain forests, biking at the beaches and safaris for bird
+                        and
+                        bird
+                        watching are just a few of the recommendations that we can give you.
+                    </p>
+                    <h4>Discover the original southwest of the Dominican Republic and Haiti with Ecotour Barahona.
+                    </h4>
+                </div>
+                <ul>
+                    <li><a href="#tour">show all our tours</a></li>
+                </ul>
+            </div>
+            <div class="imge">
+                <img src="images/beach.avif" alt="" style="width: 100%;">
+            </div>
+        </div>
+    </div>
+    <div class="sec7">
+        <div>
+            <div>
+                <div> <img src="images/col.avif" alt=""></div>
+                <div>
+                    <h3>Book Now</h3>
+                    <h4>Lorem ipsum dolor sit</h4>
+                </div>
+            </div>
+            <div>
+                <a href="#dates">check the dates</a>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="box">
+            <div>
+                <img src="images/footlogo.avif" alt="">
+                <p>Ecotour barahona is our favorite specialist for authrntic unique and memorable day ups and trips of
+                    activities in southern dominican republic.</p>
+                <img src="images/footlogo2.avif" alt="">
+                <p>Travel environmental friendly with us and discover the main dimensions of dominican republic</p>
+            </div>
+            <div>
+                <h4>ABOUT US</h4>
+                <ul>
+                    <li>ABOUT ECOTOUR</li>
+                    <li>BARAHONA</li>
+                    <li>OUR TEAM</li>
+                    <li>GUEST BOOK</li>
+                    <li>IMPRINT</li>
+                </ul>
+            </div>
+            <div>
+                <h4>CUSTOMER SERVICE</h4>
+                <ul>
+                    <li>BOOKING CONDITIONS</li>
+                    <li>CONTACT-US</li>
+                    <li>FAQ'S</li>
+                    <li>LEGAL NOTICE</li>
+                    <li>PRIVACY POLICY</li>
+                </ul>
+            </div>
+            <div>
+                <h4>RESERVATION & BOOKING</h4>
+                <ul>
+                    <li>MONDAY TO FRIDAY From 8:00am to 8:00pm</li>
+                    <li>SATURDAT TO SUNDAY From 9:00am to 5:00pm</li>
+                    <li>Atlantic Standard Time +1(809) 856 2260</li>
+                </ul>
+            </div>
+            <div>
+                <h4>FOLLOW US</h4>
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <img src="images/eye.jpg" alt="">
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
