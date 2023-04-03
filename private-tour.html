@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/34d7faf150.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <title>FrontEnd</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        header {
+            position: sticky;
+            top: 0;
+        }
+
+        .container1 {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            align-items: center;
+            background-color: white;
+            /* position: fixed;
+            top: 0; */
+        }
+
+        .container1 button:hover {
+            background-color: rgba(99, 93, 93, 0.4);
+
+        }
+
+        .left {
+            padding: 14px;
+        }
+
+        .container1>:nth-child(3) {
+            text-align: right;
+            padding: 5px;
+        }
+
+        .right button {
+            border: solid 1px yellowgreen;
+            color: #644d3b;
+            background-color: white;
+            padding: 10px;
+        }
+
+        .left>div>button {
+            border: 0;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        .boat {
+            background-image: url(images/boat.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .speed {
+            width: 70%;
+            height: 331px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 100%;
+            align-items: center;
+            font-size: 1.5em;
+            color: white;
+        }
+
+        .speed-boat>:nth-child(2) {
+            display: flex;
+            /* justify-content: center; */
+            /* width: 50%; */
+            font-size: 2.5em;
+            padding: 10px 0 0 0;
+        }
+
+        .privatize {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+            padding: 50px 0;
+        }
+
+        .privatize>:nth-child(2) {
+            width: 60%;
+            margin: auto;
+            padding: 0 0 20px 0;
+        }
+
+        .tg {
+            width: 70%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 0 0 60px 0;
+        }
+
+        .tailor {
+            width: 90%;
+            margin: auto;
+            background-color: #9bcd52;
+            /* color: white; */
+            padding: 20px 40px;
+        }
+
+        .group {
+            width: 90%;
+            margin: auto;
+            background-color: #4b5b34;
+            color: white;
+            padding: 20px 40px;
+        }
+
+        .nature {
+            background-image: url(images/nature.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 40px 0 150px 0;
+        }
+
+        .let {
+            display: flex;
+            color: white;
+            font-size: 2em;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .alpha {
+            display: grid;
+            align-items: center;
+            width: 70%;
+            margin: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 250px;
+        }
+
+        .icon {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            text-align: center;
+            color: white;
+        }
+
+        .icon i {
+            color: white;
+            padding: 20px;
+        }
+
+        .nature button {
+            background-color: #9bcd52;
+            border: 0;
+            padding: 20px;
+            cursor: pointer;
+
+        }
+
+        .nature>:last-child {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: -20px;
+        }
+
+        .green {
+            width: 100%;
+            background-color: #9bcd52;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 32% 16% 20% 20%;
+            justify-content: space-between;
+        }
+
+        #date,
+        #an,
+        #cn {
+            padding: 4px;
+        }
+
+        #select {
+            padding: 6px;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+
+        .grey {
+            width: 100%;
+            background-color: #f0efed;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 25% 25% 25% 25%;
+        }
+
+        .grey2 {
+            width: 100%;
+            background-color: #f0efed;
+            padding: 40px;
+            display: grid;
+            grid-template-columns: 75% 25%;
+            color: grey;
+        }
+
+        #ta {
+            resize: none;
+        }
+
+        #g-select {
+            width: 100%;
+            padding: 10px;
+        }
+
+        .check {
+            padding: 20px 0;
+            display: grid;
+            grid-template-columns: 20% 84%;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .grey2 button {
+            border: none;
+            background-color: #4b5b34;
+            padding: 10px;
+            width: 100%;
+        }
+
+        .getin {
+            width: 70%;
+            margin: auto;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .getin>:nth-child(2) {
+            padding: 20px;
+            color: gray;
+            font-size: medium;
+        }
+
+        .pp {
+            display: grid;
+            gap: 2px;
+            padding: 0 0 60px 0;
+        }
+
+        .pic1 {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 40% 29% 30%;
+            align-items: center;
+            gap: 2px;
+
+        }
+
+        .a {
+            background-image: url(images/1.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+            height: 200px;
+        }
+
+        .a>div,
+        .f>div {
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+
+        .b {
+            background-image: url(images/5.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+            height: 200px;
+        }
+
+        .c {
+            background-image: url(images/6.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+            height: 200px;
+        }
+
+        .b,
+        .c,
+        .d,
+        .e {
+            display: flex;
+            align-items: end;
+        }
+
+        .pic2 {
+            width: 80%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 30% 29% 40%;
+            gap: 2px;
+
+        }
+
+        .d {
+            background-image: url(images/4.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+            height: 200px;
+        }
+
+        .e {
+            background-image: url(images/2.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+            height: 200px;
+        }
+
+        .f {
+            background-image: url(images/3.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 10px;
+            color: #f0efed;
+        }
+
+        .expert {
+            background-color: #f0efed;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 0 100px;
+        }
+
+        .last>:first-child {
+            padding: 50px;
+        }
+
+        .guide {
+            display: grid;
+            grid-template-columns: 31% 31% 31%;
+            gap: 19px;
+        }
+
+        .expert button {
+            background-color: yellowgreen;
+            color: white;
+            border: none;
+            padding: 10px;
+        }
+
+        .fant-box {
+            width: 80%;
+            margin: auto;
+            padding: 126px 0 0 0;
+            color: gray;
+        }
+
+        .fant-box2 {
+            background-color: white;
+            padding: 30px;
+        }
+
+        .fant-box2>:first-child {
+            font-size: 2em;
+            color: #9bcd52;
+        }
+
+        /* .fant-box2>:nth-child(2){
+            margin: -49px 0;
+        } */
+        .review {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .review>div {
+            width: 5%;
+            height: 20px;
+            border-radius: 50%;
+            border: solid #18d677;
+            background-color: #18d677
+        }
+
+        .fant-box img {
+            width: 10%;
+            border-radius: 50%
+        }
+
+        .fant-box3 {
+            display: grid;
+            padding: 30px 0;
+            grid-template-columns: 30% 70%;
+        }
+
+        .fant-box3>div {
+            text-align: center;
+        }
+
+        .fant-box3 .review {
+            justify-content: center;
+        }
+
+        .foot-bg {
+            background-color: rgb(114, 173, 26);
+            display: grid;
+            grid-template-columns: 50% 50%;
+            padding: 80px;
+        }
+
+        .book-now {
+            display: grid;
+            grid-template-columns: 30% 70%;
+            font-size: 2em;
+            align-items: center;
+        }
+
+        .book-now>div:first-child {
+            text-align: right;
+        }
+
+        .book-now img {
+            padding: 20px;
+        }
+
+        .check-dates {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .check-dates button {
+            background-color: white;
+            color: olive;
+            border: none;
+            padding: 15px;
+            font-weight: 600;
+        }
+
+        .foot {
+            background-color: #4b5b34;
+            color: white;
+            display: grid;
+            grid-template-columns: 20% 18% 18% 20% 17%;
+            gap: 23px;
+            padding: 50px;
+            text-align: center;
+        }
+
+        .foot h5 {
+            color: #9bcd52;
+        }
+
+        .foot-a {
+            text-align: justify;
+            font-size: small;
+        }
+
+        ul {
+            list-style: none;
+            text-align: justify;
+            padding: 0 0 0 62px;
+            line-height: 3;
+        }
+
+        .foot-d div {
+            font-size: small;
+            line-height: 2;
+        }
+        .foot-c ul{
+            padding: 0 0 0 28px;
+        }
+        .fee {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            padding: 20px 50px;
+            gap: 7px;
+            align-items: center;
+        }
+
+        @media screen and (max-width:576px) {
+            .container1 {
+                width: 100%;
+                grid-template-columns: 20% 40% 38%;
+            }
+
+            .right button {
+                padding: 7px;
+            }
+
+            .privatize>:nth-child(2) {
+                width: 100%;
+            }
+
+            .tg {
+                grid-template-columns: 100%;
+                gap: 50px;
+            }
+
+            .getin {
+                width: 100%;
+            }
+
+            .pic1,
+            .pic2,
+            .pp {
+                grid-template-columns: 100%;
+                gap: 40px
+            }
+
+            .expert {
+                grid-template-columns: 100%;
+                padding: 30px;
+            }
+
+            .expert>:nth-child(3) {
+                text-align: center;
+            }
+
+            .foot-bg {
+                padding: 20px;
+            }
+
+            .foot-bg {
+                grid-template-columns: 100%;
+            }
+
+            .foot {
+                grid-template-columns: 60% 40%;
+                gap: 40px;
+            }
+
+            .foot-a,
+            .foot-b,
+            .foot-c,
+            .foot-d,
+            .foot-e {
+                text-align: left;
+            }
+
+            .fee {
+                padding: 0;
+                grid-template-columns: 15% 15% 15%;
+            }
+
+            ul {
+                padding: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container1">
+            <div class="left">
+                <div><button>&#x2630</button></div>
+            </div>
+            <div class="middle">
+                <img src="images/logoETB-1.webp" alt="">
+            </div>
+            <div class="right">
+                <button>
+                    <i class="fa-solid fa-phone"></i> GET IN TOUCH
+                </button>
+            </div>
+        </div>
+    </header>
+    <section>
+        <div class="boat">
+            <div class="speed">
+                <div class="speed-boat">
+                    <div>RECEIVE VIP TREATMENT</div>
+                    <div>Private Trips</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="privatize">
+            <h3>Privatize Any Of Our Daytrips</h3>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum id doloribus quibusdam nisi minima
+                amet unde maxime minus asperiores exercitationem, perspiciatis consequuntur, quia necessitatibus ea
+                sapiente dicta? Ex, quas ducimus.</div>
+        </div>
+        <div class="tg">
+            <div class="tailor">
+                <h2>Tailor Made Trips</h2>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cupiditate repudiandae sit laudantium
+                    labore, commodi recusandae corporis unde quaerat delectus debitis nam accusamus qui blanditiis at
+                    minima, iure.</div>
+            </div>
+            <div class="group">
+                <h2>Groups</h2>
+                <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic cupiditate repudiandae sit laudantium
+                    labore, commodi recusandae corporis unde quaerat delectus debitis nam accusamus qui blanditiis at
+                    minima, iure.</div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="nature">
+            <div class="let">
+                <div class="letget">
+                    <h3>Let's Get started </h3>
+                </div>
+            </div>
+            <div class="alpha">
+                <div class="icon">
+                    <div>
+                        <i class="fa-solid fa-magnifying-glass fa-5x"></i>
+                        <div>Select yout travel experience</div>
+                    </div>
+                    <div>
+                        <i class="fa-regular fa-hand-pointer fa-5x"></i>
+                        <div>Choose a Depature date</div>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-mobile-screen-button fa-5x"></i>
+                        <div>Call us to book your trip</div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <button data-bs-toggle="modal" data-bs-target="#staticBackdrop">GET STARTED !</button>
+            </div>
+        </div>
+    </section>
+    <!-- Get started Modal -->
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+
+                <div class="modal-body">
+                    <form>
+                        <div class="green">
+                            <div>
+                                <div>
+                                    <h6>SELECT YOUR TRAVEL EXPERIENCE</h6>
+                                </div>
+                                <div>
+                                    <select id="select">
+                                        <option value="1">Descovering the Laminar the Deep South</option>
+                                        <option value="2">Descovering the Laminar the Deep South</option>
+                                        <option value="3">Descovering the Laminar the Deep South</option>
+                                        <option value="4">Descovering the Laminar the Deep South</option>
+                                        <option value="5">Descovering the Laminar the Deep South</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div>
+                                <div>
+                                    <h6>SELECT DATE</h6>
+                                </div>
+                                <div><input type="date" id="date"></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <h6>NUMBER OF AUDULTS*</h6>
+                                </div>
+                                <div><input type="number" id="an"></div>
+                            </div>
+                            <div>
+                                <div>
+                                    <h6>NUMBER OF AUDULTS*</h6>
+                                </div>
+                                <div><input type="number" id="cn"></div>
+                            </div>
+                        </div>
+                        <div class="grey">
+                            <div>
+                                <div>First name*</div>
+                                <div><input type="text" id="fn" placeholder="Sanjay"></div>
+                            </div>
+                            <div>
+                                <div>Last name*</div>
+                                <div><input type="text" id="ln" placeholder="Kumar"></div>
+                            </div>
+                            <div>
+                                <div>Email*</div>
+                                <div><input type="email" id="mail"></div>
+                            </div>
+                            <div>
+                                <div>Phone number*</div>
+                                <div><input type="text" id="ph"></div>
+                            </div>
+                        </div>
+                        <div class="grey2">
+                            <div>
+                                <div>Message*</div>
+                                <div><textarea rows="7" cols="100" id="ta"
+                                        placeholder="Enter Your Message..."></textarea></div>
+                            </div>
+                            <div>
+                                <div>I'm From*</div>
+                                <div>
+                                    <select id="g-select">
+                                        <option>India</option>
+                                        <option>America</option>
+                                        <option>UK</option>
+                                        <option>China</option>
+                                    </select>
+                                </div>
+                                <div class="check">
+                                    <input type="checkbox" id="check">I have read and agree to the privacy policy.
+                                </div>
+                                <div>
+                                    <button> SEND TRAVEL REQUEST </button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <div class="getin">
+            <h2>Get Inspired</h2>
+            <div>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet esse aliquam at magnam eligendi ea quae
+                culpa velit, porro ratione. Dolorem in similique earum expedita nulla minus assumenda culpa dolore.
+            </div>
+        </div>
+        <div class="pp">
+            <div class="pic1">
+                <div class="a">
+                    <div>
+                        <h3>Lorem ipsum Dolar Sit</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur ipsum
+                            vero, suscipit iusto dolore at consequatur ipsa dolores, consectetur quibusdam libero. Sequi
+                            explicabo soluta, est doloremque modi rem?</p>
+                    </div>
+                </div>
+                <div class="b">
+                    <div>
+                        <h3>Lorem ipsum Dolar Sit</h3>
+                    </div>
+                </div>
+                <div class="c">
+                    <div>
+                        <h3>Lorem ipsum Dolar Sit</h3>
+                    </div>
+                </div>
+            </div>
+            <div class=pic2>
+                <div class="d">
+                    <div>
+                        <h3>Dolar Sit</h3>
+                    </div>
+                </div>
+                <div class="e">
+                    <div>
+                        <h3>Lorem Dolar Sit</h3>
+                    </div>
+                </div>
+                <div class="f">
+                    <div>
+                        <h3>Lorem ipsum Dolar Sit</h3>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur ipsum
+                            vero, suscipit iusto dolore at consequatur ipsa dolores, consectetur quibusdam libero. Sequi
+                            explicabo soluta, est doloremque modi rem?</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section>
+            <div class="expert">
+                <div class="last">
+                    <div>
+                        <h3>Our Guides & Local Experts</h3>
+                    </div>
+                    <div class="guide">
+                        <div><img src="images/pic11.webp" alt="11"></div>
+                        <div><img src="images/pic22.webp" alt="22"></div>
+                        <div><img src="images/pic33.webp" alt="33"></div>
+                        <div><img src="images/pic44.webp" alt="44"></div>
+                        <div><img src="images/pic22.webp" alt="22"></div>
+                        <div><img src="images/pic11.webp" alt="11"></div>
+                    </div>
+                </div>
+                <div class="fant">
+                    <div class="fant-box">
+                        <div class="fant-box2">
+                            <div>&rdquo;</div>
+                            <div>
+                                <h5>Fantastic Experience!</h5>
+                                <div style="font-size: small;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                    Excepturi dolorum asperiores quod quisquam non consequatur mollitia sint numquam
+                                    fugit aliquid earum vitae veniam voluptatum autem esse alias, quam laboriosam
+                                    voluptas!</div>
+                                &nbsp;
+                                <h6>SAMG </h6>
+                                <div class="review">
+                                    <img src="images/adent.webp" alt="tr">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <p>reviewed by 1 week</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fant-box3">
+                            <div>
+                                <img src="images/adent.webp" alt="tr" style="width: 20%;">
+                                <h4>TripAdvicer</h4>
+                            </div>
+                            <div>
+                                <h5>Ecotour Barahona</h5>
+                                <div class="review">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <h6>50 reviews</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 40px 20px;">
+                    <button>Meet Our Guides</button>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <footer>
+        <div class="foot-bg">
+            <div class="check-book">
+                <div class="book-now">
+                    <div>
+                        <img src="images/calendar.webp" alt="cal">
+                    </div>
+                    <div>
+                        <div style="color: white;">Book Now</div>
+                        <div>lorem Ipsum dolar sit </div>
+                    </div>
+                </div>
+            </div>
+            <div class="check-dates">
+                <div>
+                    <button>CHECK THE DATES</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer>
+        <div class="foot">
+            <div class="foot-a">
+                <div><img src="images/logoETB-1.webp" alt="logo"></div>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, dicta aspernatur sapiente explicabo ea
+                    repellendus accusantium? Voluptatum, dolorum voluptas quas minima, dolor ipsa enim in aliquam
+                    laudantium corrupti est amet.</p>
+                <div style="text-align: center;"><img src="images/do.webp" alt="do"></div>
+                <div>Travel environmently with us and discover the main destinationbof dominan Republic</div>
+            </div>
+            <div class="foot-b">
+                <h5>ABOUT US</h3>
+                    <ul>
+                        <li>ABOUT ECOTOUR</li>
+                        <li>BARHONA</li>
+                        <li>OUR TEAM</li>
+                        <li>GUESTBOOK</li>
+                        <li>IMPRINT</li>
+                    </ul>
+            </div>
+            <div class="foot-c">
+                <h5>CUSTOMER SERVICE</h5>
+                <ul>
+                    <li>BOOKING CONDITION</li>
+                    <li>CONTACT-US</li>
+                    <li>FAQ'S</li>
+                    <li>LEGAL NOTICE</li>
+                    <li>PRIVACY POLICY</li>
+                </ul>
+            </div>
+            <div class="foot-d">
+                <h5>RESERVATIONS & BOOKINGS</h5>
+                <ul>
+
+                    <li>MONDAY TO FRIDAY</li>
+                    <div>From 8.00am to 8.00pm</div>
+
+                    <li>SATURDAY TO SUNDAY</li>
+                    <div>From 9.00am to 5.00pm</div>
+
+                    <li>Atlantic Standard Time</li>
+                    <div>+1(809)856 2260</div>
+
+                </ul>
+            </div>
+            <div class="foot-e">
+                <h5>FOLLOW US</h5>
+                <div class="fee">
+                    <i class="fa-brands fa-facebook fa-2x"></i>
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                    <img src="images/ta.webp" alt="ta">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
