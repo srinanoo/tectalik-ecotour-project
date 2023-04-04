@@ -24,16 +24,24 @@
         * {
             box-sizing: border-box;
             font-family: font;
+            
         }
 
         body {
             margin: 0;
         }
 
-        img {
+        img :not(.paraiso) {
             max-width: 100%;
             height: auto;
 
+        }
+        /* header */
+        header{
+            position: sticky;
+            top: 0;
+            z-index: 2;
+            background-color: white;
         }
 
         .container1 {
@@ -46,30 +54,34 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            margin: 15px;
+            padding: 15px 0;
         }
 
         .row1>div {
             width: 30%
         }
 
-        .row1>div:first-child>button {
+        .row1>div:first-child i {
             border: 0;
             background-color: white;
             font-size: 30px;
 
         }
+    
 
         .row1>div:last-child>button {
             border: 1px solid rgb(152, 205, 93);
-            padding: 0px 20px;
+            padding: 5px 20px;
             background-color: white;
             font-variant: small-caps;
-            font-weight: 600;
+            font-weight: bolder;
             font-size: medium;
             color: rgb(100, 78, 60);
 
 
+        }
+        .row1>div:last-child>button i{
+            font-size: small;
         }
 
         .row1>div:last-child {
@@ -91,7 +103,6 @@
         }
 
         .headback::before {
-
             content: '';
             position: absolute;
             top: 0;
@@ -101,6 +112,8 @@
             height: 100%;
             background-size: cover;
             mix-blend-mode: screen;
+            
+            
 
 
         }
@@ -126,18 +139,74 @@
 
         }
 
-        .headback button {
+        .headback button ,.btn{
             border: none;
-            padding: 5px 50px;
+            padding: 10px 50px;
             background-color: rgb(152, 205, 93);
             font-variant: small-caps;
             font-weight: 600;
             font-size: medium;
             color: white;
+            cursor: pointer;
+            z-index: 1;
+            position: relative;
+           
 
         }
 
         /* header */
+        /* menu section */
+
+        .menusection{
+            display: none;
+            position: sticky;
+            top:90px;
+            z-index: 2;
+            
+        }
+        label[for="exit"],#open:checked~header label[for="open"]{
+            display: none;
+            
+        }
+
+        #open:checked~ header label[for="exit"]{
+            display: block;
+            
+
+        }
+        #open:checked~.menusection{
+            display: block;
+          
+        }
+        .menusection>ul{
+            list-style: none;
+            margin:0;
+            padding:0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: rgba(152, 205, 93);
+           
+        }
+        .menusection>ul>li>a{
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            font-variant: small-caps;
+            font-size: 1.3rem;
+            padding: 20px;
+            
+         
+            
+        }
+        section>ul>li>a:hover{
+            /* background-color: rgba(61, 97, 36); */
+            /* color:white */
+            color:white;
+        }
+
+
+        
         /* sec1 */
         .side {
             display: grid;
@@ -203,7 +272,7 @@
             display: flex;
             flex-wrap: wrap;
             height: 35px;
-            border-bottom: 2px solid green;
+            border-bottom: 2px solid rgb(152, 205, 93);
             width: 100%;
 
         }
@@ -237,7 +306,7 @@
             position: absolute;
             height: 100%;
             width: 10%;
-            border-bottom: 5px solid green;
+            border-bottom: 5px solid rgb(152, 205, 93);
             bottom: 0;
             transition: all 0.3s ease;
         }
@@ -305,8 +374,6 @@
             margin-top: 30px;
             display: grid;
             grid-template-columns: 50% 50%;
-
-            row-gap: 2px;
             column-gap: 2px;
         }
 
@@ -317,14 +384,118 @@
         }
 
         .side2>div:nth-child(2) {
-            margin: 20px 40px 0 35px;
+            margin:20px 40px 0 35px;
             line-height: 2;
 
         }
+        /* destination */
+        .timeline{
+            padding-top: 50px;
+            display: grid;
+            grid-template-columns: 0.7fr 2px 2fr;
+        
 
+        
+        }
+        .timeline__components{
+            margin:0px 20px 20px 19px;
+        }
+        
+        .timeline__component{
+            margin:0px 0 20px 50px;
+        }
+        .timeline__time{
+            color:rgb(152, 205, 93);
+            font-size: small;
+            padding: 50px 0 0;
+            
+        }
+        .timeline__time__right{
+            text-align: right;
+            font-size: 10px;
+            
+        }
+        .timeline__middle {
+            position: relative;
+            background-color: rgb(152, 205, 93);
+
+        }
+        .icon_start{
+            position: absolute;
+            top:-20px;
+            left:50%;
+            transform: translate(-50%);
+            border-radius: 50%;
+            font-size: 1em;
+            color:rgb(100, 78, 60);
+            padding: 10px;
+            background-color:rgb(238,238,238);
+            
+
+            
+        }
+        .paraiso img{
+            position: absolute;
+            top:initial;
+            left:50%;
+            transform: translate(-50%);
+            padding: 5px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            background-color:rgb(238,238,238);
+        }
+        .timeline__middle>div{
+            position: absolute;
+            top:0;
+            left:50%;
+            transform: translate(-50%);
+            height:25px;
+            width:20px;
+            background-color:white;
+            font-size: 1.5em;
+            
+        }
+        .timeline__middle .timeline__point{
+            margin:5px 0;
+            display: inline-block;
+            position: absolute;
+            top:0;
+            left:50%;
+            transform: translate(-50%);
+            height:10px;
+            width:10px;
+            background-color:rgb(152, 205, 93);
+            border-radius: 50%;
+            font-size: 1.5em;
+        
+
+        }
+        
+        
+        .timeline__location_top ,.paraiso{
+            position: relative;
+        }
+        .timeline__location{
+            position: absolute;
+            top:0px;
+            left:0px;
+            font-weight: 400;
+            font-size: 0.9em;
+        }
 
         /* sliderrrrrr */
-
+        .btm{
+            margin: 50px;
+            text-align: center;
+        }
+        /* .btn{
+            background-color: rgb(152, 205, 93);
+            padding:10px 30px
+        } */
+        .btn>a,.headback button>a{
+            text-decoration: none;
+            color: white;
+        }
 
         /* footer */
 
@@ -336,17 +507,18 @@
             line-height: 1.5;
             position: relative;
             padding: 100px 0;
+            height: 60vh;
         }
 
         footer::before {
             content: '';
             position: absolute;
-            background-image: url(images/splash21.avif);
+            background-image: url(images/splash2.avif);
             background-size: cover;
             left: 0;
             top: 0;
             width: 100%;
-            height: 100%;
+            height: 50vh;
             mix-blend-mode: screen;
 
         }
@@ -357,13 +529,17 @@
             justify-content: space-between;
         }
 
-        footer p {
+        footer p{
             color: white;
-            font-size: small;
+            font-size:x-small ;
+            margin:20px 0;
         }
 
-        footer h4 {
+        footer h3 {
             color: rgb(176 218 106);
+            font-size:small;
+            font-weight: 900;
+            margin: 15px 0;
         }
 
         footer ul {
@@ -375,6 +551,8 @@
 
         footer li {
             padding: 10px 0;
+            font-size: 10px;
+            font-weight: 900;
         }
 
         footer i {
@@ -385,26 +563,42 @@
 </head>
 
 <body>
+    <input type="radio" id="open" name="v1">
+    <input type="radio" id="exit" name="v1">
     <header>
         <div class="container">
             <div class="row1">
                 <div>
-                    <button>&#x2630</button>
+                    
+                    <label for="open">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <label for="exit">
+                        <i class="fa-solid fa-x"></i>
+                    </label>
                 </div>
                 <div>
-                    <img src="images/logoETB-1 (1).webp" alt="">
+                    <img src="images/logoETB-1 (1).webp" alt="logoETB-1">
                 </div>
                 <div>
-                    <button>&#128222 get in touch</button>
+                    <button><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp; get in touch</button>
                 </div>
             </div>
         </div>
     </header>
+    <section class="menusection">
+        <ul class="menu">
+            <li><a href="index.html">home</a></li>
+            <li><a href="private-tour.html">private tour</a></li>
+            <li><a href="tour-expand.html">tour expand</a></li>
+            <li><a href="destination.html">destination</a></li>
+        </ul>
+    </section>
     <section class="headback">
         <div>
             <p>HALF DAY</p>
             <h1>Horseback Riding</h1>
-            <button>BOOK NOW</button>
+            <button><a href="private-tour.html">BOOK NOW</a> </button>
         </div>
     </section>
 
@@ -433,7 +627,7 @@
                             <hr>
                             <p><i class="fa fa-map-marker" aria-hidden="true"></i>Departing from: Barahona</p>
                             <hr>
-                            <p><i class="fa-sharp fa-light fa-camera-retro"></i>Panoramic view over the Caribbean Sea
+                            <p><i class="fa-solid fa-camera"></i>Panoramic view over the Caribbean Sea
                             </p>
                             <hr>
                             <p><i class="fa-solid fa-water"></i>Ride through a river</p>
@@ -449,7 +643,7 @@
                             <div class="map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d718524.3109415567!2d-71.55686333341431!3d18.241104870153425!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ebaf894f4997bb9%3A0x9005736fb2c405da!2sParaiso%2081000%2C%20Dominican%20Republic!5e0!3m2!1sen!2sin!4v1680484012992!5m2!1sen!2sin"
-                                    width="700" height="500" style="border:0;" allowfullscreen="" loading="lazy"
+                                    width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
@@ -461,7 +655,88 @@
                         <div>
                             <h4>ROUTE:Barahona - Paraiso</h4>
                             <div>
-                                <div><img src="images/destination.avif" alt=""></div>
+                                <div class="timeline">
+                                    <div class="timeline__components">
+                                        <div class="timeline__time timeline__time__right">1 hour</div>
+                                    </div>
+                                    <div class="timeline__middle">
+                                        <div class="">
+                                            <i class="fa-sharp fa-solid fa-location-dot icon_start"></i>
+                                        </div>
+                            
+                                    </div>
+                                    <div class="timeline__component timeline__location_top">
+                                        <div class="timeline__location ">
+                                            <strong>Barahona</strong>
+                                        </div>
+                                    </div>
+                                    <!-- **************** -->
+                                    <div class="timeline__components">
+                                        <div class="timeline__time timeline__time__right">30 min</div>
+                                    </div>
+                                    <div class="timeline__middle">
+                                        <div>
+                                            <div class="timeline__point">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__component timeline__location_top">
+                                        <div class="timeline__location ">
+                                            Caribbean Sea Panoramic View
+                                        </div>
+                                    </div>
+                                    <!-- ****************** -->
+                                    <div class="timeline__components">
+                                        <div class="timeline__time timeline__time__right">1 hour</div>
+                                    </div>
+                                    <div class="timeline__middle">
+                                        <div>
+                                            <div class="timeline__point">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="timeline__component timeline__location_top">
+                                        <div class="timeline__location ">
+                                            River Ride
+                                        </div>
+                                    </div>
+                                    <!-- *********** -->
+                                    <div class="timeline__components">
+                                        <div class="timeline__time timeline__time__right">30 min</div>
+                                    </div>
+                                    <div class="timeline__middle">
+                                        <div>
+                                            <div class="timeline__point">
+                                        </div>
+                                        </div>
+                                        
+                            
+                                    </div>
+                                    <div class="timeline__component timeline__location_top">
+                                        <div class="timeline__location ">
+                                            Paprika Greenhouse
+                                        </div>
+                                    </div>
+                                    <!-- *********** -->
+                                    <div class="timeline__component">
+                                        <div>
+                                            <div class="timeline__time timeline__time__right"></div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="paraiso ">
+                                        <div class="timeline__point">
+                                           <img src="images/destination.png" alt="destination">
+                                        </div>
+                            
+                                    </div>
+                                    <div class="timeline__component timeline__location_top ">
+                                        <div class="timeline__location ">
+                                            <strong>Paraiso</strong> 
+                                        </div>
+                                    </div>
+                                    
+                                </div>
                             </div>
                         </div>
                         <div>
@@ -500,15 +775,14 @@
                 <div class="content content3">
                     <div class="side side3">
                         <div>
-                            <div><img src="images/sec3-1.avif" alt=""></div>
-                            <div><img src="images/sec3-2.avif" alt=""></div>
-                            <div><img src="images/sec3-3.avif" alt=""></div>
-                            <div><img src="images/sec3-4.avif" alt=""></div>
-                            <div><img src="images/sec3-5.avif" alt=""></div>
-                            <div><img src="images/sec3-6.avif" alt=""></div>
+                            <div><img src="images/sec3-2.avif" alt="sec2"></div>
+                            <div><img src="images/sec3-3.avif" alt="sec3"></div>
+                            <div><img src="images/sec3-4.avif" alt="sec4"></div>
+                            <div><img src="images/sec3-5.avif" alt="sec5"></div>
+                            <div><img src="images/sec3-6.avif" alt="sec6"></div>
                         </div>
                         <div>
-                            <img src="images/sec3-1.jpg" alt="">
+                            <img src="images/sec3-1.jpg" alt="sec3-1">
                         </div>
 
                     </div>
@@ -543,27 +817,30 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
+                
+                
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
+                
             </button>
         </div>
+        <div class="btm">
+            <button class="btn"><a href="private-tour.html">BOOK NOW</a></button>
+        </div>
+        
     </section>
     <footer>
         <div class="container1">
             <div>
-                <img src="images/footlogo.avif" alt="">
+                <img src="images/footlogo.avif" alt="footlogo">
                 <p>Ecotour barahona is our favorite specialist for authrntic unique and memorable day ups and trips of
                     activities in southern dominican republic.</p>
-                <img src="images/footlogo2.avif" alt="">
+                <img src="images/footlogo2.avif" alt="footlogo2">
                 <p>Travel environmental friendly with us and discover the main dimensions of dominican republic</p>
             </div>
             <div>
-                <h4>ABOUT US</h4>
+                <h3>ABOUT US</h3>
                 <ul>
                     <li>ABOUT ECOTOUR</li>
                     <li>BARAHONA</li>
@@ -573,7 +850,7 @@
                 </ul>
             </div>
             <div>
-                <h4>CUSTOMER SERVICE</h4>
+                <h3>CUSTOMER SERVICE</h3>
                 <ul>
                     <li>BOOKING CONDITIONS</li>
                     <li>CONTACT-US</li>
@@ -583,7 +860,7 @@
                 </ul>
             </div>
             <div>
-                <h4>RESERVATION & BOOKING</h4>
+                <h3>RESERVATION & BOOKING</h3>
                 <ul>
                     <li>MONDAY TO FRIDAY From 8:00am to 8:00pm</li>
                     <li>SATURDAT TO SUNDAY From 9:00am to 5:00pm</li>
@@ -591,10 +868,10 @@
                 </ul>
             </div>
             <div>
-                <h4>FOLLOW US</h4>
+                <h3>FOLLOW US</h3>
                 <i class="fa-brands fa-facebook-f"></i>
                 <i class="fa-brands fa-instagram"></i>
-                <img src="images/eye.jpg" alt="">
+                <img src="images/eye.jpg" alt="eye">
             </div>
         </div>
     </footer>
