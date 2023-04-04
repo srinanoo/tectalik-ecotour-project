@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home_page</title>
+    
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .row1 {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .row1>div {
+            width: 33.33%
+        }
+
+        .row1>div:first-child>button {
+            border: 0;
+            background-color: white;
+            font-size: 30px;
+        }
+
+        .row1>div:last-child>button {
+            border: 1px solid greenyellow;
+            padding: 5px 20px;
+            color: rgb(139, 98, 54);
+            background-color: white;
+        }
+
+        .row1>div:last-child {
+            text-align: right;
+        }
+
+        .main {
+            background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.jpg);
+            background-size: cover;
+            height: 550px;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .main>div>button {
+            padding: 8px 30px;
+            background-color: rgb(129, 187, 42);
+            border: 0;
+            color: white;
+        }
+
+        .smlogo {
+            display: flex;
+            flex-wrap: wrap;
+            width: 60%;
+            margin: auto;
+            justify-content: space-between;
+        }
+
+        .smlogo>div {
+            width: 15%;
+            margin: 50px 0px;
+        }
+
+        .smlogo>div h3 {
+            font-size: 15px;
+            font-weight: 100;
+        }
+
+        .undermain {
+            background: url(images/cloud.avif);
+            background-size: cover;
+        }
+
+        .vdocol {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .vdocol>div {
+            margin: 50px 0px;
+        }
+
+        .vdocol>div:first-child {
+            width: 40%;
+            background-color: white;
+            position: relative;
+            left: 120px;
+            margin: 120px 0px;
+            padding-left: 20px;
+        }
+
+        .vdocol>div:last-child {
+            width: 55%
+        }
+
+        .vdocol button {
+            padding: 8px 30px;
+            background-color: rgb(129, 187, 42);
+            border: 0;
+            color: white;
+        }
+
+        .vdocol>div:first-child>div {
+            text-align: right;
+        }
+
+        .vdocol>div:first-child h2 {
+            color: green;
+            font-weight: 100;
+        }
+
+        main h2,
+        .middle h2 {
+            text-align: center;
+        }
+
+        main {
+            padding-bottom: 50px;
+        }
+
+        .mainrow {
+            display: grid;
+            grid-template-columns: 32% 32% 32%;
+            justify-content: space-between;
+
+        }
+
+        .mainrow>div {
+            display: grid;
+            row-gap: 20px;
+        }
+
+        .common {
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 278px;
+            color: white;
+            padding-top: 100px;
+        }
+
+        .mid {
+            background-color: rgba(0, 0, 0, 0.4);
+            height: 427px;
+            color: white;
+            padding-top: 20rem;
+        }
+
+        .common:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 278px;
+        }
+
+        .mid:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+            height: 427px;
+        }
+
+        .common h2,
+        .mid h2 {
+            margin: 0;
+            text-align: left;
+            padding-left: 35px;
+        }
+
+        .common ul {
+            list-style: none;
+        }
+
+        .common button,
+        .mid button {
+            background-color: greenyellow;
+            padding: 4px 15px;
+            border: 0;
+        }
+
+        .common>div,
+        .mid>div {
+            margin: 10px 35px;
+        }
+
+        section {
+            background: url(images/beachnew.avif);
+            background-size: cover;
+            color: white;
+            height: 500px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .middle>div {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .middle>div>div {
+            width: 33%;
+            background-color: rgba(113, 87, 66,0.7);
+            padding: 10px 35px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .middle>div>div img,
+        .foot1>div img {
+            width: 20%;
+        }
+
+        .foot1,
+        .twocols,
+        .container1 ,
+        .lstrow{
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .foot1>div {
+            width: 50%;
+            padding-top: 30px;
+        }
+
+        .foot1 button {
+            padding: 10px 20px;
+            color: white;
+            background-color: rgb(123, 189, 25);
+            border: 0;
+        }
+
+        .foot1 h2 {
+            color: rgb(61, 82, 30);
+            padding-right: 30px;
+        }
+
+        .twocols>div:first-child {
+            width: 20%;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        .twocols>div:last-child {
+            width: 80%;
+            padding: 0px 20px;
+        }
+        .container1{
+            width:50%;
+            margin:auto;
+        }
+        .bgcolor{
+            background-color: rgb(142, 204, 49);
+        }
+        .container1>div{
+            width:50%;
+            color:white;
+            padding: 4em 0px;
+        }
+        .container1>div button{
+            padding:10px 20px;
+            background-color: white;
+            border:0;
+            margin-top: 50px;
+        }
+        footer{
+            background-color: rgb(75 91 52);
+        }
+        .lstrow{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .lstrow>div{
+            width:18%;
+        }
+        .lstrow>div h3{
+            color:white;
+            font-size:14px;
+            font-weight: 100;
+        }
+        .lstrow>div h4{
+            color:rgb(48, 193, 48)
+        }
+        .lstrow>div ul{
+            list-style: none;
+            color:white;
+            line-height: 2.5;
+            padding: 0;
+        }
+        .foot{
+            display: grid;
+            grid-template-columns: 20% 20% 30%;
+            align-items: center;
+            justify-items: center;
+        
+        }
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="row1">
+                <div>
+                    <button>&#x2630</button>
+                </div>
+                <div>
+                    <img src="images/logoETB-1.webp" alt="">
+                </div>
+                <div>
+                    <button>&#128222 GET IN TOUCH</button>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="container">
+                <P>DISCOVER A HIDDEN PARADISE</P>
+                <h2>Deep South West, Dominician Republic</h2>
+                <button>Book Now</button>
+            </div>
+        </div>
+        <div class="smlogo">
+            <div>
+                <img src="images/img1.png" alt="">
+                <h3>DAY-TRIPS</h3>
+            </div>
+            <div>
+                <img src="images/img2.png" alt="">
+                <h3>MULTI-DAY TRIPS</h3>
+            </div>
+            <div>
+                <img src="images/img3.png" alt="">
+                <h3>PRIVATE-TOURS</h3>
+            </div>
+        </div>
+        <div class="undermain">
+            <div class="container vdocol">
+                <div>
+                    <h2>Welcome to the Deep Southwest</h2>
+                    <h3>Discover with EcoTour Barahona, your specialist in Ecotourism a new face of the Dominican
+                        Republic, more human, more authentic!</h3>
+                    <p>We have artistically designed unique excursions for you, accompanied by professional and
+                        passionate local guides who will show you the best of this part of the country.</p>
+                    <div><button>KNOW MORE</button></div>
+                </div>
+                <div>
+                    <img src="images/lizard.avif" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>FEATURED TRAVEL EXPERIENCES</h2>
+        <div class="container">
+            <div class="mainrow">
+                <div>
+                    <div style="background: url(images/imag1.avif);background-size: cover;height:278px">
+                        <div class="common">
+                            <h2>Garden of Eden</h2>
+                            <div><button>$55</button></div>
+                            <ul>
+                                <li>Price per adult</li>
+                                <li>Departing from: Barahona</li>
+                                <li>5-6 hours</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div style="background: url(images/imag2.avif);background-size: cover;">
+                        <div class="common">
+                            <h2>Horseback Riding</h2>
+                            <div><button>$90</button></div>
+                        </div>
+                    </div>
+                    <div style="background: url(images/imag3.avif);background-size: cover;">
+                        <div class="common">
+                            <h2>Horseback Riding</h2>
+                            <div><button>$35</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: url(images/imgce1.jpg);background-size: cover;">
+                        <div class="mid">
+                            <h2>Untouched paradise</h2>
+                            <div><button>$120</button></div>
+                        </div>
+                    </div>
+                    <div style="background:url(images/imgce2.jpg);background-size: cover;">
+                        <div class="mid">
+                            <h2>Flamingo Island</h2>
+                            <div><button>$90</button></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div style="background: url(images/imag4.avif);background-size: cover;">
+                        <div class="common">
+                            <h2>Horseback Riding</h2>
+                            <div><button>$60</button></div>
+                        </div>
+                    </div>
+                    <div style="background: url(images/imag7.avif);background-size: cover;">
+                        <div class="common">
+                            <h2>Horseback Riding</h2>
+                            <div><button>$60</button></div>
+                        </div>
+                    </div>
+                    <div style="background: url(images/imag6.avif);background-size: cover;">
+                        <div class="common">
+                            <h2>Horseback Riding</h2>
+                            <div><button>$60</button></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section>
+        <div class="container">
+            <div class="middle">
+                <h2>Why book with Ecotour Barahona</h2>
+                <div>
+                    <div>
+                        <img src="images/snorkel.png" alt="">
+                        <h4>Our day trips not only allow you to visit the Southwest, but also to experience it.</h4>
+                    </div>
+                    <div>
+                        <img src="images/tourist.png" alt="">
+                        <h4>They are guided by professional and passionate Dominicans and show you the best and
+                            unexpected sides of the Dominican Republic.</h4>
+                    </div>
+                    <div>
+                        <img src="images/medal.png" alt="">
+                        <h4>Benefit from small group sizes and guaranteed weekly departures.</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <article class="container">
+        <div class="foot1">
+            <div>
+                <h2>Lorem ipsum dolor sit amet</h2>
+                <button>SEE ALL OPINIONS</button>
+            </div>
+            <div>
+                <img src="images/girl.avif" alt="">
+                <div class="twocols">
+                    <div>
+                        <img src="images/Quotation-Mark-Transparent.png" alt="">
+                    </div>
+                    <div>
+                        <h3>LUCIA JOHNSON</h3>
+                        <h4>A ros sodales proin pretium nulla a arcu molestie</h4>
+                        <p>A Proin ullamcorper justro risus, sodales vulpiutate magna ullamcopare uti morbi vernasus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </article>
+    <div class="bgcolor">
+        <div class="container1">
+            <div>
+              <h2>Book Now</h2>
+              <h3>Lorem ipsum dolor sit</h3>
+            </div>
+            <div>
+                <button>CHECK THE DATES</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="lstrow">
+                <div>
+                    <img src="images/footlogo.avif" alt="">
+                    <h3>Ecotour barahona is our favorite specialist for authrntic unique and memorable day  ups and trips of 
+                        activities in southern dominican republic.</h3>
+                    <img src="images/footlogo2.avif" alt="">    
+                    <h3>Travel environmental friendly with us and discover the main dimensions of dominican republic.</h3>
+                </div>
+                <div>
+                    <h4>ABOUT US</h4>
+                    <ul>
+                        <li>ABOUT ECOTOUR</li>
+                        <li>BARAHONA</li>
+                        <li>OUR TEAM</li>
+                        <li>GUEST BOOK</li>
+                        <li>IMPRINT</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>CUSTOMER SERVICE</h4>
+                    <ul>
+                        <li>BOOKING CONDITIONS</li>
+                        <li>CONTACT-US</li>
+                        <li>FAQ'S</li>
+                        <li>LEGAL NOTICE</li>
+                        <li>PRIVACY POLICY</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>RESERVATION & BOOKING</h4>
+                    <ul>
+                        <li>MONDAY TO FRIDAY From 8:00am to 8:00pm</li>
+                        <li>SATURDAT TO SUNDAY From 9:00am to 5:00pm</li>
+                        <li>Atlantic Standard Time +1(809) 856 2260</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>FOLLOW US</h4>
+                    <div class="foot">
+                        <div>
+                            <i class="fa-brands fa-facebook-f" style="color: #ffffff; margin:5px;"></i>
+                        </div>
+                        <div>
+                            <i class="fa-brands fa-instagram" style="color: #ffffff; margin:5px;"></i>
+                        </div>
+                        <div>
+                            <img src="images/whitelogo3.png" width="25px" style="padding-top: 5px;" alt=""></img>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
