@@ -5,17 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/34d7faf150.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/34d7faf150.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
         crossorigin="anonymous"></script>
     <title>FrontEnd</title>
     <style>
@@ -31,26 +25,121 @@
             margin: 0;
         }
 
-        header {
+        /* header {
             position: sticky;
             top: 0;
+        } */
+        header {
+            /* position: sticky;
+        top: 0; */
+            z-index: 1;
+            background-color: white;
         }
 
-        .container1 {
+        .row1 {
+            display: grid;
+            grid-template-columns: repeat(3, 33.3333%);
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-variant: small-caps;
+            font-family: funer;
+            padding: 0px 20px;
+        }
+
+        .nav {
+            list-style: none;
+            background-color: rgb(162 205 93);
+            margin: 0;
+            padding: 10px;
+            display: none;
+            text-align: center;
+        }
+
+        .nav>div {
+            display: grid;
+            grid-template-columns: repeat(4, 15%);
+            justify-content: space-evenly;
+        }
+
+        .nav a {
+            color: rgb(0 0 0);
+            font-size: large;
+            display: block;
+            border-radius: 50%;
+            font-weight: 400;
+            font-size: 1.3rem;
+            font-family: sans-serif;
+        }
+
+        .nav a:hover {
+            /* background-color: rgb(152, 196, 82); */
+            color: azure;
+        }
+
+        #open,
+        #exit {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        #open:checked~.row1 label[for="open"],
+        label[for="exit"] {
+            display: none;
+        }
+
+        #open:checked~.row1 label[for="exit"],
+        #open:checked~.nav {
+            display: block;
+        }
+
+        label[for="open"] {
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        label[for="exit"] {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        /* .call>{
+            border: rgb(162 205 93) 1px solid;
+            background-color: white;
+            font-weight: 600;
+            color: rgb(100 78 60);
+            padding: 10px;
+        } */
+        .call>button {
+            padding: 8px;
+            color: #644e3c;
+            background-color: white;
+            border: solid 1px yellowgreen;
+
+        }
+
+        .row1 button:hover {
+            background-color: rgba(0, 0, 0, 0.10);
+        }
+
+        /* .container1 {
             width: 100%;
             display: grid;
             grid-template-columns: 33% 33% 33%;
             align-items: center;
             background-color: white;
-            /* position: fixed;
-            top: 0; */
+            text-align: center;
+            padding: 20px;
         }
 
         .container1 button:hover {
             background-color: rgba(99, 93, 93, 0.4);
-
         }
-
         .left {
             padding: 14px;
         }
@@ -71,7 +160,7 @@
             border: 0;
             background-color: white;
             font-size: 30px;
-        }
+        } */
 
         .boat {
             background-image: url(images/boat.webp);
@@ -108,7 +197,7 @@
         .privatize>:nth-child(2) {
             width: 60%;
             margin: auto;
-            padding: 0 0 20px 0;
+            /* padding: 0 0 20px 0; */
         }
 
         .tg {
@@ -120,16 +209,16 @@
         }
 
         .tailor {
-            width: 90%;
-            margin: auto;
+            width: 95%;
+            margin: auto 20px auto auto;
             background-color: #9bcd52;
-            /* color: white; */
+            color: white;
             padding: 20px 40px;
         }
 
         .group {
-            width: 90%;
-            margin: auto;
+            width: 95%;
+            margin: auto auto auto 20px;
             background-color: #4b5b34;
             color: white;
             padding: 20px 40px;
@@ -153,7 +242,7 @@
         .alpha {
             display: grid;
             align-items: center;
-            width: 70%;
+            width: 69%;
             margin: auto;
             background-color: rgba(0, 0, 0, 0.5);
             height: 250px;
@@ -176,6 +265,7 @@
             border: 0;
             padding: 20px;
             cursor: pointer;
+            border-radius: 5px;
 
         }
 
@@ -195,14 +285,32 @@
             justify-content: space-between;
         }
 
+        .green>div {
+            margin: 5px;
+        }
+
+        form>:first-child {
+            background-color: #9bcd52;
+            text-align: right;
+        }
+
+        #close {
+            position: relative;
+            top: 10ox;
+            right: 20px;
+            padding: 10px 0;
+        }
+
         #date,
         #an,
         #cn {
             padding: 4px;
+            border-radius: 5px;
         }
 
         #select {
             padding: 6px;
+            border-radius: 5px;
         }
 
         .modal-body {
@@ -220,7 +328,7 @@
         .grey2 {
             width: 100%;
             background-color: #f0efed;
-            padding: 40px;
+            padding: 0 40px 30px 40px;
             display: grid;
             grid-template-columns: 75% 25%;
             color: grey;
@@ -246,6 +354,7 @@
         .grey2 button {
             border: none;
             background-color: #4b5b34;
+            color: #fcfbfc;
             padding: 10px;
             width: 100%;
         }
@@ -266,7 +375,7 @@
         .pp {
             display: grid;
             gap: 2px;
-            padding: 0 0 60px 0;
+            padding: 0 105px 60px 105px;
         }
 
         .pic1 {
@@ -350,7 +459,6 @@
             background-image: url(images/3.webp);
             background-repeat: no-repeat;
             background-size: cover;
-            padding: 10px;
             color: #f0efed;
         }
 
@@ -358,17 +466,18 @@
             background-color: #f0efed;
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 0 100px;
+            padding: 0 142px;
         }
 
         .last>:first-child {
-            padding: 50px;
+            padding: 40px 90px;
         }
 
         .guide {
             display: grid;
             grid-template-columns: 31% 31% 31%;
-            gap: 19px;
+            gap: 73px 19px;
+            padding: 0 0 0 70px;
         }
 
         .expert button {
@@ -381,7 +490,7 @@
         .fant-box {
             width: 80%;
             margin: auto;
-            padding: 126px 0 0 0;
+            padding: 97px 0 0 0;
             color: gray;
         }
 
@@ -435,7 +544,7 @@
             background-color: rgb(114, 173, 26);
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 80px;
+            padding: 80px 147px;
         }
 
         .book-now {
@@ -468,13 +577,15 @@
         }
 
         .foot {
-            background-color: #4b5b34;
-            color: white;
+
             display: grid;
-            grid-template-columns: 20% 18% 18% 20% 17%;
-            gap: 23px;
-            padding: 50px;
-            text-align: center;
+            grid-template-columns: 17% 17% 20% 17% 17%;
+            gap: 35px;
+            width: 70%;
+            margin: auto;
+            padding: 50px 0;
+            /* padding: 50px 157px 20px; */
+            /* text-align: center; */
         }
 
         .foot h5 {
@@ -489,29 +600,52 @@
         ul {
             list-style: none;
             text-align: justify;
-            padding: 0 0 0 62px;
-            line-height: 3;
+            /* padding: 0 0 0 62px; */
+            padding: 0;
+            line-height: 1.5;
+        }
+
+        li {
+            padding: 10px 0;
         }
 
         .foot-d div {
             font-size: small;
             line-height: 2;
         }
-        .foot-c ul{
+
+        /* .foot-c ul {
             padding: 0 0 0 28px;
-        }
+        } */
+
         .fee {
             display: grid;
-            grid-template-columns: 30% 30% 30%;
-            padding: 20px 50px;
-            gap: 7px;
-            align-items: center;
+            grid-template-columns: repeat(3, 20%);
+            gap: 9px;
+        }
+
+        #footer {
+            background-color: #4b5b34;
+            color: white;
         }
 
         @media screen and (max-width:576px) {
-            .container1 {
+
+            /* .container1 {
                 width: 100%;
                 grid-template-columns: 20% 40% 38%;
+            } */
+            .row1 {
+                grid-template-columns: 20% 45% 38%;
+            }
+
+            .nav>div {
+                grid-template-columns: repeat(2, 1fr);
+
+            }
+
+            .nav a {
+                font-size: 2rem;
             }
 
             .right button {
@@ -535,7 +669,8 @@
             .pic2,
             .pp {
                 grid-template-columns: 100%;
-                gap: 40px
+                gap: 40px;
+                padding: 0;
             }
 
             .expert {
@@ -547,6 +682,15 @@
                 text-align: center;
             }
 
+            .last>:last-child {
+                text-align: center;
+            }
+
+            .guide,
+            .fant-box {
+                padding: 0;
+            }
+
             .foot-bg {
                 padding: 20px;
             }
@@ -556,11 +700,16 @@
             }
 
             .foot {
-                grid-template-columns: 60% 40%;
+                grid-template-columns: 50% 50%;
                 gap: 40px;
             }
 
-            .foot-a,
+            .group,
+            .tailor {
+                margin: auto;
+            }
+
+            /* .foot-a,
             .foot-b,
             .foot-c,
             .foot-d,
@@ -575,6 +724,72 @@
 
             ul {
                 padding: 0;
+            } */
+            .grey {
+                grid-template-columns: 50% 50%;
+            }
+
+            .green,
+            .grey2 {
+                grid-template-columns: 100%;
+            }
+
+            #ta {
+                height: 200px;
+                width: 410px;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+
+            /* .foot{
+                margin: 0;
+                overflow: hidden;
+            } */
+            .row1 {
+                width: 100%;
+                grid-template-columns: 100%;
+                gap: 20px;
+                padding: 40px;
+                width: 100%;
+            }
+
+            .row1>a {
+                padding: 0;
+            }
+
+            .nature {
+                width: 100%;
+                position: relative;
+                padding-bottom: 292px;
+            }
+
+            .icon {
+                grid-template-columns: 100%;
+            }
+
+            .nature>:last-child {
+                margin: 0;
+                position: absolute;
+                bottom: 20px;
+
+            }
+
+            .foot {
+                grid-template-columns: 100%;
+            }
+
+            .fant-box {
+                width: 100%;
+            }
+
+            .fant-box3 {
+                grid-template-columns: 100%;
+            }
+
+            .book-now {
+                grid-template-columns: 50% 50%;
+                font-size: medium;
             }
         }
     </style>
@@ -582,9 +797,9 @@
 
 <body>
     <header>
-        <div class="container1">
+        <!-- <div class="container1">
             <div class="left">
-                <div><button>&#x2630</button></div>
+                <div><button id="three-dot">&#x2630</button></div>
             </div>
             <div class="middle">
                 <img src="images/logoETB-1.webp" alt="">
@@ -594,7 +809,33 @@
                     <i class="fa-solid fa-phone"></i> GET IN TOUCH
                 </button>
             </div>
+        </div> -->
+        <input type="radio" id="open" name="v1">
+        <input type="radio" id="exit" name="v1">
+        <div class="row1 box">
+            <div>
+                <label for="open">
+                    &#x2630
+                </label>
+                <label for="exit">
+                    <i class="fa-solid fa-x"></i>
+                </label>
+            </div>
+            <div>
+                <img src="images/logoETB-1.webp" alt="">
+            </div>
+            <div class="call">
+                <button><i class="fa-solid fa-phone"></i>&emsp;GET IN TOUCH</button>
+            </div>
         </div>
+        <ul class="nav">
+            <div>
+                <li><a href="index.html">home page</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="tour-expand.html">tour list</a></li>
+                <li><a href="single-tour-page.html">single tour</a></li>
+            </div>
+        </ul>
     </header>
     <section>
         <div class="boat">
@@ -657,12 +898,17 @@
         </div>
     </section>
     <!-- Get started Modal -->
-    <div class="modal fade" id="staticBackdrop" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="staticBackdrop" tabindex="-1" data-bs-backdrop="static"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
 
                 <div class="modal-body">
-                    <form>
+                    <form validate>
+                        <div>
+                            <button type="button" id="close" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                        </div>
                         <div class="green">
                             <div>
                                 <div>
@@ -670,7 +916,7 @@
                                 </div>
                                 <div>
                                     <select id="select">
-                                        <option value="1">Descovering the Laminar the Deep South</option>
+                                        <option value="1">--Select--</option>
                                         <option value="2">Descovering the Laminar the Deep South</option>
                                         <option value="3">Descovering the Laminar the Deep South</option>
                                         <option value="4">Descovering the Laminar the Deep South</option>
@@ -682,49 +928,51 @@
                                 <div>
                                     <h6>SELECT DATE</h6>
                                 </div>
-                                <div><input type="date" id="date"></div>
+                                <div><input type="date" id="date" required></div>
                             </div>
                             <div>
                                 <div>
                                     <h6>NUMBER OF AUDULTS*</h6>
                                 </div>
-                                <div><input type="number" id="an"></div>
+                                <div><input type="number" id="an" required></div>
                             </div>
                             <div>
                                 <div>
                                     <h6>NUMBER OF AUDULTS*</h6>
                                 </div>
-                                <div><input type="number" id="cn"></div>
+                                <div><input type="number" id="cn" required></div>
                             </div>
                         </div>
                         <div class="grey">
                             <div>
                                 <div>First name*</div>
-                                <div><input type="text" id="fn" placeholder="Sanjay"></div>
+                                <div><input type="text" id="fn" placeholder="Sanjay" required></div>
                             </div>
                             <div>
                                 <div>Last name*</div>
-                                <div><input type="text" id="ln" placeholder="Kumar"></div>
+                                <div><input type="text" id="ln" placeholder="Kumar" required></div>
                             </div>
                             <div>
                                 <div>Email*</div>
-                                <div><input type="email" id="mail"></div>
+                                <div><input type="email" id="mail" required></div>
                             </div>
                             <div>
                                 <div>Phone number*</div>
-                                <div><input type="text" id="ph"></div>
+                                <div><input type="text" id="ph" required></div>
                             </div>
                         </div>
                         <div class="grey2">
                             <div>
                                 <div>Message*</div>
-                                <div><textarea rows="7" cols="100" id="ta"
-                                        placeholder="Enter Your Message..."></textarea></div>
+                                <div>
+                                    <textarea rows="7" cols="100" id="ta"
+                                        placeholder="Enter Your Message..."></textarea>
+                                </div>
                             </div>
                             <div>
                                 <div>I'm From*</div>
                                 <div>
-                                    <select id="g-select">
+                                    <select id="g-select" required>
                                         <option>India</option>
                                         <option>America</option>
                                         <option>UK</option>
@@ -732,7 +980,8 @@
                                     </select>
                                 </div>
                                 <div class="check">
-                                    <input type="checkbox" id="check">I have read and agree to the privacy policy.
+                                    <input type="checkbox" id="check" required>I have read and agree to the privacy
+                                    policy.
                                 </div>
                                 <div>
                                     <button> SEND TRAVEL REQUEST </button>
@@ -758,8 +1007,7 @@
                     <div>
                         <h3>Lorem ipsum Dolar Sit</h3>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur ipsum
-                            vero, suscipit iusto dolore at consequatur ipsa dolores, consectetur quibusdam libero. Sequi
-                            explicabo soluta, est doloremque modi rem?</p>
+                            vero, suscipit iusto dolore at consequatur ipsa dolores.</p>
                     </div>
                 </div>
                 <div class="b">
@@ -797,6 +1045,7 @@
     </section>
     <footer>
         <section>
+
             <div class="expert">
                 <div class="last">
                     <div>
@@ -810,6 +1059,9 @@
                         <div><img src="images/pic22.webp" alt="22"></div>
                         <div><img src="images/pic11.webp" alt="11"></div>
                     </div>
+                    <div style="padding: 40px 54px;">
+                        <button>Meet Our Guides</button>
+                    </div>
                 </div>
                 <div class="fant">
                     <div class="fant-box">
@@ -817,7 +1069,8 @@
                             <div>&rdquo;</div>
                             <div>
                                 <h5>Fantastic Experience!</h5>
-                                <div style="font-size: small;">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <div style="font-size: small;">Lorem ipsum, dolor sit amet consectetur adipisicing
+                                    elit.
                                     Excepturi dolorum asperiores quod quisquam non consequatur mollitia sint numquam
                                     fugit aliquid earum vitae veniam voluptatum autem esse alias, quam laboriosam
                                     voluptas!</div>
@@ -845,16 +1098,14 @@
                                     <div></div>
                                     <div></div>
                                     <div></div>
-                                    <div></div>
+                                    <div style="background-color: white;"></div>
                                     <h6>50 reviews</h6>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div style="padding: 40px 20px;">
-                    <button>Meet Our Guides</button>
-                </div>
+
             </div>
         </section>
     </footer>
@@ -878,13 +1129,12 @@
             </div>
         </div>
     </footer>
-    <footer>
+    <footer id="footer">
         <div class="foot">
             <div class="foot-a">
                 <div><img src="images/logoETB-1.webp" alt="logo"></div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, dicta aspernatur sapiente explicabo ea
-                    repellendus accusantium? Voluptatum, dolorum voluptas quas minima, dolor ipsa enim in aliquam
-                    laudantium corrupti est amet.</p>
+                    repellendus accusantium? Voluptatum.</p>
                 <div style="text-align: center;"><img src="images/do.webp" alt="do"></div>
                 <div>Travel environmently with us and discover the main destinationbof dominan Republic</div>
             </div>
@@ -911,24 +1161,18 @@
             <div class="foot-d">
                 <h5>RESERVATIONS & BOOKINGS</h5>
                 <ul>
-
-                    <li>MONDAY TO FRIDAY</li>
-                    <div>From 8.00am to 8.00pm</div>
-
-                    <li>SATURDAY TO SUNDAY</li>
-                    <div>From 9.00am to 5.00pm</div>
-
-                    <li>Atlantic Standard Time</li>
-                    <div>+1(809)856 2260</div>
-
-                </ul>
+                    <li>MONDAY TO FRIDAY<br>From8.00amto8.00pm</li>
+                    <li>SATURDAYTOSUNDAY<br>From9.00amto5.00pm</li>
+                    <li>Atlantic Standard<br>Time+1(809)856 2260</li>
             </div>
             <div class="foot-e">
-                <h5>FOLLOW US</h5>
-                <div class="fee">
-                    <i class="fa-brands fa-facebook fa-2x"></i>
-                    <i class="fa-brands fa-instagram fa-2x"></i>
-                    <img src="images/ta.webp" alt="ta">
+                <div>
+                    <h5>FOLLOW US</h5>
+                    <div class="fee">
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                        <input type="image" src="images/ta.webp" alt="ta-lo" width="99%">
+                    </div>
                 </div>
             </div>
         </div>
