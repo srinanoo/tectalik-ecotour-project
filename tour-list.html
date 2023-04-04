@@ -5,10 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home_page</title>
+    <title>Tour_List</title>
     <style>
         * {
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
         body {
@@ -25,30 +26,99 @@
             margin: auto;
         }
 
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: white;
+        }
+
         .row1 {
             display: flex;
             flex-wrap: wrap;
+            justify-content: space-between;
             align-items: center;
+            padding: 15px 0;
         }
 
         .row1>div {
-            width: 33.33%
+            width: 30%
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-variant: small-caps;
+            font-family: funer;
+            padding: 0px 20px;
         }
 
-        .row1>div:first-child>button {
-            border: 0;
+        .nav {
+            list-style: none;
+            background-color: rgb(162 205 93);
+            margin: 0;
+            padding: 10px;
+            display: none;
+            text-align: center;
+        }
+
+        .nav>div {
+            display: grid;
+            grid-template-columns: repeat(4, 15%);
+            justify-content: space-evenly;
+        }
+
+        .nav a {
+            color: rgb(0 0 0);
+            font-size: large;
+            display: block;
+            border-radius: 50%;
+            font-weight: 400;
+            font-size: 1.3rem;
+        }
+
+        .nav a:hover {
+            background-color: rgb(152, 196, 82);
+        }
+
+        #open,
+        #exit {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        #open:checked~.row1 label[for="open"],
+        label[for="exit"] {
+            display: none;
+        }
+
+        #open:checked~.row1 label[for="exit"],
+        #open:checked~.nav {
+            display: block;
+        }
+
+        label[for="open"] {
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        label[for="exit"] {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        .call>a {
+            border: rgb(162 205 93) 1px solid;
             background-color: white;
-            font-size: 30px;
-        }
+            font-size: medium;
+            font-weight: 600;
+            color: rgb(100 78 60);
 
-        .row1>div:last-child>button {
-            border-color: hsl(84.39deg 55.16% 56.27%) padding: 5px 20px;
-            color: maroon;
         }
 
         .row1>div:last-child {
             text-align: right;
+            color: black;
         }
+
 
         .head p {
             font-size: 2rem;
@@ -310,6 +380,7 @@
             .r1>div:first-child {
                 width: 100%;
             }
+
             .r1>div:nth-child(2) {
                 width: 100%;
             }
@@ -336,36 +407,49 @@
 
             }
 
-            
+
         }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="container">
-            <div class="row1">
-                <div>
-                    <button>&#x2630</button>
-                </div>
-                <div>
-                    <img src="images/logoETB-1.webp" alt="">
-                </div>
-                <div>
-                    <button>&#128222 Get in touch</button>
-                </div>
+        <input type="radio" id="open" name="v1">
+        <input type="radio" id="exit" name="v1">
+        <div class="row1 container">
+            <div>
+                <label for="open">
+                    &#x2630
+                </label>
+                <label for="exit">
+                    <i class="fa-solid fa-x"></i>
+                </label>
+            </div>
+            <div>
+                <img src="images/logoETB-1.webp" alt="">
+            </div>
+            <div class="call">
+                <a href="#call"><i class="fa-solid fa-phone"></i>&emsp;get in touch</a>
             </div>
         </div>
-        <div class="main">
-            <div class="container">
-                <div class="head">
-                    <P>DISCOVER A HIDDEN PARADISE</P>
-                    <h2>Our Travels</h2>
-                    <button>Book Now</button>
-                </div>
+        <ul class="nav">
+            <div>
+                <li><a href="index.html">home page</a></li>
+                <li><a href="private-tour.html">private tours</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="single-tour-page.html">single tour</a></li>
             </div>
-        </div>
+        </ul>
     </header>
+    <div class="main">
+        <div class="container">
+            <div class="head">
+                <P>DISCOVER A HIDDEN PARADISE</P>
+                <h2>Our Travels</h2>
+                <button>Book Now</button>
+            </div>
+        </div>
+    </div>
     <div>
         <div class="container">
             <div class="row2">
@@ -562,7 +646,7 @@
                         <div class="col">
                             <div class="c1">
                                 <div>
-                                    <h2>Untouchrd Paradise</h2>
+                                    <h2>Untouched Paradise</h2>
                                     <h5>DAYTRIP</h5>
                                     <p>Departing from:Barahona</p>
                                     <p>&#9716 5-6 hours</p>
