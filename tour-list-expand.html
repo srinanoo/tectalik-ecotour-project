@@ -15,6 +15,7 @@
 
         * {
             box-sizing: border-box;
+            font-family: sans-serif;
         }
 
         body {
@@ -25,12 +26,83 @@
             max-width: 100%;
 
         }
+        .box{
+            width:80%;
+            margin:auto;
+        }
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            background-color: white;
+        }
+        a {
+            text-decoration: none;
+            cursor: pointer;
+            font-variant: small-caps;
+        }
+
+        .nav {
+            list-style: none;
+            background-color: rgb(162 205 93);
+            margin: 0;
+            padding: 10px;
+            display: none;
+            text-align: center;
+        }
+
+        .nav>div {
+            display: grid;
+            grid-template-columns: repeat(4, 15%);
+            justify-content: space-evenly;
+        }
+
+        .nav a {
+            color: rgb(0 0 0);
+            display: block;
+            border-radius: 50%;
+        }
+
+        .nav a:hover {
+            background-color: rgb(152, 196, 82);
+        }
+
+        #open,
+        #exit {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        #open:checked~.row1 label[for="open"],
+        label[for="exit"] {
+            display: none;
+        }
+
+        #open:checked~.row1 label[for="exit"],
+        #open:checked~.nav {
+            display: block;
+        }
+
+        label[for="open"] {
+            cursor: pointer;
+            font-size: 2rem;
+        }
+
+        label[for="exit"] {
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+
+        .nav>div {
+            grid-template-columns: repeat(4, 1fr);
+
+        }
         .container {
             width: 80%;
             margin: auto;
         }
 
-        .row1 {
+         .row1 {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
@@ -38,18 +110,6 @@
 
         .row1>div {
             width: 33.33%
-        }
-
-        .row1>div:first-child>button {
-            border: 0;
-            background-color: white;
-            font-size: 30px;
-        }
-
-        .row1>div:last-child>button {
-            border-color: greenyellow;
-            padding: 5px 20px;
-            color: maroon;
         }
 
         .row1>div:last-child {
@@ -63,6 +123,12 @@
         .head h2 {
             font-size: 4rem;
             margin: 40px 0px;
+        } 
+
+        .row1>div:last-child>button {
+            border-color: greenyellow;
+            padding: 5px 20px;
+            color: maroon;
         }
 
         .main {
@@ -116,6 +182,7 @@
 
         .start {
             padding-bottom: 20px;
+            font-size:15px;
         }
 
         .row {
@@ -241,18 +308,23 @@
         #expand:checked~.start .content {
             display: block;
         }
+
         #expand0:checked~.start .content0 {
             display: block;
         }
+
         #expand1:checked~.start .content1 {
             display: block;
         }
+
         #expand2:checked~.start .content2 {
             display: block;
         }
+
         #expand3:checked~.start .content3 {
             display: block;
         }
+
         .c5 {
             display: grid;
             grid-template-columns: 20% 80%;
@@ -405,633 +477,657 @@
 </head>
 
 <body>
-    <div class="opacity">
-        <header>
-            <div class="container">
-                <div class="row1">
-                    <div>
-                        <button>&#x2630</button>
-                    </div>
-                    <div>
-                        <img src="images/logoETB-1.webp" alt="">
-                    </div>
-                    <div>
-                        <button>&#128222 Get in touch</button>
-                    </div>
-                </div>
+    <header>
+        <!-- ****************menubar-start***************** -->
+        <input type="radio" id="open" name="v1">
+        <input type="radio" id="exit" name="v1">
+        <div class="row1 box">
+            <div>
+                <label for="open">
+                    &#x2630
+                </label>
+                <label for="exit">
+                    <i class="fa-solid fa-x"></i>
+                </label>
             </div>
-            <div class="main">
-                <div class="container">
-                    <div class="head">
-                        <P>DISCOVER A HIDDEN PARADISE</P>
-                        <h2>Our Travels</h2>
-                        <button>Book Now</button>
-                    </div>
-                </div>
+            <div>
+                <img src="images/logoETB-1.webp" alt="">
             </div>
-        </header>
-        <div>
+            <div>
+                <button>&#128222 Get in touch</button>
+            </div>
+        </div>
+        <ul class="nav">
+            <div>
+                <li><a href="index.html">home page</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="private-tour.html">tour list</a></li>
+                <li><a href="single-tour-page.html">single tour</a></li>
+            </div>
+        </ul>
+    <!-- ****************menubar-end***************** -->
+    </header>
+    <div>
+        <div class="main">
             <div class="container">
-                <div class="row2">
-                    <h2>Our Tours</h2>
-                    <h4>Discover with EcoTour Barahona, your specialist in Ecotorism a new face of the Dominican
-                        Republic,
-                        more human, more authentic!</h4>
-                    <p>
-                        We have artistically designed unique excursion for you, accompained by professional and
-                        passionate
-                        local guides who will show you the best of this part of the country.
-                    </p>
+                <div class="head">
+                    <P>DISCOVER A HIDDEN PARADISE</P>
+                    <h2>Our Travels</h2>
+                    <button>Book Now</button>
                 </div>
             </div>
         </div>
-        <section>
-            <div class="container">
-                <div class="smlogo">
-                    <div class="com">
-                        <div><img src="images/img3.png" alt=""></div>
-                        <h3>ALL CATEGORIES</h3>
-                    </div>
-                    <div class="com">
-                        <div><img src="images/img1.png" alt=""></div>
-                        <h3>DAY-TRIPS</h3>
-                    </div>
-                    <div class="com">
-                        <div><img src="images/img2.png" alt=""></div>
-                        <h3>MULTI-DAY TRIPS</h3>
-                    </div>
-                    <div class="com">
-                        <div><img src="images/img3.png" alt=""></div>
-                        <h3>PRIVATE-TOURS</h3>
-                    </div>
-                </div>
-                <input type="radio" id="expand" name="kre">
-                <div class="start" >
-                    <label for="expand">
-                        <div class="row">
-                            <div class="r1" id="ex">
-                                <div>
-                                    <img src="images/mountain.avif" alt="">
-                                    <div class="content style">
-                                        <div>
-                                            <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin-right: 8px;"></i>Map</p>
-                                        </div>
-                                        <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
-                                        <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
-                                        <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
-                                        <p><i class="fa-solid fa-water"></i>Ride through a river</p>
-                                        <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="c1">
-                                        <div>
-                                            <h2>Garden of Eden</h2>
-                                            <h5>DAYTRIP</h5>
-                                            <p>Departing from:Barahona</p>
-                                            <p>&#9716 5-6 hours</p>
-                                        </div>
-                                        <div>
-                                            <button>$55</button>
-                                            <h4>per adult</h4>
-                                            <p>Transportation included</p>
-                                        </div>
-                                    </div>
-                                    <div class="c2">
-                                        <div class="c3">
-                                            <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
-                                            </h4>
-                                            <p>We start on a large farm where you only have to stretch out your arm to
-                                                pick
-                                                and
-                                                taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
-                                                passion
-                                                fruit,
-                                                and many others types of fruit.
-                                            </p>
-                                            <div class="content">
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain </p>
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain
-                                                </p>
-                                                <p>Finally, we will follow the river downhill to the village paraisp</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c4">
-                                        <div class="c5">
-                                            <div><img src="images/owl.png" alt=""></div>
-                                            <div>
-                                                <input type="radio" name="rad26" checked>
-                                                <input type="radio" name="rad27" checked>
-                                                <input type="radio" name="rad28" checked>
-                                                <input type="radio" name="rad29" checked>
-                                                <input type="radio" name="rad30" checked> 2756 opinions
-                                            </div>
-                                        </div>
-                                        <div class="c6">
-                                            <p><i class="fa-regular fa-file-lines fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Info</p>
-                                            <p><i class="fa-solid fa-images fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Photos</p>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Map</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <input type="radio" id="expand0" name="kre">
-                <div class="start">
-                    <label for="expand0">
-                        <div class="row">
-                            <div class="r1" id="ex0">
-                                <div>
-                                    <img src="images/wave.avif" alt="">
-                                    <div class="content0 style">
-                                        <p><b>ROUTE</b>: Barahona - Paraiso
-                                            <i class="fa-solid fa-location-dot fa-lg"></i>Map
-                                        </p>
-                                        <p>Horseback riding / Duration:3-4 hours </p>
-                                        <p>Departing from: Barahona</p>
-                                        <p>Panoromic view over the Caribbean Sea</p>
-                                        <p>Ride through a river</p>
-                                        <p>Stop at the paprika greenhouse</p>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="c1">
-                                        <div>
-                                            <h2>Blue Jewel Paradise</h2>
-                                            <h5>DAYTRIP</h5>
-                                            <p>Departing from:Barahona</p>
-                                            <p>&#9716 5-6 hours</p>
-                                        </div>
-                                        <div>
-                                            <button>$55</button>
-                                            <h4>per adult</h4>
-                                            <p>Transportation included</p>
-                                        </div>
-                                    </div>
-                                    <div class="c2">
-                                        <div class="c3">
-                                            <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
-                                            </h4>
-                                            <p>We start on a large farm where you only have to stretch out your arm to
-                                                pick
-                                                and
-                                                taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
-                                                passion
-                                                fruit,
-                                                and many others types of fruit.
-                                            </p>
-                                            <div class="content0">
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain </p>
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c4">
-                                        <div class="c5">
-                                            <div><img src="images/owl.png" alt=""></div>
-                                            <div>
-                                                <input type="radio" name="rad26" checked>
-                                                <input type="radio" name="rad27" checked>
-                                                <input type="radio" name="rad28" checked>
-                                                <input type="radio" name="rad29" checked>
-                                                <input type="radio" name="rad30" checked> 2756 opinions
-                                            </div>
-                                        </div>
-                                        <div class="c6">
-                                            <p><i class="fa-regular fa-file-lines fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Info</p>
-                                            <p><i class="fa-solid fa-images fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Photos</p>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Map</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <input type="radio" id="expand1" name="kre">
-                <div class="start">
-                    <label for="expand1">
-                        <div class="row">
-                            <div class="r1" id="ex1">
-                                <div>
-                                    <img src="images/sunset2.avif" alt="">
-                                    <div class="content1 style">
-                                        <p><b>ROUTE</b>: Barahona - Paraiso
-                                            <i class="fa-solid fa-location-dot fa-lg"></i>Map
-                                        </p>
-                                        <p>Horseback riding / Duration:3-4 hours </p>
-                                        <p>Departing from: Barahona</p>
-                                        <p>Panoromic view over the Caribbean Sea</p>
-                                        <p>Ride through a river</p>
-                                        <p>Stop at the paprika greenhouse</p>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="c1">
-                                        <div>
-                                            <h2>Untouched Paradise</h2>
-                                            <h5>DAYTRIP</h5>
-                                            <p>Departing from:Barahona</p>
-                                            <p>&#9716 5-6 hours</p>
-                                        </div>
-                                        <div>
-                                            <button>$55</button>
-                                            <h4>per adult</h4>
-                                            <p>Transportation included</p>
-                                        </div>
-                                    </div>
-                                    <div class="c2">
-                                        <div class="c3">
-                                            <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
-                                            </h4>
-                                            <p>We start on a large farm where you only have to stretch out your arm to
-                                                pick
-                                                and
-                                                taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
-                                                passion
-                                                fruit,
-                                                and many others types of fruit.
-                                            </p>
-                                            <div class="content1">
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain </p>
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c4">
-                                        <div class="c5">
-                                            <div><img src="images/owl.png" alt=""></div>
-                                            <div>
-                                                <input type="radio" name="rad26" checked>
-                                                <input type="radio" name="rad27" checked>
-                                                <input type="radio" name="rad28" checked>
-                                                <input type="radio" name="rad29" checked>
-                                                <input type="radio" name="rad30" checked> 2756 opinions
-                                            </div>
-                                        </div>
-                                        <div class="c6">
-                                            <p><i class="fa-regular fa-file-lines fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Info</p>
-                                            <p><i class="fa-solid fa-images fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Photos</p>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Map</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <input type="radio" id="expand2" name="kre">
-                <div class="start">
-                    <label for="expand2">
-                        <div class="row">
-                            <div class="r1" id="ex2">
-                                <div>
-                                    <img src="images/forest.avif" alt="">
-                                    <div class="content2 style">
-                                        <p><b>ROUTE</b>: Barahona - Paraiso
-                                            <i class="fa-solid fa-location-dot fa-lg"></i>Map
-                                        </p>
-                                        <p>Horseback riding / Duration:3-4 hours </p>
-                                        <p>Departing from: Barahona</p>
-                                        <p>Panoromic view over the Caribbean Sea</p>
-                                        <p>Ride through a river</p>
-                                        <p>Stop at the paprika greenhouse</p>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="c1">
-                                        <div>
-                                            <h2>Cloud Forest Mountain</h2>
-                                            <h5>DAYTRIP</h5>
-                                            <p>Departing from:Barahona</p>
-                                            <p>&#9716 5-6 hours</p>
-                                        </div>
-                                        <div>
-                                            <button>$55</button>
-                                            <h4>per adult</h4>
-                                            <p>Transportation included</p>
-                                        </div>
-                                    </div>
-                                    <div class="c2">
-                                        <div class="c3">
-                                            <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
-                                            </h4>
-                                            <p>We start on a large farm where you only have to stretch out your arm to
-                                                pick
-                                                and
-                                                taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
-                                                passion
-                                                fruit,
-                                                and many others types of fruit.
-                                            </p>
-                                            <div class="content2">
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain </p>
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c4">
-                                        <div class="c5">
-                                            <div><img src="images/owl.png" alt=""></div>
-                                            <div>
-                                                <input type="radio" name="rad26" checked>
-                                                <input type="radio" name="rad27" checked>
-                                                <input type="radio" name="rad28" checked>
-                                                <input type="radio" name="rad29" checked>
-                                                <input type="radio" name="rad30" checked> 2756 opinions
-                                            </div>
-                                        </div>
-                                        <div class="c6">
-                                            <p><i class="fa-regular fa-file-lines fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Info</p>
-                                            <p><i class="fa-solid fa-images fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Photos</p>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Map</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <input type="radio" id="expand3" name="kre">
-                <div class="start">
-                    <label for="expand3">
-                        <div class="row">
-                            <div class="r1" id="ex3">
-                                <div>
-                                    <img src="images/boat.avif" alt="">
-                                    <div class="content3 style">
-                                        <p><b>ROUTE</b>: Barahona - Paraiso
-                                            <i class="fa-solid fa-location-dot fa-lg"></i>Map
-                                        </p>
-                                        <p>Horseback riding / Duration:3-4 hours </p>
-                                        <p>Departing from: Barahona</p>
-                                        <p>Panoromic view over the Caribbean Sea</p>
-                                        <p>Ride through a river</p>
-                                        <p>Stop at the paprika greenhouse</p>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="c1">
-                                        <div>
-                                            <h2>Flamingo Island</h2>
-                                            <h5>DAYTRIP</h5>
-                                            <p>Departing from:Barahona</p>
-                                            <p>&#9716 5-6 hours</p>
-                                        </div>
-                                        <div>
-                                            <button>$55</button>
-                                            <h4>per adult</h4>
-                                            <p>Transportation included</p>
-                                        </div>
-                                    </div>
-                                    <div class="c2">
-                                        <div class="c3">
-                                            <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
-                                            </h4>
-                                            <p>We start on a large farm where you only have to stretch out your arm to
-                                                pick
-                                                and
-                                                taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
-                                                passion
-                                                fruit,
-                                                and many others types of fruit.
-                                            </p>
-                                            <div class="content3">
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain </p>
-                                                <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
-                                                    amazing
-                                                    panoramic view of the villages los patos, ojeda and pariso, the
-                                                    river
-                                                    riosito, and the high mountains of cachote. we will continue our
-                                                    morning
-                                                    trek uphill to the village Barlo Nuevo, founded by a haitain family
-                                                    who
-                                                    produces coffee farms on top of the mountain
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="c4">
-                                        <div class="c5">
-                                            <div><img src="images/owl.png" alt=""></div>
-                                            <div>
-                                                <input type="radio" name="rad26" checked>
-                                                <input type="radio" name="rad27" checked>
-                                                <input type="radio" name="rad28" checked>
-                                                <input type="radio" name="rad29" checked>
-                                                <input type="radio" name="rad30" checked> 2756 opinions
-                                            </div>
-                                        </div>
-                                        <div class="c6">
-                                            <p><i class="fa-regular fa-file-lines fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Info</p>
-                                            <p><i class="fa-solid fa-images fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Photos</p>
-                                            <p><i class="fa-solid fa-location-dot fa-lg"
-                                                    style="color: #59d95b; margin:5px;"></i>Map</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </label>
-                </div>
-                <div class="load">
-                    <button>
-                        <h3>Load More</h3>
-                    </button>
-                </div>
-            </div>
-        </section>
-        <main>
-            <div class="featurebox">
-                <h2>Featured Travel Experience</h2>
-                <div class="picrow">
-                    <div style="background-image: url(images/photo-1607992922515-7e38329e65d4.avif); height: 400px;">
-                        <div>
-                            <div class="pad">
-                                <h2>Garden of Eden</h2>
-                                <button>
-                                    <h3>$55</h3>
-                                </button>
-                                <p>price per audit</p>
-                                <p>Departing from:Barahona</p>
-                                <p>&#9716 5-6hours</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background-image: url(images/photo-1613706903647-77e255eff994.avif);">
-                        <div>
-                            <div class="pad">
-                                <h2>Untouched Paradise</h2>
-                                <button>
-                                    <h3>$55</h3>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="background-image: url(images/photo-1621157281974-e926449624e3.avif);">
-                        <div>
-                            <div class="pad">
-                                <h2>Cloud Forest Mountain</h2>
-                                <button>
-                                    <h3>$55</h3>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="load">
-                    <button>
-                        <h3>Load More</h3>
-                    </button>
-                </div>
-            </div>
-        </main>
-        <footer>
-            <div class="container">
-                <div class="end">
-                    <div class="endcol1">
-                        <div><img src="images/logoETB-1.webp" alt="logo"></div>
-                        <p>Ecotour Barahona is your favoritew specialist for authentic , unique and memorable round
-                            trips,
-                            day trips and activities in southwerst of Dominican republic.</p>
-                        <div><img src="images/logo2.png" alt="2" /></div>
-                        <p>Travel environmentally friendly with us and discover the main destinations of the dominician
-                            republic</p>
-                    </div>
-                    <div class="endcol2">
-                        <h4>ABOUT US</h4>
-                        <h5>ABOUT ECOTOUR</h5>
-                        <h5>BARAHONA</h5>
-                        <h5>OUR TEAM</h5>
-                        <h5>GUEST BOOK</h5>
-                        <h5>IMPRINT</h5>
-                    </div>
-                    <div class="endcol3">
-                        <h4>CUSTOMER SERVICE</h4>
-                        <h5>BOOKING CONDITIONS</h5>
-                        <h5>CONTACT US</h5>
-                        <h5>FAQ'S</h5>
-                        <h5>LEGAL NOTICE</h5>
-                        <h5>PRIVACY NOTICE</h5>
-                    </div>
-                    <div class="endcol4">
-                        <h4>RESERVATIONS & BOOKINGS</h4>
-                        <div>MONDAY TO FRIDAY
-                            From 8:00 am to 8:00 pm
-                        </div>
-                        <div>SATURDAY TO SUNDAY
-                            From 9:00 am to 5:00 pm
-                        </div>
-                        <div>Atlantic Standard Time
-                            +001 (809) 856 2260
-                        </div>
-                    </div>
-                    <div class="endcol5">
-                        <h4>FOLLOW US</h4>
-                        <div>
-                            <div><i style="color: white" class="fa-brands fa-facebook "></i></div>
-                            <div><i style="color: white" class="fa-brands fa-instagram "></i></div>
-                            <div><img src="images/icon.png" alt=""></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
     </div>
+    <div>
+        <div class="container">
+            <div class="row2">
+                <h2>Our Tours</h2>
+                <h4>Discover with EcoTour Barahona, your specialist in Ecotorism a new face of the Dominican
+                    Republic,
+                    more human, more authentic!</h4>
+                <p>
+                    We have artistically designed unique excursion for you, accompained by professional and
+                    passionate
+                    local guides who will show you the best of this part of the country.
+                </p>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="container">
+            <div class="smlogo">
+                <div class="com">
+                    <div><img src="images/img3.png" alt=""></div>
+                    <h3>ALL CATEGORIES</h3>
+                </div>
+                <div class="com">
+                    <div><img src="images/img1.png" alt=""></div>
+                    <h3>DAY-TRIPS</h3>
+                </div>
+                <div class="com">
+                    <div><img src="images/img2.png" alt=""></div>
+                    <h3>MULTI-DAY TRIPS</h3>
+                </div>
+                <div class="com">
+                    <div><img src="images/img3.png" alt=""></div>
+                    <h3>PRIVATE-TOURS</h3>
+                </div>
+            </div>
+            <input type="radio" id="expand" name="kre">
+            <div class="start">
+                <label for="expand">
+                    <div class="row">
+                        <div class="r1">
+                            <div>
+                                <img src="images/mountain.avif" alt="">
+                                <div class="content style">
+                                    <div>
+                                        <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
+                                    <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
+                                    <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
+                                    <p><i class="fa-solid fa-water"></i>Ride through a river</p>
+                                    <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="c1">
+                                    <div>
+                                        <h2>Garden of Eden</h2>
+                                        <h5>DAYTRIP</h5>
+                                        <p>Departing from:Barahona</p>
+                                        <p>&#9716 5-6 hours</p>
+                                    </div>
+                                    <div>
+                                        <button>$55</button>
+                                        <h4>per adult</h4>
+                                        <p>Transportation included</p>
+                                    </div>
+                                </div>
+                                <div class="c2">
+                                    <div class="c3">
+                                        <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
+                                        </h4>
+                                        <p>We start on a large farm where you only have to stretch out your arm to
+                                            pick
+                                            and
+                                            taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
+                                            passion
+                                            fruit,
+                                            and many others types of fruit.
+                                        </p>
+                                        <div class="content">
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain </p>
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain
+                                            </p>
+                                            <p>Finally, we will follow the river downhill to the village paraisp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c4">
+                                    <div class="c5">
+                                        <div><img src="images/owl.png" alt=""></div>
+                                        <div>
+                                            <input type="radio" name="rad26" checked>
+                                            <input type="radio" name="rad27" checked>
+                                            <input type="radio" name="rad28" checked>
+                                            <input type="radio" name="rad29" checked>
+                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                        </div>
+                                    </div>
+                                    <div class="c6">
+                                        <p><i class="fa-regular fa-file-lines fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        <p><i class="fa-solid fa-images fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <input type="radio" id="expand0" name="kre">
+            <div class="start">
+                <label for="expand0">
+                    <div class="row">
+                        <div class="r1" id="ex0">
+                            <div>
+                                <img src="images/wave.avif" alt="">
+                                <div class="content0 style">
+                                    <div>
+                                        <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
+                                    <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
+                                    <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
+                                    <p><i class="fa-solid fa-water"></i>Ride through a river</p>
+                                    <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="c1">
+                                    <div>
+                                        <h2>Blue Jewel Paradise</h2>
+                                        <h5>DAYTRIP</h5>
+                                        <p>Departing from:Barahona</p>
+                                        <p>&#9716 5-6 hours</p>
+                                    </div>
+                                    <div>
+                                        <button>$55</button>
+                                        <h4>per adult</h4>
+                                        <p>Transportation included</p>
+                                    </div>
+                                </div>
+                                <div class="c2">
+                                    <div class="c3">
+                                        <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
+                                        </h4>
+                                        <p>We start on a large farm where you only have to stretch out your arm to
+                                            pick
+                                            and
+                                            taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
+                                            passion
+                                            fruit,
+                                            and many others types of fruit.
+                                        </p>
+                                        <div class="content0">
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain </p>
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c4">
+                                    <div class="c5">
+                                        <div><img src="images/owl.png" alt=""></div>
+                                        <div>
+                                            <input type="radio" name="rad26" checked>
+                                            <input type="radio" name="rad27" checked>
+                                            <input type="radio" name="rad28" checked>
+                                            <input type="radio" name="rad29" checked>
+                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                        </div>
+                                    </div>
+                                    <div class="c6">
+                                        <p><i class="fa-regular fa-file-lines fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        <p><i class="fa-solid fa-images fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <input type="radio" id="expand1" name="kre">
+            <div class="start">
+                <label for="expand1">
+                    <div class="row">
+                        <div class="r1" id="ex1">
+                            <div>
+                                <img src="images/sunset2.avif" alt="">
+                                <div class="content1 style">
+                                    <div>
+                                        <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
+                                    <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
+                                    <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
+                                    <p><i class="fa-solid fa-water"></i>Ride through a river</p>
+                                    <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="c1">
+                                    <div>
+                                        <h2>Untouched Paradise</h2>
+                                        <h5>DAYTRIP</h5>
+                                        <p>Departing from:Barahona</p>
+                                        <p>&#9716 5-6 hours</p>
+                                    </div>
+                                    <div>
+                                        <button>$55</button>
+                                        <h4>per adult</h4>
+                                        <p>Transportation included</p>
+                                    </div>
+                                </div>
+                                <div class="c2">
+                                    <div class="c3">
+                                        <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
+                                        </h4>
+                                        <p>We start on a large farm where you only have to stretch out your arm to
+                                            pick
+                                            and
+                                            taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
+                                            passion
+                                            fruit,
+                                            and many others types of fruit.
+                                        </p>
+                                        <div class="content1">
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain </p>
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c4">
+                                    <div class="c5">
+                                        <div><img src="images/owl.png" alt=""></div>
+                                        <div>
+                                            <input type="radio" name="rad26" checked>
+                                            <input type="radio" name="rad27" checked>
+                                            <input type="radio" name="rad28" checked>
+                                            <input type="radio" name="rad29" checked>
+                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                        </div>
+                                    </div>
+                                    <div class="c6">
+                                        <p><i class="fa-regular fa-file-lines fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        <p><i class="fa-solid fa-images fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <input type="radio" id="expand2" name="kre">
+            <div class="start">
+                <label for="expand2">
+                    <div class="row">
+                        <div class="r1" id="ex2">
+                            <div>
+                                <img src="images/forest.avif" alt="">
+                                <div class="content2 style">
+                                    <div>
+                                        <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
+                                    <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
+                                    <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
+                                    <p><i class="fa-solid fa-water"></i>Ride through a river</p>
+                                    <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="c1">
+                                    <div>
+                                        <h2>Cloud Forest Mountain</h2>
+                                        <h5>DAYTRIP</h5>
+                                        <p>Departing from:Barahona</p>
+                                        <p>&#9716 5-6 hours</p>
+                                    </div>
+                                    <div>
+                                        <button>$55</button>
+                                        <h4>per adult</h4>
+                                        <p>Transportation included</p>
+                                    </div>
+                                </div>
+                                <div class="c2">
+                                    <div class="c3">
+                                        <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
+                                        </h4>
+                                        <p>We start on a large farm where you only have to stretch out your arm to
+                                            pick
+                                            and
+                                            taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
+                                            passion
+                                            fruit,
+                                            and many others types of fruit.
+                                        </p>
+                                        <div class="content2">
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain </p>
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c4">
+                                    <div class="c5">
+                                        <div><img src="images/owl.png" alt=""></div>
+                                        <div>
+                                            <input type="radio" name="rad26" checked>
+                                            <input type="radio" name="rad27" checked>
+                                            <input type="radio" name="rad28" checked>
+                                            <input type="radio" name="rad29" checked>
+                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                        </div>
+                                    </div>
+                                    <div class="c6">
+                                        <p><i class="fa-regular fa-file-lines fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        <p><i class="fa-solid fa-images fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <input type="radio" id="expand3" name="kre">
+            <div class="start">
+                <label for="expand3">
+                    <div class="row">
+                        <div class="r1" id="ex3">
+                            <div>
+                                <img src="images/boat.avif" alt="">
+                                <div class="content3 style">
+                                    <div>
+                                        <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
+                                    <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
+                                    <p><i class="fa-solid fa-camera"></i> Panoromic view over the Caribbean Sea</p>
+                                    <p><i class="fa-solid fa-water"></i>Ride through a river</p>
+                                    <p><i class="fa-regular fa-flag"></i>Stop at the paprika greenhouse</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="c1">
+                                    <div>
+                                        <h2>Flamingo Island</h2>
+                                        <h5>DAYTRIP</h5>
+                                        <p>Departing from:Barahona</p>
+                                        <p>&#9716 5-6 hours</p>
+                                    </div>
+                                    <div>
+                                        <button>$55</button>
+                                        <h4>per adult</h4>
+                                        <p>Transportation included</p>
+                                    </div>
+                                </div>
+                                <div class="c2">
+                                    <div class="c3">
+                                        <h4>Our trek begins in the village Ojeda on the southern coast of Barahona
+                                        </h4>
+                                        <p>We start on a large farm where you only have to stretch out your arm to
+                                            pick
+                                            and
+                                            taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas,
+                                            passion
+                                            fruit,
+                                            and many others types of fruit.
+                                        </p>
+                                        <div class="content3">
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain </p>
+                                            <p>After a 2-hour uphill, stop at a mirador (lookout-point) with an
+                                                amazing
+                                                panoramic view of the villages los patos, ojeda and pariso, the
+                                                river
+                                                riosito, and the high mountains of cachote. we will continue our
+                                                morning
+                                                trek uphill to the village Barlo Nuevo, founded by a haitain family
+                                                who
+                                                produces coffee farms on top of the mountain
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="c4">
+                                    <div class="c5">
+                                        <div><img src="images/owl.png" alt=""></div>
+                                        <div>
+                                            <input type="radio" name="rad26" checked>
+                                            <input type="radio" name="rad27" checked>
+                                            <input type="radio" name="rad28" checked>
+                                            <input type="radio" name="rad29" checked>
+                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                        </div>
+                                    </div>
+                                    <div class="c6">
+                                        <p><i class="fa-regular fa-file-lines fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        <p><i class="fa-solid fa-images fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        <p><i class="fa-solid fa-location-dot fa-lg"
+                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <div class="load">
+                <button>
+                    <h3>Load More</h3>
+                </button>
+            </div>
+        </div>
+    </section>
+    <main>
+        <div class="featurebox">
+            <h2>Featured Travel Experience</h2>
+            <div class="picrow">
+                <div style="background-image: url(images/photo-1607992922515-7e38329e65d4.avif); height: 400px;">
+                    <div>
+                        <div class="pad">
+                            <h2>Garden of Eden</h2>
+                            <button>
+                                <h3>$55</h3>
+                            </button>
+                            <p>price per audit</p>
+                            <p>Departing from:Barahona</p>
+                            <p>&#9716 5-6hours</p>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-image: url(images/photo-1613706903647-77e255eff994.avif);">
+                    <div>
+                        <div class="pad">
+                            <h2>Untouched Paradise</h2>
+                            <button>
+                                <h3>$55</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div style="background-image: url(images/photo-1621157281974-e926449624e3.avif);">
+                    <div>
+                        <div class="pad">
+                            <h2>Cloud Forest Mountain</h2>
+                            <button>
+                                <h3>$55</h3>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="load">
+                <button>
+                    <h3>Load More</h3>
+                </button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="end">
+                <div class="endcol1">
+                    <div><img src="images/logoETB-1.webp" alt="logo"></div>
+                    <p>Ecotour Barahona is your favoritew specialist for authentic , unique and memorable round
+                        trips,
+                        day trips and activities in southwerst of Dominican republic.</p>
+                    <div><img src="images/logo2.png" alt="2" /></div>
+                    <p>Travel environmentally friendly with us and discover the main destinations of the dominician
+                        republic</p>
+                </div>
+                <div class="endcol2">
+                    <h4>ABOUT US</h4>
+                    <h5>ABOUT ECOTOUR</h5>
+                    <h5>BARAHONA</h5>
+                    <h5>OUR TEAM</h5>
+                    <h5>GUEST BOOK</h5>
+                    <h5>IMPRINT</h5>
+                </div>
+                <div class="endcol3">
+                    <h4>CUSTOMER SERVICE</h4>
+                    <h5>BOOKING CONDITIONS</h5>
+                    <h5>CONTACT US</h5>
+                    <h5>FAQ'S</h5>
+                    <h5>LEGAL NOTICE</h5>
+                    <h5>PRIVACY NOTICE</h5>
+                </div>
+                <div class="endcol4">
+                    <h4>RESERVATIONS & BOOKINGS</h4>
+                    <div>MONDAY TO FRIDAY
+                        From 8:00 am to 8:00 pm
+                    </div>
+                    <div>SATURDAY TO SUNDAY
+                        From 9:00 am to 5:00 pm
+                    </div>
+                    <div>Atlantic Standard Time
+                        +001 (809) 856 2260
+                    </div>
+                </div>
+                <div class="endcol5">
+                    <h4>FOLLOW US</h4>
+                    <div>
+                        <div><i style="color: white" class="fa-brands fa-facebook "></i></div>
+                        <div><i style="color: white" class="fa-brands fa-instagram "></i></div>
+                        <div><img src="images/icon.png" alt=""></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
 </body>
 
 </html>
