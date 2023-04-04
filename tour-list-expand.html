@@ -24,22 +24,26 @@
 
         img {
             max-width: 100%;
+            height: auto;
+        }
 
+        .box {
+            width: 80%;
+            margin: auto;
         }
-        .box{
-            width:80%;
-            margin:auto;
-        }
+
         header {
             position: sticky;
             top: 0;
             z-index: 1;
             background-color: white;
         }
+
         a {
             text-decoration: none;
             cursor: pointer;
             font-variant: small-caps;
+            padding: 0px 20px;
         }
 
         .nav {
@@ -53,18 +57,18 @@
 
         .nav>div {
             display: grid;
-            grid-template-columns: repeat(4, 15%);
+            grid-template-columns: repeat(4, 1fr);
             justify-content: space-evenly;
         }
 
         .nav a {
             color: rgb(0 0 0);
+            font-size: large;
             display: block;
-            border-radius: 50%;
         }
 
         .nav a:hover {
-            background-color: rgb(152, 196, 82);
+            color: white;
         }
 
         #open,
@@ -93,27 +97,31 @@
             font-size: 1.5rem;
         }
 
-        .nav>div {
-            grid-template-columns: repeat(4, 1fr);
-
-        }
         .container {
             width: 80%;
             margin: auto;
         }
 
-         .row1 {
+        .row1 {
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: space-between;
         }
 
         .row1>div {
-            width: 33.33%
+            width: 30%
         }
 
         .row1>div:last-child {
             text-align: right;
+        }
+
+        .row1>div:last-child>button {
+            border: 1px solid greenyellow;
+            padding: 5px 20px;
+            color: rgb(139, 98, 54);
+            background-color: white;
         }
 
         .head p {
@@ -123,12 +131,6 @@
         .head h2 {
             font-size: 4rem;
             margin: 40px 0px;
-        } 
-
-        .row1>div:last-child>button {
-            border-color: greenyellow;
-            padding: 5px 20px;
-            color: maroon;
         }
 
         .main {
@@ -182,7 +184,7 @@
 
         .start {
             padding-bottom: 20px;
-            font-size:15px;
+            font-size: 15px;
         }
 
         .row {
@@ -473,6 +475,41 @@
         .endcol5>div>div {
             width: 20%;
         }
+
+        @media (max-width:576px) {
+            .nav>div {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .smlogo>div {
+                width: 43%;
+            }
+
+            .r1>div:first-child,
+            .r1>div:nth-child(2) {
+                width: 100%;
+            }
+
+            .load button {
+                width: 30%;
+            }
+
+            .picrow>div {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .endcol1,
+            .endcol2 {
+                width: 40%;
+            }
+
+            .endcol3,
+            .endcol4,
+            .endcol5 {
+                width: 30%;
+            }
+        }
     </style>
 </head>
 
@@ -494,7 +531,7 @@
                 <img src="images/logoETB-1.webp" alt="">
             </div>
             <div>
-                <button>&#128222 Get in touch</button>
+                <button>&#128222 GET IN TOUCH</button>
             </div>
         </div>
         <ul class="nav">
@@ -505,7 +542,7 @@
                 <li><a href="single-tour-page.html">single tour</a></li>
             </div>
         </ul>
-    <!-- ****************menubar-end***************** -->
+        <!-- ****************menubar-end***************** -->
     </header>
     <div>
         <div class="main">
