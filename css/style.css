@@ -63,3 +63,152 @@ body {
 .main h1 {
     font-family: PlusSans;
 }
+
+.c-container {
+    width: 95%;
+    margin: auto;
+    padding: 60px 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-row1,
+.c-c2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.c-c1 {
+    display: flex;
+    flex-direction: column;
+}
+
+.c-c2 {
+    padding: 10px 0px;
+}
+
+.c-c2 button {
+    border: 0;
+    display: flex;
+    align-items: center;
+    font-family: "Inter";
+    font-size: 1rem;
+    font-weight: 600;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding: 7px 12px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.c-c2 button:hover {
+    background-color: transparent;
+}
+
+.c-row1 h2 {
+    margin: 0px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 1.2;
+}
+
+.c-c3 button {
+    background-color: rgb(99, 102, 241);
+    color: white;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.c-box-shadow {
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+}
+
+.c-row2 {
+    display: flex;
+    flex-wrap: wrap;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+    padding: 20px 0px;
+}
+.c-row2>div a {
+    text-decoration: none;
+    margin-left: 25px;
+    padding: 10px 0px;
+    color: rgb(108, 115, 127);
+    font-family: "Inter";
+}
+
+.c-row2>div a:hover {
+    text-decoration: underline rgb(99, 102, 241) 2px;
+    color: rgb(99, 102, 241);
+
+}
+
+.c-row3 {
+    display: grid;
+    grid-template-columns: 57% 37%;
+    justify-content: space-between;
+    align-items: end;
+    padding: 20px 20px;
+}
+.c-c4,.c-c5{
+    position: relative;
+}
+
+.c-c4 [type="search"]{
+    width: 100%;
+    padding: 15px 30px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+
+}
+.c-c4 ::placeholder{
+    padding-left: 5px;
+    color: rgb(108, 115, 127);
+    font-family: "Inter";
+}
+.c-c4 img {
+    position: absolute;
+    top: 11px;
+    left: 10px;
+}
+
+#search:focus,#val:focus {
+    outline: 5px solid rgb(99, 102, 241);
+    border-radius: 8px;
+    border: 0;
+}
+.c-row3,.c-row4{
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 5px 22px, rgba(0, 0, 0, 0.03) 0px 0px 0px 0.5px;
+}
+select#val{
+    padding: 15px;
+    border: solid 1px lightgray;
+    border-radius: 5px;
+    font-family: "Inter";
+    font-weight: 500;
+}
+.c-c5 label{
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    font-size: small;
+    color: rgb(108, 115, 127);
+    font-family: "Inter";
+}
+.c-c5 label:focus{
+    text-decoration: underline rgb(99, 102, 241) ;
+}
+.c-row4{
+    display: grid;
+    grid-template-columns: 9% 24% 24% 9% 14% 14%;
+    justify-content: space-between;
+    padding: 20px 20px;
+    align-items: center;
+}
