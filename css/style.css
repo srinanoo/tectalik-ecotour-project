@@ -15,6 +15,7 @@ img {
     --black: rgb(17, 25, 39);
     --gray: rgb(108, 115, 127);
     --white: rgb(255, 255, 255);
+    --blue: rgb(99, 102, 241);
 }
 
 body {
@@ -27,7 +28,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20%;
+    width: 18%;
     height: 100%;
     background-color: rgb(28 37 54);
     display: flex;
@@ -58,8 +59,8 @@ body {
 }
 
 .main {
-    width: 80%;
-    margin-left: 20%;
+    width: 82%;
+    margin-left: 18%;
 
 }
 
@@ -85,7 +86,7 @@ header>div:first-child {
     display: flex;
 }
 
-.main h2 {
+.blog-h2 {
     font-family: PlusSans;
     margin-top: 50px;
     line-height: 1.2;
@@ -107,7 +108,6 @@ header>div:first-child {
 
 .blog-r1 ul li {
     display: inline-block;
-
 }
 
 .blog-r1 ul li:nth-of-type(even) {
@@ -120,6 +120,12 @@ header>div:first-child {
 
 .blog-r1 ul li:last-child a {
     color: var(--gray);
+    cursor: text;
+}
+
+.blog-r1 li a:hover:not(li:last-child a),
+.blog-r3 a:hover {
+    text-decoration: underline black;
 }
 
 .blog-r2 {
@@ -163,7 +169,7 @@ header>div:first-child {
     margin: 0;
 }
 
-hr {
+.blog-hr {
     margin: 30px 16px;
     border: solid rgb(242, 244, 247);
     border-width: 0px 0px thin;
@@ -177,7 +183,7 @@ hr {
 }
 
 .blog-r3>div {
-    border: solid 1px rgb(239, 237, 237);
+    border: solid 1px rgb(247, 243, 243);
     border-radius: 20px;
 }
 
@@ -206,9 +212,151 @@ hr {
     color: var(--black);
     font-size: 1.4rem;
     font-family: PlusSans;
-    margin: 0;
+    margin: 10px 0 0;
 }
 
-.blog-r3 p:last-child {
+.blog-r3>div>div p:not(:first-child) {
     color: var(--gray);
+}
+
+.blog-c1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog-c1>div {
+    display: flex;
+    align-items: center;
+}
+
+.blog-c1>div>div {
+    width: 40px;
+    margin-right: 20px;
+}
+
+.blog-c1 img {
+    border-radius: 50%;
+}
+
+.blog-c1 h5 {
+    font-weight: 500;
+}
+
+.blog-c1 p {
+    font-size: 0.9rem;
+    color: var(--gray);
+}
+
+.blog-r4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0 50px;
+    font-weight: 600;
+}
+
+.blog-r4 [type="button"] {
+    background-color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.blog-r4 div:first-child {
+    padding-right: 30px;
+}
+
+.blog-r4 div:last-child {
+    border-radius: 20px;
+    padding: 20px;
+    cursor: pointer;
+    color: var(--blue);
+    transition: all 100ms;
+}
+
+.blog-r4 div:first-child i {
+    margin-right: 10px;
+    color: rgb(183 183 183);
+}
+
+.blog-r4 i:last-child {
+    margin-left: 10px;
+}
+
+.blog-r4 div:last-child:active {
+    background-color: rgba(120, 119, 119, 0.237);
+}
+
+.blog-r5 {
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 5px 1px;
+    padding: 50px 50px 60px 50px;
+    margin: 30px 0 60px;
+}
+
+.blog-r5>div {
+    display: grid;
+    grid-template-columns: 50% 47%;
+    justify-content: space-between;
+    align-items: end;
+}
+
+.blog-r5 p {
+    margin: 0 0 25px 0;
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.blog-label input {
+    padding: 30px 10px 10px;
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgb(219, 215, 215);
+    transition-property: all;
+    transition-duration: 100ms;
+}
+
+.blog-label {
+    position: relative;
+}
+
+label[for="e1"] {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    cursor: text;
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 200ms;
+}
+
+.blog-label input:focus {
+    outline: var(--blue) 3px solid;
+}
+
+.blog-label input:focus~label[for="e1"] {
+    font-size: 0.8rem;
+    top: 5px;
+    color: var(--blue);
+}
+
+.blog-sub {
+    background-color: var(--blue);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-top: 15px;
+    padding: 15px;
+    font-weight: 600;
+}
+
+.blog-r5>div>div:last-child {
+    background-image: url(../images/blog-bell.svg);
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
 }
