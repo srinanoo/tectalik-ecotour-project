@@ -380,10 +380,6 @@ select#val{
 
 }
 
-.in h2 {
-    color: #0b815a;
-}
-
 .in button {
     background-color: rgba(99, 102, 241, 1);
     color: white;
@@ -397,7 +393,7 @@ select#val{
 .but button:first-child {
     background-color: #ffffff;
     border: 1px white;
-    color: #0b815a;
+    color: #0a0a0ae8;
 }
 
 .but button:hover {
