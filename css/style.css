@@ -374,7 +374,6 @@ select#val{
     padding: 20px 20px;
     align-items: center;
 }
-=======
 .in .but {
     display: grid;
     grid-template-columns: repeat(2, 45%);
