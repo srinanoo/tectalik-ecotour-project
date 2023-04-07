@@ -212,3 +212,180 @@ hr {
 .blog-r3 p:last-child {
     color: var(--gray);
 }
+
+/************************** SANJAY KUMAR L **********************/
+.main h1 {
+    font-family: PlusSans;
+}
+
+.invoice {
+    font-family: PlusSans;
+    width: 90%;
+    margin: auto;
+}
+
+.in {
+    display: grid;
+    grid-template-columns: 30% 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.in .but {
+    display: grid;
+    grid-template-columns: repeat(2, 45%);
+    justify-content: space-between;
+
+}
+
+.in h2 {
+    color: #0b815a;
+}
+
+.in button {
+    background-color: rgba(99, 102, 241, 1);
+    color: white;
+    border: solid 1px;
+    border-radius: 10px;
+    padding: 10px 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.but button:first-child {
+    background-color: #ffffff;
+    border: 1px white;
+    color: #0b815a;
+}
+
+.but button:hover {
+    background-color: rgba(99, 102, 241, 0.2);
+}
+
+.gri-3 {
+    font-family: plusSans;
+    display: grid;
+    grid-template-columns: repeat(3, 31%);
+    justify-content: space-between;
+}
+
+.invo {
+    display: grid;
+    grid-template-columns: 20% 75%;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px rgb(241, 237, 237);
+    border-radius: 20px;
+    padding: 20px;
+    color: gray;
+    line-height: 1.6;
+}
+
+.invo>div:first-child {
+    padding: 12px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.invo>div:last-child>div:nth-child(2) {
+    color: black;
+    font-weight: 400;
+}
+
+.invo>div:last-child>div:not(:nth-child(2)) {
+    font-family: Inter;
+    font-weight: 400;
+}
+
+.cancel {
+    padding: 0 0 40px 0;
+}
+
+.cancel h6 {
+    font-family: PlusSans;
+    font-size: 1em;
+    color: gray;
+    /* text-align: justify; */
+}
+
+.prepaid {
+    font-family: Inter;
+    border: 1px solid #f2f4f7;
+    border-radius: 20px;
+    /* padding: 20px o; */
+    box-shadow: 2px 2px 10px 1px #f2f4f7;
+}
+
+.prepaid>div:not(:last-child) {
+    border-bottom: 1px solid #f2f4f7;
+}
+
+.prepaid>div {
+    padding: 0 10px;
+}
+
+.paid {
+    display: grid;
+    grid-template-columns: 20% 15% 15% 15% 10% 10%;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+
+}
+
+.as {
+    display: grid;
+    grid-template-columns: 20% 74%;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.as>div:first-child {
+    background-color: rgb(206, 199, 199);
+    border-radius: 50%;
+    text-align: center;
+    padding: 7px;
+}
+
+.as>div:last-child {
+    padding: 10px;
+}
+
+.paid>div p:last-child {
+    color: grey;
+    font-weight: 400;
+}
+
+.paid>div:nth-child(5) button {
+    color: #0b815a;
+    background-color: #e2f6f0;
+    border-radius: 10px;
+    border: none;
+    padding: 5px;
+    font-size: 0.9em;
+    font-weight: 600;
+}
+
+.paid>div:nth-child(6) i:hover {
+    background-color: #dce0df;
+    padding: 7px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.pending .paid>div:nth-child(5) button {
+    color: #b54708;
+    background-color: #fef2e1;
+    font-size: 0.8em;
+}
+
+.rp {
+    padding: 20px 0;
+    text-align: right;
+    color: gray;
+    font-size: small;
+    justify-content: end;
+}
+
+/************************** SANJAY KUMAR L *********************/
