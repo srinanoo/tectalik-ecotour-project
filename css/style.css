@@ -86,6 +86,10 @@ header>div:first-child {
     display: flex;
 }
 
+.blog-margin {
+    padding-top: 30px;
+}
+
 .blog-h2 {
     font-family: PlusSans;
     margin-top: 50px;
