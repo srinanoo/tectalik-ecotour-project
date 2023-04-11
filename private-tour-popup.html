@@ -32,6 +32,112 @@
     img {
         max-width: 100%;
     }
+    input[type=radio]{
+        display: none;
+    }
+    .eco_head{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        background-color: white;
+    }
+
+    .container1 {
+        width: 80%;
+        margin: auto;
+    }
+
+    .row1 {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        padding: 15px 0;
+    }
+
+    .row1>div {
+        width: 30%
+    }
+
+    .row1>div:first-child i {
+        border: 0;
+        background-color: white;
+        font-size: 30px;
+
+    }
+
+
+    .row1>div:last-child>button {
+        border: 1px solid rgb(152, 205, 93);
+        padding: 5px 20px;
+        background-color: white;
+        font-variant: small-caps;
+        font-weight: bolder;
+        font-size: medium;
+        color: rgb(100, 78, 60);
+
+
+    }
+
+    .row1>div:last-child>button i {
+        font-size: small;
+    }
+
+    .row1>div:last-child {
+        text-align: right;
+    }
+        /* menu section */
+
+    .menusection {
+        display: none;
+        position: sticky;
+        top: 90px;
+        z-index: 2;
+
+    }
+
+    label[for="exit"],
+    #open:checked~header label[for="open"] {
+        display: none;
+
+    }
+
+    #open:checked~header label[for="exit"] {
+        display: block;
+
+
+    }
+
+    #open:checked~.menusection {
+        display: block;
+
+    }
+
+    .menusection>ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: rgba(152, 205, 93);
+
+    }
+
+    .menusection>ul>li>a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        font-variant: small-caps;
+        font-size: 1.3rem;
+        padding: 20px;
+    }
+
+    section>ul>li>a:hover {
+        /* background-color: rgba(61, 97, 36); */
+        /* color:white */
+        color: white;
+    }
 
     /* header1 */
 
@@ -270,6 +376,9 @@
     .right1a > div:nth-child(2){
         padding:10px;
     }
+    .right1a > div:nth-child(3) > p{
+        margin:0;
+    }
     .right2a{
         padding-top:30px; 
         width:30%;
@@ -286,6 +395,9 @@
         display: grid; 
         grid-template-columns: 48% 50%; 
         align-items: center;
+    }
+    .right2b1 > div:nth-last-child(1) > p{
+        margin:0;
     }
 
     /* header7 */
@@ -366,21 +478,39 @@
 </style>
 
 <body>
-    <header class="header1">
-        <div class="inside">
-            <div class="section">
+    <input type="radio" id="open" name="v1">
+    <input type="radio" id="exit" name="v1">
+    <header class="eco_head">
+        <div class="container1">
+            <div class="row1">
                 <div>
-                    <h1>&#x2630;</h1>
+
+                    <label for="open">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <label for="exit">
+                        <i class="fa-solid fa-x"></i>
+                    </label>
                 </div>
                 <div>
-                    <img src="images/headlogo.avif">
+                    <img src="images/headlogo.avif" alt="logoETB-1">
                 </div>
-                <div class="touch">
-                    <button type="submit" aria-label="touch"><span><i class="fa-solid fa-phone"></i></span> GET IN TOUCH</button>
+                <div>
+                    <button><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp; get in touch</button>
                 </div>
             </div>
         </div>
     </header>
+    <section class="menusection">
+        <ul class="menu">
+            <li><a href="index.html">home</a></li>
+            <li><a href="destination.html">destination</a></li>
+            <li><a href="private-tour.html">private tour</a></li>
+            <li><a href="private-tour-popup.html">private-tour-popup</a></li>
+            <li><a href="tour-list.html">tour-list</a></li>
+            <li><a href="tour-list-expand.html">tour expand</a></li>
+        </ul>
+    </section>
     <header class="header2">
         <div class="inside">
             <div>
