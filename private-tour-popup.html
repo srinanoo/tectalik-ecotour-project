@@ -472,7 +472,58 @@
         padding:5px;
     }
 
-    
+    @media only screen and (max-width: 576px){
+        .row1>div{
+            width:100%;
+            text-align: center;
+        }
+        .cards{
+            grid-template-columns: 100%;
+        }
+        .icons{
+            grid-template-columns: 100%;
+        }
+        .blackbg{
+            height:600px;
+        }
+        .head2{
+            grid-template-columns: 100%;
+        }
+        .head3{
+            grid-template-columns: 100%;
+        }
+        .contain{
+            grid-template-columns: 100%;
+        }
+        .left2a{
+            grid-template-columns: 100%;
+        }
+        .left3{
+            grid-template-columns: 100%;
+        }
+        .cover{
+            grid-template-columns: 100%;
+        }
+        .dateicon{
+            grid-template-columns: 100%;
+        }
+        .right2a{
+            width: 100%;
+        }
+        .right2b{
+            width: 100%;
+        }
+        .right2b1{
+            grid-template-columns: 100%;
+        }
+        .footer{
+            grid-template-columns: 100%;
+        }
+        
+        
+
+    }
+
 
 
 </style>
@@ -484,7 +535,6 @@
         <div class="container1">
             <div class="row1">
                 <div>
-
                     <label for="open">
                         <i class="fa-solid fa-bars"></i>
                     </label>
@@ -583,8 +633,8 @@
                                       <input type="text" class="form-control" id="adults" aria-label="Zip">
                                     </div>
                                     <div class="col-sm">
-                                        <label for="adults" class="form-label">Number of children *</label>
-                                      <input type="text" class="form-control" id="adults" aria-label="Zip">
+                                        <label for="child" class="form-label">Number of children *</label>
+                                      <input type="text" class="form-control" id="child" aria-label="child">
                                     </div>
                                 </div>                            
                             </div>
@@ -592,19 +642,19 @@
                                 <div class="row" style=" padding: 20px 0;">
                                     <div class="col-sm">
                                         <label for="first" class="form-label">First name *</label>
-                                      <input type="text" class="form-control" id="first" aria-label="Zip">
+                                      <input type="text" class="form-control" id="first" aria-label="first">
                                     </div>
                                     <div class="col-sm">
                                         <label for="last" class="form-label">Last name *</label>
-                                      <input type="text" class="form-control" id="last" aria-label="Zip">
+                                      <input type="text" class="form-control" id="last" aria-label="last">
                                     </div>
                                     <div class="col-sm">
                                         <label for="email" class="form-label">Email *</label>
-                                      <input type="text" class="form-control" id="email" aria-label="Zip">
+                                      <input type="text" class="form-control" id="email" aria-label="email">
                                     </div>
                                     <div class="col-sm">
                                         <label for="phone" class="form-label">Phone *</label>
-                                      <input type="text" class="form-control" id="phone" aria-label="Zip">
+                                      <input type="text" class="form-control" id="phone" aria-label="phone">
                                     </div>
                                 </div>
                                 <div class="row" style="padding:20px 0;">
@@ -614,8 +664,8 @@
                                     </div>
                                     <div class="from col-sm ">
                                         <div>
-                                            <label for="phone" class="form-label">I'm from *</label>
-                                            <input type="text" class="form-control" id="phone" placeholder="Afghanistan" aria-label="Zip">
+                                            <label for="from" class="form-label">I'm from *</label>
+                                            <input type="text" class="form-control" id="from" placeholder="Afghanistan" aria-label="from">
                                         </div>
                                         <div class="col-sm">
                                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
@@ -714,10 +764,10 @@
                         <p><b>SAMG.</b></p>
                         <div class="right1a">
                             <div>
-                                <img src="images/triplogo.avif " width="40px">
+                                <img src="images/triplogo.avif " alt="triplogo" width="40px">
                             </div>
                             <div>
-                                <img src="images/review.avif " width="80px">
+                                <img src="images/review.avif " alt="review" width="80px">
                             </div>
                             <div>
                                 <p>Reviewed 1 week ago</p>
@@ -726,13 +776,13 @@
                     </div>
                     <div class="right2">
                         <div class="right2a">
-                            <img src="images/triplogo2.avif" width="110px">
+                            <img src="images/triplogo2.avif" alt="triplogo2" width="110px">
                         </div>
                         <div class="right2b">
                             <p><b>Ecotour Barahona</b></p>
                             <div class="right2b1">
                                 <div>
-                                    <img src="images/review2.avif" width="80px">
+                                    <img src="images/review2.avif" alt="review2" width="80px">
                                 </div>
                                 <div>
                                     <p>50 Reviews</p>
@@ -766,9 +816,9 @@
         <div class="inside">
             <div class="footer">
                 <div class="footer1">
-                    <img src="images/footlogo.avif">
+                    <img src="images/footlogo.avif" alt="footlogo">
                     <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round trips, day trips and actvities in Southwest of Dominican Republic.</p>
-                    <img src="images/footlogo2.avif">
+                    <img src="images/footlogo2.avif" alt="footlogo2">
                     <p>Travel environmentally friendly with us and discover the main destinations of Dominican Republic.</p>
                 </div>
                 <div class="footer1">
@@ -806,7 +856,7 @@
                             <i class="fa-brands fa-instagram"></i>
                         </div>
                         <div>
-                            <img src="images/whitelogo3.png" width="25px" >
+                            <img src="images/whitelogo3.png" alt="whitelogo3" width="25px" >
                         </div>
                     </div>
                 </div>
