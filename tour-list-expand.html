@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUR PAGE</title>
+    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
     <style>
         @font-face {
             font-family: 'NotoSansZanabazarSquare-Regular';
@@ -39,32 +39,29 @@
             background-color: white;
         }
 
-        a {
-            text-decoration: none;
-            cursor: pointer;
-            font-variant: small-caps;
-            padding: 0px 20px;
-        }
 
         .nav {
             list-style: none;
-            background-color: rgb(162 205 93);
+            background-color: rgba(152, 205, 93);
             margin: 0;
-            padding: 10px;
+            padding: 15px 0px;
             display: none;
             text-align: center;
         }
 
         .nav>div {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-content: space-evenly;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .nav a {
             color: rgb(0 0 0);
-            font-size: large;
-            display: block;
+            display: inline-block;
+            font-variant: small-caps;
+            text-decoration: none;
+            cursor: pointer;
+            font-size: 1.1em;
         }
 
         .nav a:hover {
@@ -107,6 +104,7 @@
             flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            padding: 15px 0;
         }
 
         .row1>div {
@@ -119,7 +117,7 @@
 
         .row1>div:last-child>button {
             border: 1px solid greenyellow;
-            padding: 5px 20px;
+            padding: 10px 20px;
             color: rgb(139, 98, 54);
             background-color: white;
         }
@@ -535,11 +533,13 @@
             </div>
         </div>
         <ul class="nav">
-            <div>
-                <li><a href="index.html">home page</a></li>
+            <div class="box">
+                <li><a href="index.html">home</a></li>
                 <li><a href="destination.html">destination</a></li>
-                <li><a href="private-tour.html">tour list</a></li>
-                <li><a href="single-tour-page.html">single tour</a></li>
+                <li><a href="private-tour.html">private tour</a></li>
+                <li><a href="private-tour-popup.html">private-tour-popup</a></li>
+                <li><a href="tour-list.html">tour-list</a></li>
+                <li><a href="single-tour-page.html">single-tour-page</a></li>
             </div>
         </ul>
         <!-- ****************menubar-end***************** -->
@@ -1164,7 +1164,6 @@
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
