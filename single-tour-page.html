@@ -24,20 +24,21 @@
         * {
             box-sizing: border-box;
             font-family: font;
-            
+
         }
 
         body {
             margin: 0;
         }
 
-        img{
+        img {
             max-width: 100%;
             height: auto;
 
         }
+
         /* header */
-        header{
+        header {
             position: sticky;
             top: 0;
             z-index: 2;
@@ -67,7 +68,7 @@
             font-size: 30px;
 
         }
-    
+
 
         .row1>div:last-child>button {
             border: 1px solid rgb(152, 205, 93);
@@ -80,7 +81,8 @@
 
 
         }
-        .row1>div:last-child>button i{
+
+        .row1>div:last-child>button i {
             font-size: small;
         }
 
@@ -112,8 +114,8 @@
             height: 100%;
             background-size: cover;
             mix-blend-mode: screen;
-            
-            
+
+
 
 
         }
@@ -139,7 +141,8 @@
 
         }
 
-        .headback button ,.btn{
+        .headback button,
+        .btn {
             border: none;
             padding: 10px 50px;
             background-color: rgb(152, 205, 93);
@@ -150,63 +153,63 @@
             cursor: pointer;
             z-index: 1;
             position: relative;
-           
+
 
         }
 
         /* header */
         /* menu section */
 
-        .menusection{
+        .menusection {
             display: none;
             position: sticky;
-            top:90px;
+            top: 90px;
             z-index: 2;
-            
+
         }
-        label[for="exit"],#open:checked~header label[for="open"]{
+
+        label[for="exit"],
+        #open:checked~header label[for="open"] {
             display: none;
-            
-        }
-
-        #open:checked~ header label[for="exit"]{
-            display: block;
-            
 
         }
-        #open:checked~.menusection{
+
+        #open:checked~header label[for="exit"] {
             display: block;
-          
+
+
         }
-        .menusection>ul{
+
+        #open:checked~.menusection {
+            display: block;
+
+        }
+
+        .menusection>ul {
             list-style: none;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-wrap: wrap;
             justify-content: space-evenly;
             background-color: rgba(152, 205, 93);
-           
+
         }
-        .menusection>ul>li>a{
+
+        .menusection>ul>li>a {
             display: inline-block;
             text-decoration: none;
             color: black;
             font-variant: small-caps;
             font-size: 1.3rem;
             padding: 20px;
-            
-         
-            
         }
-        section>ul>li>a:hover{
+
+        section>ul>li>a:hover {
             /* background-color: rgba(61, 97, 36); */
             /* color:white */
-            color:white;
+            color: white;
         }
-
-
-        
         /* sec1 */
         .side {
             display: grid;
@@ -320,7 +323,7 @@
 
         #desc:checked~nav .slider {
             left: 25%;
-            width:10%;
+            width: 10%;
             font-weight: bold;
         }
 
@@ -378,7 +381,7 @@
             grid-template-columns: 50% 50%;
             column-gap: 2px;
             row-gap: 1px;
-            
+
         }
 
         .side3>div:nth-child(2),
@@ -388,115 +391,128 @@
         }
 
         .side2>div:nth-child(2) {
-            margin:20px 40px 0 35px;
+            margin: 20px 40px 0 35px;
             line-height: 2;
 
         }
+
         /* destination */
-        .timeline{
+        .timeline {
             padding-top: 50px;
             display: grid;
             grid-template-columns: 0.7fr 2px 2fr;
-        
 
-        
+
+
         }
-        .timeline__components{
-            margin:0px 20px 20px 19px;
+
+        .timeline__components {
+            margin: 0px 20px 20px 19px;
         }
-        
-        .timeline__component{
-            margin:0px 0 20px 50px;
+
+        .timeline__component {
+            margin: 0px 0 20px 50px;
         }
-        .timeline__time{
-            color:rgb(152, 205, 93);
+
+        .timeline__time {
+            color: rgb(152, 205, 93);
             font-size: small;
             padding: 50px 0 0;
-            
+
         }
-        .timeline__time__right{
+
+        .timeline__time__right {
             text-align: right;
             font-size: 10px;
-            
+
         }
+
         .timeline__middle {
             position: relative;
             background-color: rgb(152, 205, 93);
 
         }
-        .icon_start{
+
+        .icon_start {
             position: absolute;
-            top:-20px;
-            left:50%;
+            top: -20px;
+            left: 50%;
             transform: translate(-50%);
             border-radius: 50%;
             font-size: 1em;
-            color:rgb(100, 78, 60);
+            color: rgb(100, 78, 60);
             padding: 10px;
-            background-color:rgb(238,238,238);
-            
+            background-color: rgb(238, 238, 238);
 
-            
+
+
         }
-        .paraiso img{
+
+        .paraiso img {
             position: absolute;
-            top:initial;
-            left:50%;
+            top: initial;
+            left: 50%;
             transform: translate(-50%);
             padding: 5px;
             border-radius: 50%;
             font-size: 1.5em;
-            background-color:rgb(238,238,238);
+            background-color: rgb(238, 238, 238);
         }
-        .timeline__middle>div{
+
+        .timeline__middle>div {
             position: absolute;
-            top:0;
-            left:50%;
+            top: 0;
+            left: 50%;
             transform: translate(-50%);
-            height:25px;
-            width:20px;
-            background-color:white;
+            height: 25px;
+            width: 20px;
+            background-color: white;
             font-size: 1.5em;
-            
-        }
-        .timeline__middle .timeline__point{
-            margin:5px 0;
-            display: inline-block;
-            position: absolute;
-            top:0;
-            left:50%;
-            transform: translate(-50%);
-            height:10px;
-            width:10px;
-            background-color:rgb(152, 205, 93);
-            border-radius: 50%;
-            font-size: 1.5em;
-        
 
         }
-        
-        
-        .timeline__location_top ,.paraiso{
+
+        .timeline__middle .timeline__point {
+            margin: 5px 0;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+            height: 10px;
+            width: 10px;
+            background-color: rgb(152, 205, 93);
+            border-radius: 50%;
+            font-size: 1.5em;
+
+
+        }
+
+
+        .timeline__location_top,
+        .paraiso {
             position: relative;
         }
-        .timeline__location{
+
+        .timeline__location {
             position: absolute;
-            top:0px;
-            left:0px;
+            top: 0px;
+            left: 0px;
             font-weight: 400;
             font-size: 0.9em;
         }
 
         /* sliderrrrrr */
-        .btm{
+        .btm {
             margin: 50px;
             text-align: center;
         }
+
         /* .btn{
             background-color: rgb(152, 205, 93);
             padding:10px 30px
         } */
-        .btn>a,.headback button>a{
+        .btn>a,
+        .headback button>a {
             text-decoration: none;
             color: white;
         }
@@ -533,15 +549,15 @@
             justify-content: space-between;
         }
 
-        footer p{
+        footer p {
             color: white;
-            font-size:x-small ;
-            margin:20px 0;
+            font-size: x-small;
+            margin: 20px 0;
         }
 
         footer h3 {
             color: rgb(176 218 106);
-            font-size:small;
+            font-size: small;
             font-weight: 900;
             margin: 15px 0;
         }
@@ -573,7 +589,7 @@
         <div class="container">
             <div class="row1">
                 <div>
-                    
+
                     <label for="open">
                         <i class="fa-solid fa-bars"></i>
                     </label>
@@ -593,9 +609,11 @@
     <section class="menusection">
         <ul class="menu">
             <li><a href="index.html">home</a></li>
-            <li><a href="private-tour.html">private tour</a></li>
-            <li><a href="tour-list-expand.html">tour expand</a></li>
             <li><a href="destination.html">destination</a></li>
+            <li><a href="private-tour.html">private tour</a></li>
+            <li><a href="private-tour-popup.html">private-tour-popup</a></li>
+            <li><a href="tour-list.html">tour-list</a></li>
+            <li><a href="tour-list-expand.html">tour expand</a></li>
         </ul>
     </section>
     <section class="headback">
@@ -667,7 +685,7 @@
                                         <div class="">
                                             <i class="fa-sharp fa-solid fa-location-dot icon_start"></i>
                                         </div>
-                            
+
                                     </div>
                                     <div class="timeline__component timeline__location_top">
                                         <div class="timeline__location ">
@@ -711,10 +729,10 @@
                                     <div class="timeline__middle">
                                         <div>
                                             <div class="timeline__point">
+                                            </div>
                                         </div>
-                                        </div>
-                                        
-                            
+
+
                                     </div>
                                     <div class="timeline__component timeline__location_top">
                                         <div class="timeline__location ">
@@ -726,20 +744,20 @@
                                         <div>
                                             <div class="timeline__time timeline__time__right"></div>
                                         </div>
-                                        
+
                                     </div>
                                     <div class="paraiso ">
                                         <div class="timeline__point">
-                                           <img src="images/destination.png" alt="destination">
+                                            <img src="images/destination.png" alt="destination">
                                         </div>
-                            
+
                                     </div>
                                     <div class="timeline__component timeline__location_top ">
                                         <div class="timeline__location ">
-                                            <strong>Paraiso</strong> 
+                                            <strong>Paraiso</strong>
                                         </div>
                                     </div>
-                                    
+
                                 </div>
                             </div>
                         </div>
@@ -779,7 +797,7 @@
                 <div class="content content3">
                     <div class="side side3">
                         <div>
-                            <div><img src="images/sec3-1.webp" alt="sec1" ></div>
+                            <div><img src="images/sec3-1.webp" alt="sec1"></div>
                             <div><img src="images/sec3-2.webp" alt="sec2"></div>
                             <div><img src="images/sec3-3.webp" alt="sec3"></div>
                             <div><img src="images/sec3-4.webp" alt="sec4"></div>
@@ -822,18 +840,18 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="prev">
-                
-                
+
+
             </button>
             <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
                 data-bs-slide="next">
-                
+
             </button>
         </div>
         <div class="btm">
             <button class="btn"><a href="private-tour.html">BOOK NOW</a></button>
         </div>
-        
+
     </section>
     <footer>
         <div class="container1">
