@@ -28,7 +28,7 @@
         header {
             position: sticky;
             top: 0;
-            z-index: 1;
+            z-index: 2;
             background-color: white;
         }
 
@@ -50,11 +50,8 @@
         }
 
         #tap1:checked~div label[for="tap2"] {
-            position: absolute;
             display: block;
-            left: 5px;
-            top: -23px;
-            font-size: 1.9rem;
+
         }
 
         #tap1:checked~div label[for="tap1"] {
@@ -72,7 +69,7 @@
         }
 
         .main-head {
-            width: 80%;
+            width: 90%;
             margin: auto;
             display: flex;
             justify-content: space-between;
@@ -81,28 +78,51 @@
             align-items: center;
         }
 
-        .main-head a {
+        .right a {
+            color: #4b5b34;
+            padding: 0;
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .right button {
+            border: solid 1px #9bcd52;
+            background-color: white;
+            padding: 0 5px 5px 5px;
+        }
+
+        /* .main-head a {
             text-decoration: none;
             border: #9bcd52 1px solid;
             padding: 12px 20px;
             color: #4b5b34;
             font-weight: 700;
             font-size: 0.8rem;
-        }
+            vertical-align: middle;
+        } */
 
         .main-head a:hover {
             color: #4b5b34;
-            ;
         }
 
-        .main-head>.left,
-        .main-head>.middle,
-        .main-head>.right {
-            width: 30%;
+        .main-head>.left {
+            width: 9%;
+            display: flex;
+            justify-content: center;
         }
+
+        .main-head>.right {
+            width: 19%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .main-head>.middle {
+            width: 50%;
+        }
+
 
         .main-head>.left div {
-            position: relative;
             margin: auto;
             color: black;
             font-size: 2.2em;
@@ -114,10 +134,10 @@
         }
 
         .main-head>.right div {
+
             margin: auto;
             color: black;
             font-size: 1.6rem;
-            margin: 0 0 12px 70px;
 
         }
 
@@ -131,9 +151,12 @@
         }
 
         .nav>div {
-            display: grid;
-            grid-template-columns: repeat(4, 15%);
+            width: 90%;
+            margin: auto;
+            display: flex;
+            /* grid-template-columns: repeat(4, 15%); */
             justify-content: space-evenly;
+            z-index: 2;
         }
 
         .nav a {
@@ -151,13 +174,26 @@
 
 
         .boat {
-            background-image: url(images/boat.webp);
+            background-image: url(images/private-boat.webp);
             background-repeat: no-repeat;
             background-size: cover;
+            position: relative;
+        }
+
+        .boat::after {
+            content: '';
+            background-image: url(images/splash1.webp);
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            mix-blend-mode: screen;
         }
 
         .speed {
-            width: 70%;
+            width: 80%;
             height: 331px;
             margin: auto;
             display: grid;
@@ -173,6 +209,8 @@
             /* width: 50%; */
             font-size: 2.5em;
             padding: 10px 0 0 0;
+            font-weight: 800;
+            font-family: initial;
         }
 
         .privatize {
@@ -213,10 +251,23 @@
         }
 
         .nature {
+            position: relative;
             background-image: url(images/nature.webp);
             background-repeat: no-repeat;
             background-size: cover;
             padding: 40px 0 150px 0;
+        }
+
+        .nature::after {
+            content: '';
+            background-image: url(images/both.webp);
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            mix-blend-mode: screen;
         }
 
         .let {
@@ -254,6 +305,10 @@
             padding: 20px;
             cursor: pointer;
             border-radius: 5px;
+            z-index: 1;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%);
 
         }
 
@@ -282,11 +337,16 @@
             text-align: right;
         }
 
+        form input {
+            outline: none;
+        }
+
         #close {
             position: relative;
             top: 10ox;
-            right: 20px;
-            padding: 10px 0;
+            right: 10px;
+            padding: 5px;
+            margin: 10px 0;
         }
 
         #date,
@@ -444,10 +504,12 @@
         }
 
         .f {
+            display: flex;
             background-image: url(images/3.webp);
             background-repeat: no-repeat;
             background-size: cover;
             color: #f0efed;
+            height: 200px;
         }
 
         .expert {
@@ -465,7 +527,12 @@
             display: grid;
             grid-template-columns: 31% 31% 31%;
             gap: 73px 19px;
-            padding: 0 0 0 70px;
+            /* padding: 0 0 0 70px; */
+            margin: 0 0 31px 79px;
+        }
+
+        .meet-guides {
+            margin: 0 0 20px 89px;
         }
 
         .expert button {
@@ -536,9 +603,11 @@
         }
 
         .book-now {
+            width: 80%;
+            margin: auto;
             display: grid;
             grid-template-columns: 30% 70%;
-            font-size: 2em;
+            font-size: 1.5em;
             align-items: center;
         }
 
@@ -551,9 +620,11 @@
         }
 
         .check-dates {
+            width: 65%;
+            margin: auto;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: end;
         }
 
         .check-dates button {
@@ -567,13 +638,14 @@
         .foot {
 
             display: grid;
-            grid-template-columns: 17% 17% 20% 17% 17%;
+            /* grid-template-columns: 17% 17% 20% 17% 17%; */
+            grid-template-columns: repeat(5, 1fr);
             gap: 35px;
-            width: 70%;
+            width: 65%;
             margin: auto;
             padding: 50px 0;
-            /* padding: 50px 157px 20px; */
-            /* text-align: center; */
+
+
         }
 
         .foot h5 {
@@ -588,7 +660,6 @@
         ul {
             list-style: none;
             text-align: justify;
-            /* padding: 0 0 0 62px; */
             padding: 0;
             line-height: 1.5;
         }
@@ -602,142 +673,61 @@
             line-height: 2;
         }
 
-        /* .foot-c ul {
-            padding: 0 0 0 28px;
-        } */
-
         .fee {
-            display: grid;
-            grid-template-columns: repeat(3, 20%);
+            display: flex;
+            /* grid-template-columns: repeat(3, 20%); */
             gap: 9px;
-        }
-
-        .fee>i+img {
-            padding: 0 0 0 3px;
-            margin: 5px;
+            width: 22%;
         }
 
         #footer {
             background-color: #4b5b34;
             color: white;
+            position: relative;
+        }
+
+        #footer::after {
+            content: '';
+            background-image: url(images/footer.webp);
+            background-size: cover;
+            position: absolute;
+            width: 100%;
+            height: 5vh;
+            left: 0;
+            top: 0;
+            mix-blend-mode: screen;
         }
 
         @media screen and (max-width:576px) {
-            .main-head {
-                width: 100%;
-                justify-content: space-evenly;
+            .main-head>.right {
+                width: 40%;
             }
 
-            .main-head>.right div {
-                margin: 0;
-                text-align: center;
-            }
-
-            .main-head>.left div {
-                text-align: center;
-            }
-
-            .main-head>div {
-                width: 100%;
-            }
-
-            .right>div {
-                margin: 0 0 0 0;
-                padding: 0;
-            }
-
-            .main-head>.left {
-                width: 10%;
-            }
-
-            .nav>div {
-                grid-template-columns: repeat(2, 1fr);
-
-            }
-
-            .nav a {
-                font-size: 2rem;
-            }
-
-            .right button {
-                padding: 7px;
-            }
-
-            .privatize>:nth-child(2) {
-                width: 100%;
+            .right a {
+                font-size: 0.7rem;
             }
 
             .tg {
                 grid-template-columns: 100%;
-                gap: 50px;
+                gap: 40px
             }
 
-            .getin {
-                width: 100%;
+            .speed-boat>:nth-child(2) {
+                font-size: 1.6em;
             }
 
-            .pic1,
-            .pic2,
-            .pp {
+            .tailor,
+            .group {
+                margin: 0;
+            }
+
+            .alpha {
+                width: 80%;
+                height: 600px;
+            }
+
+            .icon {
                 grid-template-columns: 100%;
-                gap: 40px;
-                padding: 0;
-            }
-
-            .expert {
-                grid-template-columns: 100%;
-                padding: 30px;
-            }
-
-            .expert>:nth-child(3) {
-                text-align: center;
-            }
-
-            .last>:last-child {
-                text-align: center;
-            }
-
-            .guide,
-            .fant-box {
-                padding: 0;
-            }
-
-            .foot-bg {
-                padding: 20px;
-            }
-
-            .foot-bg {
-                grid-template-columns: 100%;
-            }
-
-            .foot {
-                grid-template-columns: 50% 50%;
-                gap: 40px;
-            }
-
-            .group,
-            .tailor {
-                margin: auto;
-            }
-
-            /* .foot-a,
-            .foot-b,
-            .foot-c,
-            .foot-d,
-            .foot-e {
-                text-align: left;
-            }
-
-            .fee {
-                padding: 0;
-                grid-template-columns: 15% 15% 15%;
-            }
-
-            ul {
-                padding: 0;
-            } */
-            .grey {
-                grid-template-columns: 50% 50%;
             }
 
             .green,
@@ -745,51 +735,84 @@
                 grid-template-columns: 100%;
             }
 
-            #ta {
-                height: 200px;
-                width: 410px;
-            }
-        }
-
-        @media screen and (max-width:320px) {
-            /* .foot{
-                margin: 0;
-                overflow: hidden;
-            } */
-
-
-            .nature {
+            #date,
+            #an,
+            #cn,#select,#fn,#ln,#mail,#ph{
                 width: 100%;
-                position: relative;
-                padding-bottom: 292px;
+            }
+           
+
+            .grey {
+                grid-template-columns: 48% 48%;
+                justify-content: space-between;
             }
 
-            .icon {
+            #ta {
+                width: 100%;
+                height: 100px;
+            }
+            .getin{
+                width: 100%;
+            }
+            .a,
+            .f {
+                overflow: hidden;
+            }
+
+            .pp {
+                padding: 0;
+            }
+
+            .expert {
+                padding: 0;
                 grid-template-columns: 100%;
             }
 
-            .nature>:last-child {
-                margin: 0;
-                position: absolute;
-                bottom: 20px;
-
+            .guide {
+                margin-right: 79px;
+                margin-left: 70px;
+                /* width: 100%; */
+                grid-template-columns: 50% 50%;
+                /* margin: 50px; */
+                padding: 10px;
+                row-gap: 30px;
+            }
+            .last>:first-child{
+                padding: 20px 40px;
             }
 
-            .foot {
-                grid-template-columns: 100%;
+            .meet-guides {
+                margin: 20px;
+                text-align: center;
+            }
+            .check-dates {
+                justify-content: center;
+                font-size: 0.6rem;
+                padding: 10px;
             }
 
             .fant-box {
-                width: 100%;
+                padding: 0;
             }
 
-            .fant-box3 {
+            .fant-box3{
                 grid-template-columns: 100%;
             }
+            .foot-bg {
+                grid-template-columns: 100%;
+                padding: 10px;
+            }
 
-            .book-now {
-                grid-template-columns: 50% 50%;
-                font-size: medium;
+            .foot {
+                grid-template-columns: 45% 45%;
+                justify-content: space-between;
+            }
+
+            .foot-e {
+                grid-column: span 2;
+            }
+            .fee{
+                width: 7%;
             }
         }
     </style>
@@ -806,7 +829,7 @@
                         &#x2630
                     </label>
                     <label for="tap2">
-                        <i class="fa-solid fa-x"></i>
+                        &#x2630
                     </label>
                 </div>
             </div>
@@ -814,15 +837,19 @@
                 <div><img src="images/logoETB-1.webp" alt=""></div>
             </div>
             <div class="right">
-                <div><a href="#telephone"><i class="fa-solid fa-phone"></i>&emsp;GET IN TOUCH</a></div>
+                <div><button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
+                            TOUCH</a></button></div>
             </div>
         </div>
         <ul class="nav">
-            <div>
+            <div class="nav-div">
                 <li><a href="index.html">home page</a></li>
-                <li><a href="private-tour.html">private tours</a></li>
-                <li><a href="tour-expand.html">tour list</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="private-tour-popup.html">private tours popup</a></li>
+                <li><a href="tour-list.html">tour list</a></li>
+                <li><a href="tour-expand.html">tour list expand</a></li>
                 <li><a href="single-tour-page.html">single tour</a></li>
+                <li><a href="ecotour.html">Ecotour</a></li>
             </div>
         </ul>
     </header>
@@ -1048,7 +1075,7 @@
                         <div><img src="images/pic22.webp" alt="22"></div>
                         <div><img src="images/pic11.webp" alt="11"></div>
                     </div>
-                    <div style="padding: 40px 54px;">
+                    <div class="meet-guides">
                         <button>Meet Our Guides</button>
                     </div>
                 </div>
@@ -1158,8 +1185,8 @@
                 <div>
                     <h5>FOLLOW US</h5>
                     <div class="fee">
-                        <i class="fa-brands fa-facebook fa-2x"></i>
-                        <i class="fa-brands fa-instagram fa-2x"></i>
+                        <i class="fa-brands fa-facebook-f fa-2x" style="color: #fafafa;margin: 3px;"></i>
+                        <i class="fa-brands fa-instagram fa-2x" style="margin: 5px;"></i>
                         <input type="image" src="images/ta.webp" alt="ta-lo" width="99%">
                     </div>
                 </div>
