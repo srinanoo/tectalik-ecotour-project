@@ -99,7 +99,7 @@
         header {
             position: sticky;
             top: 0;
-            z-index: 1;
+            z-index: 2;
             background-color: white;
         }
 
@@ -204,14 +204,10 @@
             background-size: cover;
             mix-blend-mode: screen;
         }
-        .head{
-            position: relative;
-        }
-
+      
         .head button {
-            position: absolute;
-            z-index: 2;
-            bottom: -75px;
+            position: relative;
+            z-index: 1;
             padding: 15px 25px;
             background-color: rgb(155 205 82);
             border: 0;
@@ -480,7 +476,7 @@
             }
 
             .load button {
-                width: 30%
+                width: 42%;
             }
 
             .picrow>div {
@@ -489,7 +485,8 @@
             }
 
             .c7 {
-                grid-template-columns: 100%;
+                grid-template-columns: 40% 40%;
+                justify-content: space-between;
                 
             }
 
