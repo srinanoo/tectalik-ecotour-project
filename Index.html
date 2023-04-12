@@ -8,6 +8,11 @@
     <title>Home_page</title>
 
     <style>
+        @font-face {
+            font-family: font;
+            src: url(fonts/NotoSansZanabazarSquare-Regular.ttf);
+        }
+
         * {
             box-sizing: border-box;
         }
@@ -33,18 +38,26 @@
         }
 
         .bg {
-            background-color: greenyellow;
+            background-color: rgba(152, 205, 93);
             display: none;
         }
 
         .bg>div {
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
 
-        .bg>div>a {
-            width: 25%;
-            padding: 20px 0px;
+        .bg>div a {
+            padding: 15px 0px;
+            font-family: sans-serif;
+            font-size: 1.1rem;
+            font-variant: small-caps;
+            color: black;
+        }
+
+        .bg>div a:hover {
+            color: white;
         }
 
         header a {
@@ -56,19 +69,35 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            justify-content: space-between;
+            padding: 15px 0;
         }
 
         .row1>div {
-            width: 33.33%
+            width: 30%;
+        }
+
+        label[for="open"],
+        label[for="exit"] {
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: bold;
         }
 
 
+        .fa-phone:before {
+            margin-right: 5px;
+        }
 
         .row1>div:last-child>button {
-            border: 1px solid greenyellow;
-            padding: 5px 20px;
-            color: rgb(139, 98, 54);
+            border: 1px solid rgb(152, 205, 93);
+            padding: 0px 20px;
             background-color: white;
+            font-family: font;
+            font-variant: small-caps;
+            font-weight: bolder;
+            font-size: 16px;
+            color: rgb(100, 78, 60);
         }
 
         .row1>div:last-child {
@@ -76,21 +105,53 @@
         }
 
         .main {
-            background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.jpg);
+            background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.webp);
             background-size: cover;
-            height: 550px;
+            height: 601px;
             color: white;
             display: flex;
             align-items: center;
             font-size: 20px;
+            position: relative;
         }
 
-        .main>div>button {
-            padding: 8px 30px;
-            background-color: rgb(129, 187, 42);
+        .main::after,.sec::after{
+            content: '';
+            background: url(images/splash1.webp);
+            position: absolute;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: screen;
+        }
+
+        .cent-cont {
+            width: 50%;
+        }
+
+        .cent-cont h2 {
+            font-size: 3rem;
+            margin: 20px 0px;
+        }
+
+        .cent-cont p {
+            margin: 0;
+            font-family: font;
+            font-size: 1.3rem;
+
+        }
+
+        .cent-cont button {
+            padding: 4px 40px;
+            background-color: rgb(152, 205, 93);
             border: 0;
             color: white;
+            font-family: 'font';
+            font-size: 1rem;
         }
+
 
         .smlogo {
             display: flex;
@@ -110,52 +171,70 @@
             font-weight: 100;
         }
 
-        .undermain {
-            background: url(images/cloud.avif);
+
+        .sec {
+            background: url(images/cloud.webp);
+            height: 80vh;
             background-size: cover;
+            position: relative;
+            margin-bottom: 45px;
+        }
+        .sec::after,section::after{
+            content: '';
+            background: url(images/both.webp);
+            position: absolute;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: screen;
         }
 
-        .vdocol {
-            display: flex;
-            justify-content: space-between;
+        .sec>div {
+            height: 80vh;
+            display: grid;
+            grid-template-columns: repeat(2, 50%);
+            align-items: center;
         }
 
-        .vdocol>div {
-            margin: 50px 0px;
-        }
-
-        .vdocol>div:first-child {
-            width: 40%;
+        .sec>div>div:first-child {
             background-color: white;
             position: relative;
-            left: 120px;
-            margin: 120px 0px;
+            width: 85%;
+            left: 10rem;
+        }
+
+        .sec>div>div:first-child>div {
             padding-left: 20px;
         }
 
-        .vdocol>div:last-child {
-            width: 55%
+        .sec>div>div:first-child>div>div {
+            text-align: right;
         }
 
-        .vdocol button {
-            padding: 8px 30px;
-            background-color: rgb(129, 187, 42);
+        .sec>div>div:first-child>div button {
+            padding: 12px 30px;
+            background-color: rgb(152, 205, 93);
             border: 0;
             color: white;
         }
 
-        .vdocol>div:first-child>div {
-            text-align: right;
+        .sec h2 {
+            color: rgb(11 108 11);
+            font-family: fonts;
+            font-size: 2rem;
         }
 
-        .vdocol>div:first-child h2 {
-            color: green;
-            font-weight: 100;
+        .sec h3 {
+            margin-bottom: 0;
         }
+
 
         main h2,
         .middle h2 {
             text-align: center;
+            font-size: 30px;
         }
 
         main {
@@ -166,6 +245,8 @@
             display: grid;
             grid-template-columns: 32% 32% 32%;
             justify-content: space-between;
+            margin: 45px 0px;
+            cursor: pointer;
 
         }
 
@@ -211,7 +292,7 @@
 
         .common button,
         .mid button {
-            background-color: greenyellow;
+            background-color: rgb(152, 205, 93);
             padding: 4px 15px;
             border: 0;
         }
@@ -222,13 +303,14 @@
         }
 
         section {
-            background: url(images/beachnew.avif);
+            background: url(images/beachnew.webp);
             background-size: cover;
             color: white;
-            height: 500px;
+            height: 700px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
+            position:relative;
         }
 
         .middle>div {
@@ -238,10 +320,16 @@
 
         .middle>div>div {
             width: 33%;
-            background-color: rgba(113, 87, 66, 0.7);
-            padding: 10px 35px;
+            background-color: rgb(121 79 44 / 70%);
+            padding: 45px 35px;
             text-align: center;
             font-size: 20px;
+        }
+
+        .middle>div>div>h4 {
+            font-size: 1.05rem;
+            padding: 0px 31px;
+            font-weight: 100;
         }
 
         .middle>div>div img,
@@ -265,7 +353,7 @@
         .foot1 button {
             padding: 10px 20px;
             color: white;
-            background-color: rgb(123, 189, 25);
+            background-color: rgb(152, 205, 93);
             border: 0;
         }
 
@@ -291,30 +379,63 @@
         }
 
         .bgcolor {
-            background-color: rgb(142, 204, 49);
+            background-color: rgb(176 218 106);
+            padding: 10px 0px;
         }
 
         .container1>div {
             width: 50%;
             color: white;
-            padding: 4em 0px;
+            padding: 50px 0px;
+        }
+
+        .container1>div:first-child {
+            display: grid;
+            grid-template-columns: 20% 80%;
+            align-items: center;
+        }
+
+        .container1>div:first-child span {
+            font-family: font;
+            color: rgb(10, 84, 10);
+            font-size: 26px;
         }
 
         .container1>div button {
-            padding: 10px 20px;
+            padding: 7px 23px;
             background-color: white;
             border: 0;
             margin-top: 50px;
+            color: rgb(17, 65, 17);
+            font-family: font;
+            position: relative;
+            left: 57px;
         }
 
         footer {
             background-color: rgb(75 91 52);
+            position:relative;
+            padding:50px 0px;
         }
+
+        footer::after{
+            content: '';
+            background: url(images/footer.webp);
+            position: absolute;
+            background-size: cover;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            mix-blend-mode: screen;
+        }
+
 
         .lstrow {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            font-family: font;
         }
 
         .lstrow>div {
@@ -323,12 +444,12 @@
 
         .lstrow>div h3 {
             color: white;
-            font-size: 14px;
+            font-size: 13px;
             font-weight: 100;
         }
 
         .lstrow>div h4 {
-            color: rgb(48, 193, 48)
+            color: rgb(176 218 106);
         }
 
         .lstrow>div ul {
@@ -351,13 +472,82 @@
             display: none;
         }
 
-        #open:checked~ .container [for=open] {
+        #open:checked~.container [for=open] {
             display: none;
         }
 
         #open:checked~.bg,
-        #open:checked~ .container [for=exit] {
+        #open:checked~.container [for=exit] {
             display: block;
+        }
+
+        @media(max-width:576px) {
+            html {
+                font-size: 12px;
+            }
+
+            .row1>div:first-child {
+                width: 10%;
+            }
+
+            .row1>div:last-child {
+                width: 40%;
+            }
+
+            .row1>div:last-child>button {
+                padding: 1px 5px;
+                font-size: 13px;
+            }
+
+            .cent-cont,
+            .sec>div>div:first-child,
+            .smlogo>div,
+            .middle>div>div,
+            .foot1>div,
+            .lstrow>div {
+                width: 100%;
+            }
+
+            .sec {
+                height: 100vh;
+                padding-top: 20px;
+            }
+
+            .sec>div,
+            .mainrow {
+                grid-template-columns: 100%;
+                row-gap: 20px;
+            }
+
+            .sec>div>div:first-child {
+                left: 0;
+            }
+
+            .container1>div:first-child {
+                grid-template-columns: 100%;
+            }
+
+            .cent-cont h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                height: 100%;
+                padding-bottom: 20px;
+            }
+
+            .container1>div:first-child span {
+                font-size: 1.5rem;
+            }
+
+            .container1>div button {
+                margin: 0 0px 20px;
+            }
+
+            .container1>div {
+                width: 100%;
+                padding: 0;
+            }
         }
     </style>
 </head>
@@ -369,70 +559,84 @@
         <div class="container">
             <div class="row1">
                 <div>
-                    <label for="open">&#x2630</label>
-                    <label for="exit">close</label>
+                    <label for="open">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <label for="exit">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
                 </div>
                 <div>
                     <img src="images/logoETB-1.webp" alt="">
                 </div>
                 <div>
-                    <button>&#128222 GET IN TOUCH</button>
+                    <button><i class="fa fa-phone" aria-hidden="true"></i> get in touch</button>
                 </div>
             </div>
         </div>
 
         <div class="bg">
             <div class="container">
-                <a href="destination.html">DESTINATION</a>
-                <a href="tour-list-expand.html">TOUR LIST</a>
-                <a href="private-tour.html">PRIVATE TOUR </a>
-                <a href="single-tour-page.html">SINGLE TOUR PAGE</a>
+                <a href="destination.html">destination</a>
+                <a href="private-tour.html">private tour</a>
+                <a href="private-tour-popup.html">private tour popup</a>
+                <a href="tour-list.html">tour list</a>
+                <a href="tour-list-expand.html">tour expand</a>
+                <a href="single-tour.html">single tour</a>
+                <a href="ecotour.html">ecotour</a>
             </div>
         </div>
     </header>
 
     <div class="main">
         <div class="container">
-            <P>DISCOVER A HIDDEN PARADISE</P>
-            <h2>Deep South West, Dominician Republic</h2>
-            <button>Book Now</button>
+            <div class="cent-cont">
+                <P>DISCOVER A HIDDEN PARADISE</P>
+                <h2>Deep South West, Dominician Republic</h2>
+                <button>Book Now</button>
+            </div>
         </div>
     </div>
     <div class="smlogo">
         <div>
-            <img src="images/img1.png" alt="">
+            <img src="images/img1.webp" alt="">
             <h3>DAY-TRIPS</h3>
         </div>
         <div>
-            <img src="images/img2.png" alt="">
+            <img src="images/img2.webp" alt="">
             <h3>MULTI-DAY TRIPS</h3>
         </div>
         <div>
-            <img src="images/img3.png" alt="">
+            <img src="images/img3.webp" alt="">
             <h3>PRIVATE-TOURS</h3>
         </div>
     </div>
-    <div class="undermain">
-        <div class="container vdocol">
+
+
+    <div class="sec">
+        <div class="container">
             <div>
-                <h2>Welcome to the Deep Southwest</h2>
-                <h3>Discover with EcoTour Barahona, your specialist in Ecotourism a new face of the Dominican
-                    Republic, more human, more authentic!</h3>
-                <p>We have artistically designed unique excursions for you, accompanied by professional and
-                    passionate local guides who will show you the best of this part of the country.</p>
-                <div><button>KNOW MORE</button></div>
+                <div>
+                    <h2>Welcome to the Deep Southwest</h2>
+                    <h3>Discover with EcoTour Barahona, your specialist in Ecotourism a new face of the Dominican
+                        Republic, more human, more authentic!</h3>
+                    <p>We have artistically designed unique excursions for you, accompanied by professional and
+                        passionate local guides who will show you the best of this part of the country.</p>
+                    <div><button>KNOW MORE</button></div>
+                </div>
             </div>
             <div>
-                <img src="images/lizard.avif" alt="">
+                <img src="images/lizard.webp" alt="">
             </div>
         </div>
     </div>
+
     <main>
-        <h2>FEATURED TRAVEL EXPERIENCES</h2>
+        <h2>Featured Travel Experiences</h2>
         <div class="container">
             <div class="mainrow">
                 <div>
-                    <div style="background: url(images/imag1.avif);background-size: cover;height:278px">
+                    <div style="background: url(images/imag1.webp);background-size: cover;height:278px">
                         <div class="common">
                             <h2>Garden of Eden</h2>
                             <div><button>$55</button></div>
@@ -443,13 +647,13 @@
                             </ul>
                         </div>
                     </div>
-                    <div style="background: url(images/imag2.avif);background-size: cover;">
+                    <div style="background: url(images/imag2.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
                             <div><button>$90</button></div>
                         </div>
                     </div>
-                    <div style="background: url(images/imag3.avif);background-size: cover;">
+                    <div style="background: url(images/imag3.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
                             <div><button>$35</button></div>
@@ -457,13 +661,13 @@
                     </div>
                 </div>
                 <div>
-                    <div style="background: url(images/imgce1.jpg);background-size: cover;">
+                    <div style="background: url(images/imgce1.webp);background-size: cover;">
                         <div class="mid">
                             <h2>Untouched paradise</h2>
                             <div><button>$120</button></div>
                         </div>
                     </div>
-                    <div style="background:url(images/imgce2.jpg);background-size: cover;">
+                    <div style="background:url(images/imgce2.webp);background-size: cover;">
                         <div class="mid">
                             <h2>Flamingo Island</h2>
                             <div><button>$90</button></div>
@@ -471,19 +675,19 @@
                     </div>
                 </div>
                 <div>
-                    <div style="background: url(images/imag4.avif);background-size: cover;">
+                    <div style="background: url(images/imag4.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
                             <div><button>$60</button></div>
                         </div>
                     </div>
-                    <div style="background: url(images/imag7.avif);background-size: cover;">
+                    <div style="background: url(images/imag7.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
                             <div><button>$60</button></div>
                         </div>
                     </div>
-                    <div style="background: url(images/imag6.avif);background-size: cover;">
+                    <div style="background: url(images/imag6.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
                             <div><button>$60</button></div>
@@ -496,19 +700,19 @@
     <section>
         <div class="container">
             <div class="middle">
-                <h2>Why book with Ecotour Barahona</h2>
+                <h2>Why book with Ecotour Barahona?</h2>
                 <div>
                     <div>
-                        <img src="images/snorkel.png" alt="">
+                        <img src="images/snorkel.webp" alt="">
                         <h4>Our day trips not only allow you to visit the Southwest, but also to experience it.</h4>
                     </div>
                     <div>
-                        <img src="images/tourist.png" alt="">
+                        <img src="images/tourist.webp" alt="">
                         <h4>They are guided by professional and passionate Dominicans and show you the best and
                             unexpected sides of the Dominican Republic.</h4>
                     </div>
                     <div>
-                        <img src="images/medal.png" alt="">
+                        <img src="images/medal.webp" alt="">
                         <h4>Benefit from small group sizes and guaranteed weekly departures.</h4>
                     </div>
                 </div>
@@ -522,10 +726,10 @@
                 <button>SEE ALL OPINIONS</button>
             </div>
             <div>
-                <img src="images/girl.avif" alt="">
+                <img src="images/girl.webp" alt="">
                 <div class="twocols">
                     <div>
-                        <img src="images/Quotation-Mark-Transparent.png" alt="">
+                        <img src="images/Quotation-Mark-Transparent.webp" alt="">
                     </div>
                     <div>
                         <h3>LUCIA JOHNSON</h3>
@@ -539,8 +743,13 @@
     <div class="bgcolor">
         <div class="container1">
             <div>
-                <h2>Book Now</h2>
-                <h3>Lorem ipsum dolor sit</h3>
+                <div>
+                    <img src="images/col.webp" alt="">
+                </div>
+                <div>
+                    <h2>Book Now</h2>
+                    <span>Lorem ipsum dolor sit</span>
+                </div>
             </div>
             <div>
                 <button>CHECK THE DATES</button>
@@ -551,11 +760,11 @@
         <div class="container">
             <div class="lstrow">
                 <div>
-                    <img src="images/footlogo.avif" alt="">
+                    <img src="images/footlogo.webp" alt="">
                     <h3>Ecotour barahona is our favorite specialist for authrntic unique and memorable day ups and trips
                         of
                         activities in southern dominican republic.</h3>
-                    <img src="images/footlogo2.avif" alt="">
+                    <img src="images/footlogo2.webp" alt="">
                     <h3>Travel environmental friendly with us and discover the main dimensions of dominican republic.
                     </h3>
                 </div>
@@ -597,14 +806,17 @@
                             <i class="fa-brands fa-instagram" style="color: #ffffff; margin:5px;"></i>
                         </div>
                         <div>
-                            <img src="images/whitelogo3.png" width="25px" style="padding-top: 5px;" alt=""></img>
+                            <img src="images/whitelogo3.webp" width="25px" style="padding-top: 5px;" alt=""></img>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/81a9fb04d8.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

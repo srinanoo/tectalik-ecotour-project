@@ -99,7 +99,7 @@
         header {
             position: sticky;
             top: 0;
-            z-index: 1;
+            z-index: 2;
             background-color: white;
         }
 
@@ -204,14 +204,10 @@
             background-size: cover;
             mix-blend-mode: screen;
         }
-        .head{
-            position: relative;
-        }
-
+      
         .head button {
-            position: absolute;
-            z-index: 2;
-            bottom: -75px;
+            position: relative;
+            z-index: 1;
             padding: 15px 25px;
             background-color: rgb(155 205 82);
             border: 0;
@@ -480,7 +476,7 @@
             }
 
             .load button {
-                width: 30%
+                width: 42%;
             }
 
             .picrow>div {
@@ -489,7 +485,8 @@
             }
 
             .c7 {
-                grid-template-columns: 100%;
+                grid-template-columns: 40% 40%;
+                justify-content: space-between;
                 
             }
 
@@ -525,12 +522,12 @@
     </header>
     <div class="bg">
         <div class="container">
-            <a href="index.html">home</a>
+            <a href="index.html">index</a>
             <a href="destination.html">destination</a>
             <a href="private-tour.html">private tour</a>
             <a href="private-tour-popup.html">private tour popup</a>
             <a href="tour-list-expand.html">tour expand</a>
-            <a href="single-tour.html">single tour</a>
+            <a href="single-tour-page.html">single tour</a>
             <a href="ecotour.html">ecotour</a>
         </div>
     </div>
@@ -957,7 +954,7 @@
             </div>
             <div class="load">
                 <button>
-                    <a href="single-tour.html">
+                    <a href="single-tour-page.html">
                         load more
                     </a>
                 </button>
@@ -968,12 +965,12 @@
         <div class="container">
             <div class="c7">
                 <div>
-                    <img src="images/footlogo.avif" alt=""></img>
+                    <img src="images/footlogo.webp" alt=""></img>
                     <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round
                         trips,
                         day trips and activites in Southwest of Dominican Republic.
                     </p>
-                    <img src="images/footlogo2.avif" alt="">
+                    <img src="images/footlogo2.webp" alt="">
                     <p>Travel environmentally friendly with us and discover the main destinations of the Dominican
                         Republic.
                     </p>
