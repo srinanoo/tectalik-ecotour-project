@@ -15,27 +15,64 @@
 <style>
     * {
         box-sizing: border-box;
-        border-color: white;
+        border-color:white;
     }
-
     body {
-        margin: 20px;
+        /* margin: 20px; */
         padding:0px;
     }
-
     img {
         max-width: 100%;
     }
+    .row1{
+    
+        display: flex;
+        justify-content: space-around;
+    }
+    /* .grid-header{
+        width:80%;
+        margin:auto;
+    } */
+    .grid-header .row3{
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        background-color: #9bcd52;
+        color:black;
+        height:40px;    
+    }
+
+    .row4{
+        width:80%;
+        display:flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        background-color: #9bcd52;
+        color:black;
+        height:40px; 
+        font-size: 0.9rem;
+    }
+    .row3>div{
+        margin-top: 6px;
+    }
+    .phone{
+        border:solid 2px #9bcd52;
+    }
+    .grid-header .row2 {
+        border-color:none;
+        color:#4b5b34;
+     
+        
+    }
+
     .photo {
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-
     .photoA {
         text-align: center;
         color: white;
         background-color: rgba (50%, 50%, 50%, 0.5);
     }
-
     .grid-footerA {
         display: flex;
         background-color: #9bcd52;
@@ -47,12 +84,10 @@
     .column{
         width:50%;
     }
-
     .grid-footerB {
         background-color: #4b5b34;
         padding: 40px;
         font-size: 10px;
-        
         text-align: center;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
@@ -62,49 +97,40 @@
         display: grid;
         grid-template-columns: repeat(5, 20%);
         justify-content: space-between;
-
     }
     .row2{
-        color:white"
+        color:white;    
     }
-
+    .ph{
+        margin-top: 20px;
+        /* padding:20px; */
+    }
+    .phone{
+       color:#84877e;
+    
+    }
     .item2 {
         color: white
     }
-
     .grid-content {
         display: grid;
         grid-template-columns: repeat(2, 50%);
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
     }
-
     .column1 {
         width: 75%;
         color: #43621e;
         text-align: center;
     }
-
     .image {
         text-align: left;
     }
-
     .imageA {
         display: flex;
     }
-
     .contentA {
         display: grid;
         grid-template-columns: 33.333333% 33.33333% 33.333333%;
-    }
-
-    .photoA>div>div{
-        width:50%;
-    }
-    .photoB{
-        justify-content: right;
-        display:grid;
-        width:35%;
     }
     .box{
         width: 45%;
@@ -116,91 +142,138 @@
         flex-wrap:wrap ;
         font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-size: 15px;
-        color: rgb(89, 85, 85);;
+        color: rgb(89, 85, 85);
+        justify-content: space-between;
     }
     .About>div{
         width:50%;
     }
+
     .display{
         width: 100%;
-        height:100vh;
+        height:60vh;
         position: relative;
         background-image: url(images/img.avif);
         background-size: cover;
         color:white;
     }
-        .display .inner{
+.display .inner{
         position: absolute;
         width:100%;
-        /* transform: translate(-50% -50%);
-        top:50%;
-        left:50%; */
-        /* border-bottom: 4px solid;
-        border-top: 4px solid; */
-    
     }
-    .display .inner p{
-        color:#84877e;
-        font-size: 20px;
-        font-family: arial;
-        text-align: center;
+.display .inner p{
+    color:white;
+    font-size: 20px;
+    font-family: arial;
+    text-align: center;
+}
+.aside{
+    background-color: #eeeeee;
+    margin: auto;
+    font-size: 15px;
+    justify-content: space-between;
+    display:grid;
+    grid-template-columns: 60% 40%;
     }
-    .aside{
-        background-color: #eeeeee;
-        width:80%;
-        margin: auto;
-        display:flex;
-        flex-wrap:wrap ;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        font-size: 15px;
-        justify-content: space-between;
+.aside>div{
+    color: rgb(89, 85, 85);    
+}
+.geo{
+     margin-left: 100px;
+    /* align-items:center; */
+    /* margin-top: 20px; */
+    display:flex;
+    flex-wrap: nowrap;
 
-    }
-    .aside>div{
-        width:50%;
-        color: rgb(89, 85, 85);;
-        
-    }
-    .pictures{
-        display:flex;
-        padding: 10px;
-    }
-    .pictures>div{
-        padding:2px;
-    }
-    .article{
-        width:80%;
-        text-align: center;
-        margin:auto;
-        
-       
-    }
-    .about{
-        margin: 50px;
-        text-align: center;
-        color: rgb(89, 85, 85);
-    }
-    .grid{
-        width: 100%;
-        height:250px;
-        position: relative;
-        background-image: url(images/a1.1.avif);
-        background-size: cover;
-    }
-    .grid .inside{
-        position: absolute;
-        width:100%;
-    }
-    .grid .inside p{
-        color:white;
-        font-size: 20px;
-        font-family: arial;
-        text-align:left;
-    }
-    .row1{
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
+}
+.row5{
+width:80%;
+margin-top: 50px;
+        /* display:flex;
+        flex-wrap: nowrap; */
+}
+.img{
+    margin-right: 30px;
+    align-items: start;
+}
+.pictures{
+    display:flex;
+    background-color: #eeeeee;
+}
+.pictures>div{
+    padding:1px;
+}
+.article{
+    width:80%;
+    text-align: center;
+    margin:auto;   
+ }
+.about{
+     margin: 50px;
+    text-align: center;
+    color: rgb(89, 85, 85);
+}
+.grid{
+     width: 100%;
+    height:250px;
+    position: relative;
+    background-image: url(images/a1.1.avif);
+    background-size: cover;
+ }
+.grid .inside{
+    position: absolute;
+     width:100%;
+}
+.grid .inside p{
+    color:white;
+    font-size: 20px;
+    font-family: arial;
+    text-align:left;
+}
+.row1{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.row2{
+    align-items: center;
+    margin-top: 20px;
+     margin-left: 20px;
+}
+.photoA{
+    width:100%;
+    height:100%;
+    background-image: url(images/pexels-pixabay-86695.avif);
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+.core{
+     width: 65%;
+    margin-left: 20%;
+    margin-top: 3%;
+    margin-right: 20%;    
+}
+.outer{
+    position: relative;
+    margin-left: 75%;
+    width:100%;
+    background-color: white;
+    color:#84877e;
+    margin-top: 15%;
+    margin-bottom: 15%;
+    z-index: 1;
+}
+.corner{
+    background-color:#9bcd52;
+    color: white;
+    margin-left: 65%;
+}
+.item2{
+    font-size: 1.1rem;
+}
+.foot{
+    color:white;
+}
 
 
 </style>
@@ -208,14 +281,27 @@
 <body>
     <div class="grid-header">
         <div class="row1">
-            <div>
-                <button>&#x2630</button>
+            <div class="row2">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            
             </div>
             <div>
                 <img src="images/logoETB-1.avif" alt="">
             </div>
-            <div>
-                <a href="#call"><i class="fa-solid fa-phone"></i>&emsp;Get in touch</a>
+            <div class="ph" style="padding:0px 40px;">
+                <a href="#call" class="phone"><i class="fa-solid  fa-phone"></i>&emsp;Get in touch</a>
+            </div>
+        </div>
+        <div class="row3" >
+            <div class="row4">
+            <a href="Index.html" style="color:black;">HOME</a>
+            <a href="destination"style="color:black;"> DESTINATION</a>
+            <a href="private tour"style="color:black;">PRIVATE TOUR</a>
+            <a href="single tour" style="color:black;">SINGLE TOUR</a>
+            <a href="private" style="color:black;">PRIVATE TOUR POPUP</a>
+            <a href="tourlise"style="color:black;">TOURLIST</a>
+            <a href="tour expand"style="color:black;">TOURLIST EXPAND</a>
+            <a href="ecotour"style="color:black;">ECOTOUR</a>
             </div>
         </div>
 
@@ -225,7 +311,7 @@
     <div class="grid">
         <div class="inside">
             <p  style="width:50%;margin: 30px; left: 30px;" >ONE ISLAND-MANY FACES</p>
-            <p  style="width:50%;margin: 30px; left: 30px;" > Andaman & Nicobar Islands</p>
+            <h3  style="width:50%;margin: 30px; left: 30px;font-family: serif;color:white;" > Andaman & Nicobar Islands</h3>
         </div>
 
     </div>
@@ -233,7 +319,7 @@
 
     <div class="article">
         <div class="about">
-            <h4>Paradise Andaman</h4>
+            <h4 style="color: #4b5b34;">Paradise Andaman</h4>
             <p>Both Andaman and Nicobar are home to about 300 islands and are known for their beautiful white-sand beaches, tropical rainforests, mangrove rainforests, and palm-lined beaches.</p><br>
             <p> Beautiful coral reefs are also present here which house Sharks, Rays, and all sorts of marine life thus a paradise for diving and snorkeling.</p>            
         </div>
@@ -246,46 +332,41 @@
             <img src="images/p1.avif" alt="">
         </div>
         <div style="width:33.333333%;">
-            <img src="images/p3.1.avif" alt="" height="290px;">
+            <img src="images/p3.1.avif" alt="" height="100%;">
         </div>
         <div style="width:33.333333%;">
             <img src="images/p2.avif" alt="">
         </div>
-
-
     </div>
     
 
     <div class="aside">
-        <div>
-            <h4>Geography</h4>
+        <div class="geo">
+            <div class="row5">
+            <h2 style="font-family: serif;color:black;">Geography</h2>
             <p>Andaman and Nicobar Island topography shows a typical character, with the presence of a number of islands in a long and broken chain. The topography of Andaman and Nicobar Islands appears to be a north-south arc, situated between the 16° and 14° latitude, and 92° and 94° East longitude.</p>
             <p>The topography of Andaman and Nicobar Islands is, geologically, a part of land mass of South-east Asia, including Malaysia, North-east India, Burma, Thailand and Indonesia.</p>
             <p>Andaman and Nicobar Islands contains a group of 3000 islands, which includes both islands and islets in the archipelago. Ritchie Archipelago and Labyrinth Islands are the two important islets in Andaman and Nicobar Islands. The topography in Andaman and Nicobar Islands comprises of a long range of hills with evergreen forests. The islands holds a series of ridges and mountains, with moderate elevation and slopes: flat lands are sparse in Andaman and Nicobar Islands.</p>
-
+            </div>
         </div>
-        <div>
-            <img src="images/a&n.avif.avif" style="height:50%;margin-top: 30px;"><br><br>
-            <div style="font-size: 10px;background-color: white; margin-top: 65px;">
+        <div class="img">
+            <img src="images/a&n.avif.avif" style=" width:100%;height:50%;margin-top: 30px;margin-right: 30px;"><br><br>
+            <div style="font-size: 10px;background-color: white; margin-top: 65px; margin-right:30px;text-align: center;">
                 The Andaman and Nicobar Islands is a union territory of India consisting of 572 islands, of which 37 are inhabited, at the junction of the Bay of Bengal and the Andaman Sea.The territory's capital is the city of Port Blair.
             </div>
-
         </div>
 
     </div>
-  
-    
     <div class="display"> 
         <div class="inner">
-            <p style="width:50%;margin: auto; margin-top: 350px;" >TAKE VACATIONS, GO AS MANY PLACES AS YOU CAN. YOU CAN ALWAYS MAKE MONEY , YOU CAN'T ALWAYS MAKE MEMORIES. </p>
+            <p style="width:50%;font-family:serif;margin: auto; margin-top: 10%;text-align: center;font-weight: bold;" >Take vacations, go as many places as you can. You can always make money , You can't always make memories... </p>
         </div>
-
     </div>
-    
+
      
     <div class="About">
         <div >
-            <h4>History</h4>
+            <h2 style="font-family: serif;color: black;">History</h2>
             <p>The Andaman and Nicobar Islands are fascinating Indian destinations. </p>
             <p>They are located in the Bay of Bengal and are made up of more than 500 islands. The capital city is Port Blair, and the total population is around 380,000 people and an area of approximately, 8249 km sq.</p>
         </div>
@@ -294,57 +375,28 @@
             <p>The culture of the Andaman and Nicobar Islands is a blend of Indian, British, and indigenous influences.</p>
         </div>
     </div>
-    
-    
-    <div class="photoA" style=" display:flex;background-image: url(images/pexels-pixabay-86695.avif);">
-        <div class="box">
-            <h3>What to see and what to do ?</h3>
-            <p>It’s the favorite activity of all wildlife enthusiasts and water babies in Andaman, and these islands tend to be the best place to try this delightful feat. Just hop into your boat that will sail slowly over the brightest blue ocean and meet the friendliest creatures on earth while they prance, play, and chatter around you in the water.</p>
+   
+    <div class="photoA">
+        <div class="outer">
+            <h4 style="color:#4b5b34;">What to see and what to do !</h4>
+            <p>Wild mountain streams , hidden caves and dreamy waterfalls can be visited on guided tours in the mountains . Walks through tropical mountain forests , biking at the beavches and safarisfor bird and bird watching are just few of the recommendations that we can suggest you. </p>
+            <p>Discover the original southwest of Andaman & Nicobar Islands with ecotour.</p>
+            <div class="corner">SHOW ALL TOURS</div>
         </div>
-        <div class="photoB">
-                <img src="images/a1.avif">
-        </div>
-        
-            
+        <div class="core">
+            <img src="images/a1.avif">
         </div>
     </div>
-
     
-    <div class="grid-content">
-        <div class="column1">
-            <p>Enjoy your vacation joyfully</p>
-            <input type="button" value="SEE ALL YOUR OPINIONS" style="background-color:#9bcd52;color: white;">
-
-        </div>
-        <div class="image">
-            <img src="images/face3.avif" alt="" style="border-radius: 50% ;width:25%;"><br>
-            <div class="imageA">
-
-
-                <div class="imageB" style="width:9%;">
-                    <i style="font-size:24px;color: #495c31;" class="fa">&#xf10e;</i>
-                </div>
-                <div>
-                    <p style="color:#84877e">LUCIA JOHNSON</p>
-                    <p style="color:#767676"> A ros sodales proin pretium nulla a arcu molestie .</p>
-                    <p style="color:#d6d6d6">A proin ullamcorper justo risus , soddales vulputate magna ullamcorper ut
-                        morbi
-                        venetais </p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
     <div class="grid-footerA">
         <div class="column" >
-            <p style="color: white;">
+            <h4 style="color: white;margin-top: 8%;font-family:serif;font-weight: bold;">
                 <i class="fa fa-calendar icon"></i>&nbsp;&nbsp;Book Now
-            </p>
+            </h4>
             <p style="color:#43621e;">Enjoy your weekend happily</p>
         </div>
         <div class="column2" style="text-align: center;">
-            <input type="button" value="CHECK THE DATES" style="background-color:white;color: rgb(89, 85, 85);">
+            <input type="button" value="CHECK THE DATES" style="background-color:white; padding: 0px 20px;color: rgb(89, 85, 85);">
         </div>
     </div>
 
@@ -352,7 +404,7 @@
     <div class="grid-footerB">
         <div class="footerC">
             <div class="foot">
-                <img src="images/logoETB-1.avif" alt="" >
+                <img src="images/footlogo.avif" alt="" >
 
                 <p>Ecotour Barahona is your facourite specialist for authentic , unique and memorable round trips , day
                     trips snd activities in Southwest of Dominician Republic .</p>
@@ -364,8 +416,8 @@
                             destinations of Dominican Republic.</p>
             </div>
             <div>
-                <p style="color: #9bcd52">ABOUT US </p>
-                <div style="color:White">
+                <p style="color: #9bcd52;font-size: 0.9rem;">ABOUT US </p>
+                <div style="color:White;font-size: 0.9rem;">
                     <p>ABOUT ECOTOUR</p>
                     <p>BARAHONA</p>
                     <p>OUR TEAM</p>
@@ -376,8 +428,8 @@
             </div>
 
             <div>
-                <p style="color:#9bcd52;">CUSTOMER SERVICE</p>
-                <div style="color:white">
+                <p style="color:#9bcd52;font-size: 0.9rem;">CUSTOMER SERVICE</p>
+                <div style="color:white;font-size: 0.9rem;">
                     <p>BOOKING CONDITIONS</p>
                     <p>CONTACT-US</p>
                     <p>FAQ'S</p>
@@ -389,8 +441,8 @@
 
         
             <div>
-                <p style="color:#9bcd52;">RESERVATIONS & BOOKINGS </p>
-                <div style="color:white">
+                <p style="color:#9bcd52;font-size: 0.9rem;">RESERVATIONS & BOOKINGS </p>
+                <div style="color:white;font-size: 0.9rem;">
                     <p> MONDAY TO FRIDAY</p>
                     <p>From 8:00 am to 8:00pm</p>
                     <p>SATURDAY TO SUNDAY</p>
@@ -401,7 +453,7 @@
 
             </div>
             <div class="item1" width="40%">
-                <p style="color:#9bcd52;line-height: 1;">FOLLOW US </p>
+                <p style="color:#9bcd52;line-height: 1;font-size: 0.9rem;">FOLLOW US </p>
                 <div class="item2">
                     <i class="fa-brands fa-facebook-f"></i>
                     <i class="fa-brands fa-instagram"></i>
