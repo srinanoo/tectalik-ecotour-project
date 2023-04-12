@@ -259,7 +259,7 @@
 
         .sec4 {
             background-image: url(images/bootsky.webp);
-            height: 550px;
+            height: 551px;
             background-size: cover;
             align-items: center;
             margin-bottom: 50px;
@@ -309,7 +309,7 @@
 
         .sec6 {
             background-image: url(images/cloud1.webp);
-            height: 600px;
+            height: 601px;
             background-size: cover;
             position: relative;
         }
@@ -462,6 +462,13 @@
             color: white;
         }
 
+        @media (max-width:1200px) {
+            footer>div {
+                grid-template-columns: repeat(5, 18%);
+                row-gap: 50px;
+            }
+        }
+
         @media (max-width:992px) {
             html {
                 font-size: 14px;
@@ -487,7 +494,7 @@
             }
 
             .nav>div li {
-                width: 50%;
+                width: 33%;
 
             }
 
@@ -506,11 +513,12 @@
                 row-gap: 20px;
             }
 
-            .sec6>div {
-                height: 600px;
+            .sec6 {
+                height: 700px;
             }
 
             .sec6>div>div:first-child {
+                margin-top: 40px;
                 left: 0;
             }
 
@@ -579,6 +587,10 @@
             .sec6>div {
                 grid-template-columns: 100%;
                 row-gap: 20px;
+            }
+
+            .sec6 {
+                height: 600px;
             }
 
             .sec6>div>div:first-child {
