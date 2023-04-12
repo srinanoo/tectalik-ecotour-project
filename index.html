@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home_page</title>
-
     <style>
         @font-face {
             font-family: font;
@@ -37,6 +35,10 @@
             z-index: 1;
         }
 
+        header a {
+            text-decoration: none;
+        }
+
         .bg {
             background-color: rgba(152, 205, 93);
             display: none;
@@ -60,11 +62,6 @@
             color: white;
         }
 
-        header a {
-            text-decoration: none;
-        }
-
-
         .row1 {
             display: flex;
             flex-wrap: wrap;
@@ -76,14 +73,6 @@
         .row1>div {
             width: 30%;
         }
-
-        label[for="open"],
-        label[for="exit"] {
-            cursor: pointer;
-            font-size: 2rem;
-            font-weight: bold;
-        }
-
 
         .fa-phone:before {
             margin-right: 5px;
@@ -100,7 +89,26 @@
             color: rgb(100, 78, 60);
         }
 
-        .row1>div:last-child {
+        label[for="open"],
+        label[for="exit"] {
+            cursor: pointer;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        header input,
+        [for="exit"],
+        #open:checked~.container [for="open"] {
+            display: none;
+        }
+
+        #open:checked~.bg,
+        #open:checked~.container [for="exit"] {
+            display: block;
+        }
+
+        .row1>div:last-child,
+        .sec>div>div:first-child>div>div {
             text-align: right;
         }
 
@@ -115,7 +123,8 @@
             position: relative;
         }
 
-        .main::after,.sec::after{
+        .main::after,
+        .sec::after {
             content: '';
             background: url(images/splash1.webp);
             position: absolute;
@@ -140,7 +149,6 @@
             margin: 0;
             font-family: font;
             font-size: 1.3rem;
-
         }
 
         .cent-cont button {
@@ -151,7 +159,6 @@
             font-family: 'font';
             font-size: 1rem;
         }
-
 
         .smlogo {
             display: flex;
@@ -171,7 +178,6 @@
             font-weight: 100;
         }
 
-
         .sec {
             background: url(images/cloud.webp);
             height: 80vh;
@@ -179,7 +185,9 @@
             position: relative;
             margin-bottom: 45px;
         }
-        .sec::after,section::after{
+
+        .sec::after,
+        section::after {
             content: '';
             background: url(images/both.webp);
             position: absolute;
@@ -209,10 +217,6 @@
             padding-left: 20px;
         }
 
-        .sec>div>div:first-child>div>div {
-            text-align: right;
-        }
-
         .sec>div>div:first-child>div button {
             padding: 12px 30px;
             background-color: rgb(152, 205, 93);
@@ -230,7 +234,6 @@
             margin-bottom: 0;
         }
 
-
         main h2,
         .middle h2 {
             text-align: center;
@@ -246,8 +249,7 @@
             grid-template-columns: 32% 32% 32%;
             justify-content: space-between;
             margin: 45px 0px;
-            cursor: pointer;
-
+            cursor: url('images/cursor.webp'), pointer;
         }
 
         .mainrow>div {
@@ -269,14 +271,9 @@
             padding-top: 20rem;
         }
 
-        .common:hover {
-            background-color: rgba(0, 0, 0, 0.7);
-            height: 278px;
-        }
-
+        .common:hover,
         .mid:hover {
             background-color: rgba(0, 0, 0, 0.7);
-            height: 427px;
         }
 
         .common h2,
@@ -310,7 +307,7 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            position:relative;
+            position: relative;
         }
 
         .middle>div {
@@ -339,7 +336,7 @@
 
         .foot1,
         .twocols,
-        .container1,
+        .booking,
         .lstrow {
             display: flex;
             flex-wrap: wrap;
@@ -373,7 +370,7 @@
             padding: 0px 20px;
         }
 
-        .container1 {
+        .booking {
             width: 50%;
             margin: auto;
         }
@@ -383,25 +380,25 @@
             padding: 10px 0px;
         }
 
-        .container1>div {
+        .booking>div {
             width: 50%;
             color: white;
             padding: 50px 0px;
         }
 
-        .container1>div:first-child {
+        .booking>div:first-child {
             display: grid;
             grid-template-columns: 20% 80%;
             align-items: center;
         }
 
-        .container1>div:first-child span {
+        .booking>div:first-child span {
             font-family: font;
             color: rgb(10, 84, 10);
             font-size: 26px;
         }
 
-        .container1>div button {
+        .booking>div button {
             padding: 7px 23px;
             background-color: white;
             border: 0;
@@ -414,11 +411,11 @@
 
         footer {
             background-color: rgb(75 91 52);
-            position:relative;
-            padding:50px 0px;
+            position: relative;
+            padding: 50px 0px;
         }
 
-        footer::after{
+        footer::after {
             content: '';
             background: url(images/footer.webp);
             position: absolute;
@@ -429,7 +426,6 @@
             left: 0;
             mix-blend-mode: screen;
         }
-
 
         .lstrow {
             display: flex;
@@ -465,20 +461,6 @@
             align-items: center;
             justify-items: center;
 
-        }
-
-        header input,
-        [for=exit] {
-            display: none;
-        }
-
-        #open:checked~.container [for=open] {
-            display: none;
-        }
-
-        #open:checked~.bg,
-        #open:checked~.container [for=exit] {
-            display: block;
         }
 
         @media(max-width:576px) {
@@ -523,7 +505,7 @@
                 left: 0;
             }
 
-            .container1>div:first-child {
+            .booking>div:first-child {
                 grid-template-columns: 100%;
             }
 
@@ -536,22 +518,21 @@
                 padding-bottom: 20px;
             }
 
-            .container1>div:first-child span {
+            .booking>div:first-child span {
                 font-size: 1.5rem;
             }
 
-            .container1>div button {
+            .booking>div button {
                 margin: 0 0px 20px;
             }
 
-            .container1>div {
+            .booking>div {
                 width: 100%;
                 padding: 0;
             }
         }
     </style>
 </head>
-
 <body>
     <header>
         <input type="radio" name="menu" id="open">
@@ -574,7 +555,6 @@
                 </div>
             </div>
         </div>
-
         <div class="bg">
             <div class="container">
                 <a href="destination.html">destination</a>
@@ -582,12 +562,11 @@
                 <a href="private-tour-popup.html">private tour popup</a>
                 <a href="tour-list.html">tour list</a>
                 <a href="tour-list-expand.html">tour expand</a>
-                <a href="single-tour.html">single tour</a>
+                <a href="single-tour-page.html">single tour</a>
                 <a href="ecotour.html">ecotour</a>
             </div>
         </div>
     </header>
-
     <div class="main">
         <div class="container">
             <div class="cent-cont">
@@ -611,8 +590,6 @@
             <h3>PRIVATE-TOURS</h3>
         </div>
     </div>
-
-
     <div class="sec">
         <div class="container">
             <div>
@@ -630,7 +607,6 @@
             </div>
         </div>
     </div>
-
     <main>
         <h2>Featured Travel Experiences</h2>
         <div class="container">
@@ -650,13 +626,13 @@
                     <div style="background: url(images/imag2.webp);background-size: cover;">
                         <div class="common">
                             <h2>Horseback Riding</h2>
-                            <div><button>$90</button></div>
+                            <div><button>$60</button></div>
                         </div>
                     </div>
                     <div style="background: url(images/imag3.webp);background-size: cover;">
                         <div class="common">
-                            <h2>Horseback Riding</h2>
-                            <div><button>$35</button></div>
+                            <h2>Blue Jewel Mine</h2>
+                            <div><button>$99</button></div>
                         </div>
                     </div>
                 </div>
@@ -664,33 +640,33 @@
                     <div style="background: url(images/imgce1.webp);background-size: cover;">
                         <div class="mid">
                             <h2>Untouched paradise</h2>
-                            <div><button>$120</button></div>
+                            <div><button>$99</button></div>
                         </div>
                     </div>
                     <div style="background:url(images/imgce2.webp);background-size: cover;">
                         <div class="mid">
                             <h2>Flamingo Island</h2>
-                            <div><button>$90</button></div>
+                            <div><button>$105</button></div>
                         </div>
                     </div>
                 </div>
                 <div>
                     <div style="background: url(images/imag4.webp);background-size: cover;">
                         <div class="common">
-                            <h2>Horseback Riding</h2>
-                            <div><button>$60</button></div>
+                            <h2>Cloud Forest Mountain</h2>
+                            <div><button>$105</button></div>
                         </div>
                     </div>
                     <div style="background: url(images/imag7.webp);background-size: cover;">
                         <div class="common">
-                            <h2>Horseback Riding</h2>
-                            <div><button>$60</button></div>
+                            <h2>Lake Enriquillo</h2>
+                            <div><button>$119</button></div>
                         </div>
                     </div>
                     <div style="background: url(images/imag6.webp);background-size: cover;">
                         <div class="common">
-                            <h2>Horseback Riding</h2>
-                            <div><button>$60</button></div>
+                            <h2>Bahia de lasAguilas &Larimar</h2>
+                            <div><button>$295</button></div>
                         </div>
                     </div>
                 </div>
@@ -741,7 +717,7 @@
         </div>
     </article>
     <div class="bgcolor">
-        <div class="container1">
+        <div class="booking">
             <div>
                 <div>
                     <img src="images/col.webp" alt="">
@@ -818,5 +794,4 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/81a9fb04d8.js" crossorigin="anonymous"></script>
 </body>
-
 </html>

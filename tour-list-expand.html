@@ -10,7 +10,7 @@
     <style>
         * {
             box-sizing: border-box;
-            
+
         }
 
         body {
@@ -47,6 +47,7 @@
             top: 90px;
             z-index: 2;
         }
+
         .nav>div {
             display: flex;
             flex-wrap: wrap;
@@ -108,34 +109,37 @@
             padding: 15px 0;
         }
 
-        .row1>div:first-child{
+        .row1>div:first-child {
             width: 25%;
         }
-        .row1>div:nth-child(2){
-            width:30%;
+
+        .row1>div:nth-child(2) {
+            width: 30%;
         }
+
         .row1>div:last-child {
-            width:30%;
+            width: 30%;
             text-align: right;
         }
 
         .row1>div:last-child>button {
             border: 2px solid rgba(152, 205, 93);
             padding: 10px 18px;
-            color:rgb(100, 78, 60);
+            color: rgb(100, 78, 60);
             background-color: white;
             font-size: x-small;
             font-weight: bold;
             font-family: sans-serif;
         }
 
-        .row1>div:last-child>button>i{
-            margin-right:10px;
+        .row1>div:last-child>button>i {
+            margin-right: 10px;
         }
+
         .head p {
             font-size: x-large;
             font-family: sans-serif;
-            margin:0;
+            margin: 0;
             letter-spacing: 2px;
         }
 
@@ -145,29 +149,30 @@
         }
 
         .main {
-            background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.jpg);
+            background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.webp);
             background-size: cover;
             height: 400px;
             color: white;
             display: flex;
             align-items: center;
             font-size: 20px;
-            position:relative;
+            position: relative;
         }
-        .main::after{
-            content:"";
+
+        .main::after {
+            content: "";
             background-image: url(images/splash1.webp);
             background-size: cover;
-            position:absolute;
-            width:100%;
-            height:100%;
-            top:0;
-            left:0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
             mix-blend-mode: screen;
         }
-        
+
         .head button {
-            position:relative;
+            position: relative;
             z-index: 1;
             padding: 10px 50px;
             background-color: rgba(152, 205, 93);
@@ -203,17 +208,21 @@
             margin: auto;
             padding: 20px 0px 50px 0px;
         }
-        .row2 h2{
+
+        .row2 h2 {
             font-size: 2rem;
         }
-        .row2 p{
-           color: rgb(125 125 125);
-           font-size: large;
-        }
-        .row2 h4{
-            color:rgb(119 119 119);
+
+        .row2 p {
+            color: rgb(125 125 125);
             font-size: large;
         }
+
+        .row2 h4 {
+            color: rgb(119 119 119);
+            font-size: large;
+        }
+
         section {
             background-color: rgb(238, 238, 238);
         }
@@ -296,7 +305,11 @@
             padding-left: 20px;
         }
 
-        #expand, #expand0, #expand1, #expand2, #expand3{
+        #expand,
+        #expand0,
+        #expand1,
+        #expand2,
+        #expand3 {
             display: none;
         }
 
@@ -416,7 +429,7 @@
 
         .featurebox>h2 {
             text-align: center;
-            margin-bottom:50px;
+            margin-bottom: 50px;
             font-size: 40px;
         }
 
@@ -437,7 +450,7 @@
             align-items: end;
             background-color: rgba(0, 0, 0, 0.509);
             height: 400px;
-            padding:20px;
+            padding: 20px;
         }
 
         .pad {
@@ -467,8 +480,9 @@
             background-color: rgb(75, 91, 52);
             padding: 30px 0px;
             font-family: sans-serif;
-            position:relative;
+            position: relative;
         }
+
         footer::before {
             content: '';
             width: 100%;
@@ -481,34 +495,40 @@
             mix-blend-mode: screen;
         }
 
-        .end{
+        .end {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             color: white;
         }
-        .end ul{
+
+        .end ul {
             margin: 0;
             padding: 0;
             list-style-type: none;
             color: white;
         }
-        .end li{
+
+        .end li {
             padding: 10px 0;
             font-size: 12px;
         }
+
         .endcol1 {
             width: 20%;
         }
+
         .end h3 {
-            color:rgba(152, 205, 93);
-            margin:18px 0px;
+            color: rgba(152, 205, 93);
+            margin: 18px 0px;
             font-size: small;
             letter-spacing: 1.1px;
         }
-        .endcol1 p{
+
+        .endcol1 p {
             font-size: x-small;
         }
+
         .endcol2 {
             width: 15%;
             line-height: 1.1;
@@ -539,15 +559,18 @@
         }
 
         @media (max-width:576px) {
-            .row1>div:first-child{
+            .row1>div:first-child {
                 width: 10%;
             }
+
             .row1>div:last-child {
-                width:40%;
+                width: 40%;
             }
+
             .row1>div:last-child>button {
                 padding: 10px 0px;
             }
+
             .nav>div {
                 grid-template-columns: repeat(3, 1fr);
             }
@@ -1190,11 +1213,11 @@
     <footer>
         <div class="container end">
             <div class="endcol1">
-                <img src="images/footlogo.avif" alt="logo">
+                <img src="images/footlogo.webp" alt="logo">
                 <p>Ecotour Barahona is your favoritew specialist for authentic , unique and memorable round
                     trips,
                     day trips and activities in southwerst of Dominican republic.</p>
-                <img src="images/logo2.png" alt="2" />
+                <img src="images/footlogo2.webp" alt="2" />
                 <p>Travel environmentally friendly with us and discover the main destinations of the dominician
                     republic</p>
             </div>
