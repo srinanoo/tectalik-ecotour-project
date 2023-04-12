@@ -84,6 +84,7 @@
 
         .row1>div:last-child>button i {
             font-size: small;
+            margin-right: 5px;
         }
 
         .row1>div:last-child {
@@ -151,7 +152,6 @@
             font-size: medium;
             color: white;
             cursor: pointer;
-            z-index: 1;
             position: relative;
 
 
@@ -182,33 +182,35 @@
 
         #open:checked~.menusection {
             display: block;
-
-        }
-
-        .menusection>ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-evenly;
             background-color: rgba(152, 205, 93);
 
         }
+    
+        .menusection ul {
+            list-style: none;
+            margin:0;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            background-color: rgba(152, 205, 93);
+            padding:15px 0;
 
-        .menusection>ul>li>a {
+        }
+
+        .menusection ul>li>a {
             display: inline-block;
             text-decoration: none;
             color: black;
+            font-family: sans-serif;
             font-variant: small-caps;
-            font-size: 1.3rem;
-            padding: 20px;
+            font-size: 1.1rem;
+            
         }
 
-        section>ul>li>a:hover {
-            /* background-color: rgba(61, 97, 36); */
-            /* color:white */
+        section ul>li>a:hover {
             color: white;
+
         }
         /* sec1 */
         .side {
@@ -255,7 +257,11 @@
             padding-right: 10px;
         }
 
-
+        iframe{
+            width:700px;
+            height:400px;
+            border:0;
+        }
 
 
 
@@ -317,6 +323,7 @@
 
         #high:checked~nav .slider {
             left: 0%;
+            width:10%;
             font-weight: bold;
 
         }
@@ -516,6 +523,8 @@
             text-decoration: none;
             color: white;
         }
+        
+
 
         /* footer */
 
@@ -527,7 +536,7 @@
             line-height: 1.5;
             position: relative;
             padding: 100px 0;
-            height: 60vh;
+            
         }
 
         footer::before {
@@ -538,7 +547,7 @@
             left: 0;
             top: 0;
             width: 100%;
-            height: 50vh;
+            height: 100%;
             mix-blend-mode: screen;
 
         }
@@ -579,6 +588,90 @@
             margin-right: 10px;
             color: white;
         }
+        @media(max-width:576px){
+            .container1{
+                width:90%;
+                margin: auto;
+                
+            }
+            .row1>div:first-child{
+                width:10%;
+                font-size: 20px;
+            }
+            .row1>div:last-child{
+                width:40%;
+            }
+            .row1>div:last-child>button{
+                padding: 3px 5px;
+                font-size: small;
+            }
+            .headback>div{
+                padding:10px;
+               /* position: absolute;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               z-index: 3; */
+            }
+            .headback p {
+                
+                font-size: 0.8rem;
+            }
+            .headback h1{
+                font-size: 2.5rem;
+
+            }
+            .headback button,
+        .btn{
+            padding: 3px 7px;
+            font-size:x-small;
+        }
+        .wrapper nav{
+            justify-content: space-between;
+        }
+        .wrapper nav label {
+            font-size: small;
+        }
+        .side{
+            grid-template-columns: 100%;
+        }
+        .side2>div:nth-child(2){
+            margin:0;
+        }
+        iframe{
+            width:380px;
+            height:400px;
+            border:0;
+        }
+        footer>div{
+            grid-template-columns: repeat(2, 40%);
+        }
+        footer>div>div:last-child{
+            grid-column: span 2;
+            padding-right:50px;
+        }
+        .menusection ul>li{
+            width: 50%;
+        }
+        #high:checked~nav .slider {
+            left: 0%;
+            width:20%;
+            font-weight: bold;
+
+        }
+
+        #desc:checked~nav .slider {
+            left:38%;
+            width: 20%;
+            font-weight: bold;
+        }
+
+        #gal:checked~nav .slider {
+            left: 75%;
+            width: 15%;
+            font-weight: bold;
+        }
+        }
     </style>
 </head>
 
@@ -586,35 +679,38 @@
     <input type="radio" id="open" name="v1">
     <input type="radio" id="exit" name="v1">
     <header>
-        <div class="container">
+        <div class="container1">
             <div class="row1">
                 <div>
-
                     <label for="open">
                         <i class="fa-solid fa-bars"></i>
                     </label>
                     <label for="exit">
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-bars"></i>
                     </label>
                 </div>
                 <div>
                     <img src="images/logoETB-1 (1).webp" alt="logoETB-1">
                 </div>
                 <div>
-                    <button><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp; get in touch</button>
+                    <button><i class="fa fa-phone" aria-hidden="true"></i> get in touch</button>
                 </div>
             </div>
         </div>
     </header>
     <section class="menusection">
-        <ul class="menu">
-            <li><a href="index.html">home</a></li>
-            <li><a href="destination.html">destination</a></li>
-            <li><a href="private-tour.html">private tour</a></li>
-            <li><a href="private-tour-popup.html">private-tour-popup</a></li>
-            <li><a href="tour-list.html">tour-list</a></li>
-            <li><a href="tour-list-expand.html">tour expand</a></li>
-        </ul>
+        <div class="container1">
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="private-tour.html">private tour</a></li>
+                <li><a href="private-tour-popup.html">private tour popup</a></li>
+                <li><a href="tour-list.html">tour list</a></li>
+                <li><a href="tour-list-expand.html">tour expand</a></li>
+                <li><a href="ecotour.html">eco tour</a></li>
+            </ul>
+        </div>
+        
     </section>
     <section class="headback">
         <div>
@@ -665,7 +761,7 @@
                             <div class="map">
                                 <iframe
                                     src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d718524.3109415567!2d-71.55686333341431!3d18.241104870153425!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ebaf894f4997bb9%3A0x9005736fb2c405da!2sParaiso%2081000%2C%20Dominican%20Republic!5e0!3m2!1sen!2sin!4v1680484012992!5m2!1sen!2sin"
-                                    width="700" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                                     allowfullscreen="" loading="lazy"
                                     referrerpolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
@@ -885,9 +981,9 @@
             <div>
                 <h3>RESERVATION & BOOKING</h3>
                 <ul>
-                    <li>MONDAY TO FRIDAY From 8:00am to 8:00pm</li>
-                    <li>SATURDAT TO SUNDAY From 9:00am to 5:00pm</li>
-                    <li>Atlantic Standard Time +1(809) 856 2260</li>
+                    <li>MONDAY TO FRIDAY <br>From 8:00am to 8:00pm </li>
+                    <li>SATURDAT TO SUNDAY <br>From 9:00am to 5:00pm</li>
+                    <li>Atlantic Standard Time <br>+1(809) 856 2260</li>
                 </ul>
             </div>
             <div>
