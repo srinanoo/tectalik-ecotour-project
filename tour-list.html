@@ -8,14 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUR PAGE</title>
     <style>
-        @font-face {
-            font-family: 'NotoSansZanabazarSquare-Regular';
-            src: url(fonts/NotoSansZanabazarSquare-Regular.ttf);
-        }
-
         * {
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         body {
@@ -27,9 +22,78 @@
             height: auto;
         }
 
-        .box {
+        .container {
             width: 80%;
             margin: auto;
+        }
+
+        .bg>div,
+        .row1,
+        .smlogo,
+        .r1,
+        .c1,
+        .c4,
+        .picrow,
+        .picrow>div>div,
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .bg>div,
+        .row1,
+        .smlogo,
+        .picrow,
+        .c7 {
+            justify-content: space-between;
+        }
+
+        .row1,
+        .smlogo,
+        .c1,
+        .c4,
+        .c5,
+        .foot,
+        .main {
+            align-items: center;
+        }
+
+        .picrow h2,
+        .picrow h3,
+        .picrow p,
+        .c5 input[type=radio],
+        .col h2,
+        .col h5,
+        .col p,
+        .col h4,
+        .head p {
+            margin: 0;
+        }
+
+        .bg>div a,
+        .row1>div:last-child>button,
+        .head p,
+        .head button>a,
+        .smlogo>div h3,
+        .row2 p,
+        .row2 h4,
+        .load>button a,
+        .c7 p,
+        .c7 h3 {
+            font-family: sans-serif;
+        }
+
+        .c7 p,
+        .pad button,
+        .picrow,
+        .load>button a,
+        .com:hover,
+        .c1 button,
+        .head>button a,
+        .main,
+        .bg>div a:hover {
+            color: white;
         }
 
         header {
@@ -46,67 +110,51 @@
             padding: 0px 20px;
         }
 
-        .nav {
-            list-style: none;
-            background-color: rgb(162 205 93);
-            margin: 0;
-            padding: 10px;
+        .bg {
+            background-color: rgb(155 205 82);
             display: none;
-            text-align: center;
+            position: sticky;
+            top: 90px;
+            z-index: 2;
         }
 
-        .nav>div {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            justify-content: space-evenly;
+        .bg>div a {
+            padding: 15px 0px;
+            font-size: 1.1rem;
+            font-variant: small-caps;
+            color: black;
         }
 
-        .nav a {
-            color: rgb(0 0 0);
-            font-size: large;
+        .fa-phone:before {
+            content: "\f095";
+            margin-right: 7px;
+        }
+
+        input#open,
+        input#exit,
+        label[for="exit"],
+        #open:checked~header label[for="open"] {
+            display: none;
+        }
+
+        #open:checked~header label[for="exit"],
+        #open:checked~.bg {
             display: block;
         }
 
-        .nav a:hover {
-            color: white;
-        }
-
-        #open,
-        #exit {
-            visibility: hidden;
-            position: absolute;
-        }
-
-        #open:checked~.row1 label[for="open"],
+        label[for="open"],
         label[for="exit"] {
-            display: none;
-        }
-
-        #open:checked~.row1 label[for="exit"],
-        #open:checked~.nav {
-            display: block;
-        }
-
-        label[for="open"] {
             cursor: pointer;
             font-size: 2rem;
-        }
-
-        label[for="exit"] {
-            cursor: pointer;
-            font-size: 1.5rem;
-        }
-
-        .container {
-            width: 80%;
-            margin: auto;
+            font-weight: bold;
         }
 
         .row1 {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
+            padding: 15px 0px;
+        }
+
+        .row1>div:first-child {
+            width: 30%;
         }
 
         .row1>div {
@@ -118,54 +166,70 @@
         }
 
         .row1>div:last-child>button {
-            border: 1px solid greenyellow;
-            padding: 5px 20px;
-            color: rgb(139, 98, 54);
+            border: 2px solid rgb(155 205 82);
+            padding: 10px 20px;
             background-color: white;
+            font-variant: small-caps;
+            font-weight: bolder;
+            font-size: medium;
+            color: rgb(100, 78, 60);
         }
 
         .head p {
-            font-size: 2rem;
+            font-size: x-large;
         }
 
         .head h2 {
-            font-size: 4rem;
-            margin: 40px 0px;
+            font-size: 3.5rem;
+            margin: 30px 0px 25px 0px;
         }
 
         .main {
             background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.jpg);
             background-size: cover;
-            height: 550px;
-            color: white;
-            display: flex;
-            align-items: center;
+            height: 71vh;
+            position: relative;
             font-size: 20px;
         }
 
+        .main::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-position: top;
+            background: url(images/splash1.webp);
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            mix-blend-mode: screen;
+        }
+        .head{
+            position: relative;
+        }
+
         .head button {
-            padding: 8px 30px;
-            background-color: hsl(84.39deg 55.16% 56.27%);
+            position: absolute;
+            z-index: 2;
+            bottom: -75px;
+            padding: 15px 25px;
+            background-color: rgb(155 205 82);
             border: 0;
-            color: white;
+            font-size: medium;
         }
 
         .smlogo {
-            display: flex;
-            flex-wrap: wrap;
             margin: auto;
-            justify-content: space-between;
         }
 
         .smlogo>div {
             width: 22%;
-            background-color: hsl(0deg 0% 90.59%);
+            background-color: rgb(231, 231, 231);
             margin: 30px 0px;
         }
 
         .smlogo>div h3 {
-            font-size: 15px;
-            font-weight: 100;
+            font-weight: 200;
         }
 
         .row2 {
@@ -175,8 +239,22 @@
             padding: 20px 0px 50px 0px;
         }
 
+        .row2 h2 {
+            font-size: 2rem;
+        }
+
+        .row2 p {
+            color: rgb(125 125 125);
+            font-size: large;
+        }
+
+        .row2 h4 {
+            color: rgb(119 119 119);
+            font-size: large;
+        }
+
         section {
-            background-color: hsl(0deg 0% 93.33%)
+            background-color: rgb(238, 238, 238)
         }
 
         .start {
@@ -189,12 +267,6 @@
             border: 0;
             border-width: 2px;
             box-shadow: 0 0 5px 2px #555353;
-
-        }
-
-        .r1 {
-            display: flex;
-            flex-wrap: wrap;
         }
 
         .r1>div:first-child {
@@ -213,18 +285,9 @@
             padding: 20px 20px 0px 20px;
         }
 
-        .col h2,
-        .col h5,
-        .col p,
-        .col h4 {
-            margin: 0;
-        }
-
         .c1,
         .c4 {
-            display: flex;
-            flex-wrap: wrap;
-            line-height: 1.5;
+            line-height: 2;
         }
 
         .c1>div:first-child,
@@ -239,9 +302,8 @@
         }
 
         .c1 button {
-            background-color: hsl(84.39deg 55.16% 56.27%);
+            background-color: rgb(155 205 82);
             padding: 5px 20px;
-            color: white;
             border: 0;
         }
 
@@ -252,7 +314,6 @@
         .c3 {
             border-left: solid gray;
             padding-left: 20px;
-
         }
 
         .c5 {
@@ -262,7 +323,7 @@
 
         .c5 input[type=radio] {
             accent-color: green;
-            margin: 0;
+
         }
 
         .c5>div:first-child {
@@ -276,23 +337,24 @@
         }
 
         .com:hover {
-            background-color: green;
-            color: white;
+            background-color: rgb(155 205 82);
         }
 
         .load {
             text-align: center;
             padding: 50px;
         }
-
+      
         .load button {
-            width: 15%;
-            padding: 0px 10px;
-            background-color: hsl(84.39deg 55.16% 56.27%);
-            color: white;
+            width: 17%;
+            padding: 15px 12px;
+            background-color: rgb(155 205 82);
             border: 0;
+            cursor: pointer;
+            font-size: medium;
         }
 
+        
         main {
             padding: 30px 0px;
         }
@@ -304,13 +366,9 @@
 
         .featurebox>h2 {
             text-align: center;
-        }
-
-        .picrow {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            color: white;
+            margin: 50px;
+            font-size: xx-large;
+            color: rgb(75 92 51);
         }
 
         .picrow>div {
@@ -318,11 +376,15 @@
         }
 
         .picrow>div>div {
-            display: flex;
-            flex-wrap: wrap;
             align-items: end;
             background-color: rgba(0, 0, 0, 0.51);
             height: 400px;
+            padding: 20px;
+        }
+
+        .picrow>div>div:hover {
+            opacity: 0.8;
+            cursor: pointer;
         }
 
         .pad {
@@ -330,16 +392,9 @@
             line-height: 1.5;
         }
 
-        .picrow h2,
-        .picrow h3,
-        .picrow p {
-            margin: 0;
-        }
-
         .pad button {
-            background-color: hsl(84.39deg 55.16% 56.27%);
+            background-color: rgb(155 205 82);
             border: none;
-            color: white;
             padding: 3px 15px
         }
 
@@ -350,22 +405,33 @@
 
         footer {
             background-color: #4c5b33;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(images/splash2.webp);
+            background-size: cover;
+            mix-blend-mode: screen;
         }
 
         .c7 {
             display: grid;
             grid-template-columns: 17% 17% 17% 17% 17%;
-            justify-content: space-between;
-            padding: 30px 0px;
+            padding: 60px 0px;
         }
 
         .c7 p {
             font-size: small;
-            color: white;
         }
 
         .c7 h3 {
-            color: hsl(84.39deg 55.16% 56.27%);
+            color: rgb(155 205 82);
             margin: 10px 0px;
         }
 
@@ -376,13 +442,21 @@
         .foot {
             display: grid;
             grid-template-columns: 20% 20% 30%;
-            align-items: center;
-            justify-items: center;
+            justify-items: start;
         }
 
         @media(max-width:576px) {
-            .nav>div {
-                grid-template-columns: repeat(2, 1fr);
+            .row1>div:first-child {
+                width: 10%;
+            }
+
+            .row1>div:last-child>button {
+                padding: 5px 10px;
+                font-size: small;
+            }
+
+            .row2 {
+                width: 100%;
             }
 
             .r1>div:first-child {
@@ -416,49 +490,56 @@
 
             .c7 {
                 grid-template-columns: 100%;
-
+                
             }
 
-
+            .bg {
+                top: 65px;
+            }
         }
     </style>
 </head>
 
 <body>
+    <input type="radio" id="open" name="v1">
+    <input type="radio" id="exit" name="v1">
     <header>
-        <input type="radio" id="open" name="v1">
-        <input type="radio" id="exit" name="v1">
-        <div class="row1 container">
-            <div>
-                <label for="open">
-                    &#x2630
-                </label>
-                <label for="exit">
-                    <i class="fa-solid fa-x"></i>
-                </label>
-            </div>
-            <div>
-                <img src="images/logoETB-1.webp" alt="">
-            </div>
-            <div>
-                <button>&#128222 GET IN TOUCH</button>
+        <div class="container">
+            <div class="row1">
+                <div>
+                    <label for="open">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                    <label for="exit">
+                        <i class="fa-solid fa-bars"></i>
+                    </label>
+                </div>
+                <div>
+                    <img src="images/logoETB-1.webp" alt="logoETB-1">
+                </div>
+                <div>
+                    <button><i class="fa fa-phone" aria-hidden="true"></i> get in touch</button>
+                </div>
             </div>
         </div>
-        <ul class="nav">
-            <div>
-                <li><a href="index.html"target="blank">home page</a></li>
-                <li><a href="destination.html" target="blank">destination</a></li>
-                <li><a href="private-tour.html"target="blank">private tour</a></li>
-                <li><a href="single-tour-page.html"target="blank">single tour</a></li>
-            </div>
-        </ul>
     </header>
+    <div class="bg">
+        <div class="container">
+            <a href="index.html">home</a>
+            <a href="destination.html">destination</a>
+            <a href="private-tour.html">private tour</a>
+            <a href="private-tour-popup.html">private tour popup</a>
+            <a href="tour-list-expand.html">tour expand</a>
+            <a href="single-tour.html">single tour</a>
+            <a href="ecotour.html">ecotour</a>
+        </div>
+    </div>
     <div class="main">
         <div class="container">
             <div class="head">
                 <P>DISCOVER A HIDDEN PARADISE</P>
                 <h2>Our Travels</h2>
-                <button>Book Now</button>
+                <button><a href="index.html">book now</a></button>
             </div>
         </div>
     </div>
@@ -466,10 +547,12 @@
         <div class="container">
             <div class="row2">
                 <h2>Our Tours</h2>
-                <h4>Discover with EcoTour Barahona, your specialist in Ecotorism a new face of the Dominican Republic,
+                <h4>Discover with EcoTour Barahona, your specialist in Ecotorism a new face of the Dominican
+                    Republic,
                     more human, more authentic!</h4>
                 <p>
-                    We have artistically designed unique excursion for you, accompained by professional and passionate
+                    We have artistically designed unique excursion for you, accompained by professional and
+                    passionate
                     local guides who will show you the best of this part of the country.
                 </p>
             </div>
@@ -495,12 +578,10 @@
                     <h3>PRIVATE-TOURS</h3>
                 </div>
             </div>
-
-
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/mountain.avif" alt=""></div>
+                        <div><img src="images/mountain.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -518,10 +599,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -537,13 +620,15 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info
+                                    </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                    </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map
+                                    </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -552,7 +637,7 @@
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/sunset2.avif" alt=""></div>
+                        <div><img src="images/sunset2.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -570,10 +655,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -589,11 +676,14 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info
+                                    </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                    </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -603,7 +693,7 @@
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/wave.avif" alt=""></div>
+                        <div><img src="images/wave.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -621,10 +711,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -640,11 +732,11 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info</p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos</p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map</p>
                                 </div>
                             </div>
                         </div>
@@ -654,7 +746,7 @@
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/boat.avif" alt=""></div>
+                        <div><img src="images/boat.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -672,10 +764,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -691,11 +785,11 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info</p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos</p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map</p>
                                 </div>
                             </div>
                         </div>
@@ -705,7 +799,7 @@
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/city.avif" alt=""></div>
+                        <div><img src="images/city.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -723,10 +817,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -742,11 +838,14 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info
+                                    </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                    </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -756,7 +855,7 @@
             <div class="start">
                 <div class="row">
                     <div class="r1">
-                        <div><img src="images/forest.avif" alt=""></div>
+                        <div><img src="images/forest.webp" alt=""></div>
                         <div class="col">
                             <div class="c1">
                                 <div>
@@ -774,10 +873,12 @@
                             <div class="c2">
                                 <div class="c3">
                                     <h4>Our trek begins in the village Ojeda on the southern coast of Barahona</h4>
-                                    <p>We start on a large farm where you only have to stretch out your arm to pick and
+                                    <p>We start on a large farm where you only have to stretch out your arm to pick
+                                        and
                                         taste avocados, oranges, lemons, mangos, papayas, sapotes, guavas, passion
                                         fruit,
-                                        and many others types of fruit. +info</p>
+                                        and many others types of fruit. +info
+                                    </p>
                                 </div>
                             </div>
                             <div class="c4">
@@ -793,13 +894,15 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Info</p>
+                                        style="color: #59d95b; margin:5px;"></i>Info
+                                    </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                    </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                            style="color: #59d95b; margin:5px;"></i>Map</p>
+                                        style="color: #59d95b; margin:5px;"></i>Map
+                                    </p>
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -807,19 +910,18 @@
             </div>
             <div class="load">
                 <button>
-                    <h3>Load More</h3>
+                    <a href="tour-list-expand.html">
+                        load more
+                    </a>
                 </button>
             </div>
-
-
         </div>
-
     </section>
     <main>
         <div class="featurebox">
             <h2>Featured Travel Experience</h2>
             <div class="picrow">
-                <div style="background-image: url(images/photo-1607992922515-7e38329e65d4.avif); height: 400px;">
+                <div style="background-image: url(images/photo-1607992922515-7e38329e65d4.webp); height: 400px;">
                     <div>
                         <div class="pad">
                             <h2>Garden of Eden</h2>
@@ -832,7 +934,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="background-image: url(images/photo-1613706903647-77e255eff994.avif);">
+                <div style="background-image: url(images/photo-1613706903647-77e255eff994.webp);">
                     <div>
                         <div class="pad">
                             <h2>Untouched Paradise</h2>
@@ -842,7 +944,7 @@
                         </div>
                     </div>
                 </div>
-                <div style="background-image: url(images/photo-1621157281974-e926449624e3.avif);">
+                <div style="background-image: url(images/photo-1621157281974-e926449624e3.webp);">
                     <div>
                         <div class="pad">
                             <h2>Cloud Forest Mountain</h2>
@@ -855,7 +957,9 @@
             </div>
             <div class="load">
                 <button>
-                    <h3>Load More</h3>
+                    <a href="single-tour.html">
+                        load more
+                    </a>
                 </button>
             </div>
         </div>
@@ -865,11 +969,14 @@
             <div class="c7">
                 <div>
                     <img src="images/footlogo.avif" alt=""></img>
-                    <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round trips,
-                        day trips and activites in Southwest of Dominican Republic.</p>
+                    <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round
+                        trips,
+                        day trips and activites in Southwest of Dominican Republic.
+                    </p>
                     <img src="images/footlogo2.avif" alt="">
                     <p>Travel environmentally friendly with us and discover the main destinations of the Dominican
-                        Republic.</p>
+                        Republic.
+                    </p>
                 </div>
                 <div>
                     <h3>ABOUT US</h3>
@@ -889,8 +996,7 @@
                 </div>
                 <div>
                     <h3>RESERVATIONS AND BOOKING</h3>
-                    <p>MONDAY TO FRIDAY from 8:00 am to 8:00 pm
-                    <p>
+                    <p>MONDAY TO FRIDAY from 8:00 am to 8:00 pm</p>
                     <p>SATURDAY TO SUNDAY from 9:00 am to 5:00 pm</p>
                     <p>Atlantic Standing Time +1(809) 856 2260</p>
                 </div>
