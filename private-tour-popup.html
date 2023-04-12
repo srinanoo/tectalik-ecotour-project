@@ -9,18 +9,28 @@
     <meta name="theme-color" content="#317EFB" />
     <title>eco tour</title>
     <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
 
 </head>
 <style>
+    @font-face {
+        font-family: font;
+        src: url(fonts/NotoSansZanabazarSquare-Regular.ttf);
+    }
+
     * {
         box-sizing: border-box;
-        font-family:serif;
+
     }
 
     body {
         margin: 0;
+        font-family: sans-serif;
+
     }
 
     .inside {
@@ -32,10 +42,15 @@
     img {
         max-width: 100%;
     }
-    input[type=radio]{
+
+    /* headsection */
+
+
+    input[type=radio] {
         display: none;
     }
-    .eco_head{
+
+    .eco_head {
         position: sticky;
         top: 0;
         z-index: 2;
@@ -66,17 +81,14 @@
 
     }
 
-
     .row1>div:last-child>button {
         border: 1px solid rgb(152, 205, 93);
-        padding: 5px 20px;
+        padding: 5px 5px;
         background-color: white;
         font-variant: small-caps;
         font-weight: bolder;
         font-size: medium;
         color: rgb(100, 78, 60);
-
-
     }
 
     .row1>div:last-child>button i {
@@ -86,7 +98,8 @@
     .row1>div:last-child {
         text-align: right;
     }
-        /* menu section */
+
+    /* menu section */
 
     .menusection {
         display: none;
@@ -129,403 +142,670 @@
         text-decoration: none;
         color: black;
         font-variant: small-caps;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+        font-family: sans-serif;
         padding: 20px;
     }
 
     section>ul>li>a:hover {
-        /* background-color: rgba(61, 97, 36); */
-        /* color:white */
         color: white;
     }
 
-    /* header1 */
+    /* section1 */
 
-    .section{
+    .section {
         display: grid;
         grid-template-columns: 5% 80% 15%;
         align-items: center;
         justify-items: center;
     }
 
-    .touch > button{
-        padding: 6px 10px; 
-        background-color: white; 
-        color:#674d3b; 
-        font-size: 15px; 
-        border: 1px solid #674d3b; 
-        padding:10px;
+    .touch>button {
+        padding: 6px 10px;
+        background-color: white;
+        color: #674d3b;
+        font-size: 15px;
+        border: 1px solid #674d3b;
+        padding: 10px;
     }
 
-    /* header2 */
+    /* section2 */
 
-    .header2{
+    .section2 {
         background-image: url('images/boat.webp');
         display: grid;
-        color: white; 
-        height:300px; 
-        background-size: cover; 
-        padding:20px;
-    }
-
-    /* header3 */
-
-    .privatize{
-        color:#4c5b33; 
-        text-align: center; 
-        padding:20px;
-    }
-    .cards{
-        display: grid; 
-        grid-template-columns: 45% 45%; 
-        justify-content: space-between;
-        padding: 30px;
-    }
-    .cards1{
-        color:white; 
-        background-color: #9bcd52; 
-        padding:25px;
-    }
-
-    /* header4 */
-
-    .blackbg{
-        background-image: url('images/started1.avif'); 
-        height:400px; 
-        background-position: center;color: white;padding-bottom: 50px; 
+        color: white;
+        height: 300px;
         background-size: cover;
+        padding: 20px;
+        position: relative;
     }
-    .getstarted{
-        text-align: center; 
-        padding-top:50px;
+
+    .section2::after {
+        content: '';
+        background-image: url('images/splash1.webp');
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
     }
-    .icons{
-        background-color: rgba(0,0,0,0.5);
+
+    .eco_sec2>p:first-child {
+        font-size: 25px;
+    }
+
+    .eco_sec2>p:last-child {
+        font-size: 50px;
+        font-family: serif;
+    }
+
+    /* section3 */
+
+    .privatize {
+        color: #4c5b33;
+        text-align: center;
+        padding: 30px 150px;
+    }
+
+    .privatize>p:first-child {
+        font-size: 30px;
+        font-family: serif;
+        font-weight: 600;
+    }
+
+    .cards {
+        display: grid;
+        grid-template-columns: 45% 45%;
+        justify-content: space-evenly;
+        padding: 50px 0;
+    }
+
+    .cards1 {
+        color: white;
+        background-color: #9bcd52;
+        padding: 25px;
+    }
+
+    .cards1>p:first-child {
+        font-size: 30px;
+        font-family: serif;
+        font-weight: 500;
+    }
+
+    .cards2 {
+        color: white;
+        background-color: #4c5b33;
+        padding: 25px;
+    }
+
+    .cards2>p:first-child {
+        font-size: 30px;
+        font-family: serif;
+        font-weight: 500;
+    }
+
+    /* section4 */
+
+    .blackbg {
+        background-image: url('images/started1.avif');
+        height: 630px;
+        background-position: center;
+        color: white;
+        padding-bottom: 50px;
+        background-size: cover;
+        position: relative;
+    }
+
+    .blackbg::after {
+
+        content: '';
+        background-image: url('images/both.avif');
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
+    }
+
+    .getstarted {
+        text-align: center;
+        padding-top: 50px;
+    }
+
+    .getstarted>p {
+        font-size: 30px;
+        font-family: serif;
+        font-weight: 500;
+        padding: 40px 0;
+    }
+
+    .icons {
+        background-color: rgba(0, 0, 0, 0.5);
         display: grid;
         grid-template-columns: 30% 30% 30%;
         justify-items: center;
-        justify-content: space-around; 
-        padding:50px;
-    }
-    .exp , .dept, .call{
-        text-align: center;
-    }
-    .start{
-        text-align: center; 
-        margin:-25px; 
-        color:black;
-    }
-    #startbtn{
-        background-color:#9bcd52; 
-        color:white; 
-        padding: 10px;
-    }
-    .modal-header{
-        background-color:#9bcd52; 
-        text-align: left; 
-        color:white;
-    }
-    #dropdown{
-        color:gray;
+        justify-content: space-around;
+        padding: 100px;
     }
 
-    .from > div{
+    .exp,
+    .dept,
+    .call {
+        text-align: center;
+    }
+
+    .exp>p,
+    .dept>p,
+    .call>p {
+        padding-top: 20px;
+    }
+
+    .start {
+        position: relative;
+        text-align: center;
+        margin: -25px;
+        color: black;
+    }
+
+    #startbtn {
+        position: absolute;
+        background-color: #9bcd52;
+        color: white;
+        padding: 10px;
+        z-index: 1;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+    .modal-header {
+        background-color: #9bcd52;
+        text-align: left;
+        color: white;
+    }
+
+    #dropdown {
+        color: gray;
+    }
+
+    .from>div {
         padding-bottom: 20px;
     }
-    .modal-body{
-        text-align: left; 
-        color:gray;
-    }
-    #send{
-        background-color:#4c5b33; 
-        color:white; 
-        font-size: smaller; 
-        width:100%;
-    }
-    
 
-    /* header5 */
-
-
-    .header5{
-        padding:40px;
+    .modal-body {
+        text-align: left;
+        color: gray;
     }
-    .head1{
-        width:100%; 
+
+    #send {
+        background-color: #4c5b33;
+        color: white;
+        font-size: smaller;
+        width: 100%;
+    }
+
+
+    /* section5 */
+
+
+    .section5 {
+        padding: 40px;
+    }
+
+    .head1 {
+        width: 100%;
         text-align: center;
     }
-    .inspired{
-        display: grid; 
+
+    .head1>p:first-child {
+        font-size: 30px;
+        font-family: serif;
+        font-weight: 600;
+
+    }
+
+    .inspired {
+        display: grid;
         gap: 2px;
     }
-    .head2{
+
+    .head2 {
         display: grid;
         grid-template-columns: 40% 30% 30%;
-        color:white;
-        gap:2px;
+        color: white;
+        gap: 2px;
     }
-    .head2a{
-        background-image:url('images/boating.avif'); 
+
+    .head2a {
+        background-image: url('images/boating.avif');
         background-size: cover;
     }
-    .head2a1{
-        background-color: rgba(0,0,0,0.5); 
-        padding:10px;
+
+    .head2a1 {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
     }
-    .head2b{
-        background-image:url('images/horses.avif'); 
-        display: flex; 
-        align-items: end; 
+
+    .head2a1>p:first-child {
+        font-size: 35px;
+        font-family: serif;
+
+    }
+
+    .head2b {
+        background-image: url('images/horses.avif');
+        display: flex;
+        align-items: end;
         background-size: cover;
-        padding:10px;
+        padding: 10px;
     }
-    .head2c{
-        background-image:url('images/island.avif'); 
-        display: flex; 
-        align-items: end; 
+
+    .head2b>p,
+    .head2c>p {
+        font-size: 35px;
+        font-family: serif;
+    }
+
+    .head2c {
+        background-image: url('images/island.avif');
+        display: flex;
+        align-items: end;
         background-size: cover;
-        padding:0 30px; 
+        padding: 0 30px;
     }
-    .head3{
+
+    .head3 {
         display: grid;
         grid-template-columns: 30% 30% 40%;
-        color:white;
-        height:200px;
-        gap:2px;
-        
-    }
-    .head3a{
-        background-image:url('images/house.avif'); 
-        display: flex; 
-        align-items: end; 
-        background-size: cover;
-        padding:0 10px;
-    }
-    .head3b{
-        background-image:url('images/boat.avif'); 
-        display: flex; 
-        align-items: end; 
-        background-size: cover;
-        padding:0 10px;
-    }
-    .head3c{
-        background-image:url('images/ship.avif'); 
-        display: flex; 
-        align-items: end; 
-        background-size: cover;
-        padding:0 10px;
+        color: white;
+        height: 200px;
+        gap: 2px;
+
     }
 
-    /* header6 */
+    .head3a {
+        background-image: url('images/house.avif');
+        display: flex;
+        align-items: end;
+        background-size: cover;
+        padding: 0 10px;
+    }
 
-    .header6{
+    .head3a>p,
+    .head3b>p,
+    .head3c>p {
+        font-size: 35px;
+        font-family: serif;
+    }
+
+    .head3b {
+        background-image: url('images/boat.avif');
+        display: flex;
+        align-items: end;
+        background-size: cover;
+        padding: 0 10px;
+    }
+
+    .head3c {
+        background-image: url('images/ship.avif');
+        display: flex;
+        align-items: end;
+        background-size: cover;
+        padding: 0 10px;
+    }
+
+    /* section6 */
+
+    .section6 {
         background-color: #f0efed;
-        padding:30px;
+        padding: 47px 0;
+        position: relative;
     }
-    .contain{
-        display: grid; 
+
+    .section6::after {
+        content: '';
+        background-image: url('images/splash2.webp');
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
+
+    }
+
+    .contain {
+        display: grid;
         grid-template-columns: 50% 50%;
     }
-    .left1{
-        color:#4c5b33;
+
+    .left1 {
+        color: #4c5b33;
     }
-    .left2{
-        display: grid; 
-        gap:20px; 
-        padding:40px 0;
+
+    .left1>p {
+        font-size: 30px;
+        font-family: serif;
+        margin: 0;
+        font-weight: 600;
     }
-    .left2a{
-        display: grid; 
-        grid-template-columns: 25% 25% 25%; 
-        gap:20px;
+
+    .left2 {
+        display: grid;
+        gap: 20px;
+        padding: 40px 0;
     }
-    .left3{
-        display: grid; 
-        grid-template-columns: 25% 25% 25%; 
-        gap:20px;
+
+    .left2a {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        gap: 20px;
     }
-    .left4  button{
-        padding: 6px 10px; 
-        background-color: #9bcd52; 
-        color:white; 
-        font-size: 17px; 
-        border: 1px solid #9bcd52; 
-        padding:10px;
+
+    .left3 {
+        display: grid;
+        grid-template-columns: 25% 25% 25%;
+        gap: 20px;
     }
-    .right1{
-        color:#4c5b33; 
-        background-color: white; 
-        padding-left:20px;
+
+    .left4 button {
+        padding: 6px 10px;
+        background-color: #9bcd52;
+        color: white;
+        font-size: 17px;
+        border: 1px solid #9bcd52;
+        padding: 10px;
     }
-    .right1 > p:nth-child(3){
-        color:gray;
+
+    .right1 {
+        color: #4c5b33;
+        background-color: white;
+        padding-left: 20px;
     }
-    .right2{
-        display: flex; 
-        flex-wrap: wrap; 
+
+    .right1>p:nth-child(3) {
+        color: gray;
+    }
+
+    .right1>p:first-child {
+        font-size: 50px;
+        font-family: serif;
+        font-weight: 600;
+    }
+
+    .right2 {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
-    .right1a{
-        display: flex; 
-        flex-wrap: wrap; 
+
+    .right1a {
+        display: flex;
+        flex-wrap: wrap;
         align-items: center;
     }
-    .right1a > div:nth-last-child(1){
-        color:gray;
+
+    .right1a>div:nth-last-child(1) {
+        color: gray;
     }
-    .right1a > div:nth-child(2){
-        padding:10px;
+
+    .right1a>div:nth-child(2) {
+        padding: 10px;
     }
-    .right1a > div:nth-child(3) > p{
-        margin:0;
+
+    .right1a>div:nth-child(3)>p {
+        margin: 0;
     }
-    .right2a{
-        padding-top:30px; 
-        width:30%;
+
+    .right2a {
+        padding-top: 15px;
+        width: 30%;
     }
-    .right2b{
-        color:gray; 
-        padding-top:20px; 
-        width:40%;
+
+    .right2b {
+        color: gray;
+        padding-top: 20px;
+        width: 40%;
     }
-    .right2b > p{
+
+    .right2b>p {
         margin-bottom: 0;
     }
-    .right2b1{
-        display: grid; 
-        grid-template-columns: 48% 50%; 
+
+    .right2b1 {
+        display: grid;
+        grid-template-columns: 48% 50%;
         align-items: center;
     }
-    .right2b1 > div:nth-last-child(1) > p{
-        margin:0;
+
+    .right2b1>div:nth-last-child(1)>p {
+        margin: 0;
     }
 
-    /* header7 */
+    /* section7 */
 
-    .header7{
-        background-color: #9bcd52;
-        padding:30px;
-    
+    .section7 {
+        background-color: #b2dc6b;
+        padding: 30px;
+
     }
-    .bookbutton > button{
-        padding: 6px 10px; 
-        background-color: white; 
-        color:gray; 
-        font-size: 17px; 
-        border: 1px solid white; 
-        padding:10px;
+
+    .bookbutton>button {
+        padding: 6px 10px;
+        background-color: white;
+        color: #505d33;
+        font-size: 17px;
+        border: 1px solid white;
+
     }
-    .cover{
-        display: grid; 
-        grid-template-columns: 60% 40%; 
-        justify-items: center; 
+
+    .cover {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        justify-items: center;
         align-items: center;
     }
-    .dateicon{
-        display: grid; 
-        grid-template-columns: 15% 90%; 
-        align-items: center; 
+
+    .dateicon {
+        display: grid;
+        grid-template-columns: 15% 90%;
+        align-items: center;
         justify-items: center;
     }
-    .dateicon > div:nth-child(1){
-        padding:20px;
-    }
-    .dateicon > div > h1{
-        margin:0;
-        color:white;
-    }
-    .dateicon > div > h2{
-        margin:0; 
-        color:#4c5b33;
+
+    .dateicon>div:nth-child(1) {
+        padding: 20px;
     }
 
-    /* header8 */
+    .dateicon>div>p {
+        margin: 0;
+        color: white;
+        font-size: 30px;
+        font-family: serif;
+    }
 
-    .header8{
+    .dateicon>div>p:nth-child(2) {
+        margin: 0;
+        color: #4c5b33;
+    }
+
+    /* section8 */
+
+    .section8 {
         background-color: #4c5b33;
-        padding:30px;
+        padding: 53px 0;
+        position: relative;
     }
-    .footer > div > h3{
-        color:#9bcd52;
+
+    .section8::after {
+        content: '';
+        background-image: url('images/footer.avif');
+        position: absolute;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: screen;
+
+    }
+
+    .footer>div>h3 {
+        color: #9bcd52;
         font-size: medium;
     }
-    .footer{
-        display: grid; 
-        grid-template-columns: 20% 20% 20% 20% 15% ;
-        justify-items: center; 
+
+    .footer {
+        display: grid;
+        grid-template-columns: 20% 20% 20% 20% 15%;
+        justify-items: center;
         justify-content: space-between;
     }
-    .footer1 , .footer2, .footer3{
-        color:white;
+
+    .footer1,
+    .footer2,
+    .footer3 {
+        color: white;
     }
-    .footer2 > p{
-        margin:0;
+
+    .footer1>img {
+        padding-bottom: 10px;
     }
-    .follow{
-        display: grid; 
-        grid-template-columns: 20% 20% 30%; 
-        align-items: center; 
+
+    .footer1>p:first-child,
+    .footer2>p:first-child,
+    .footer3>p:first-child {
+        color: #9bcd52;
+        font-size: 15px;
+        padding-top: 10px;
+        font-weight: bold;
+    }
+
+    .footer1>div>p {
+        color: white;
+        font-size: 14px;
+        padding-top: 10px;
+    }
+
+    .footer2>p {
+        margin: 0;
+    }
+
+    .footer2>div {
+        padding-bottom: 10px;
+    }
+
+    .footer2>div>p {
+        color: white;
+        font-size: 15px;
+        padding-top: 10px;
+        margin: 0;
+    }
+
+    .follow {
+        display: grid;
+        grid-template-columns: 30% 30% 40%;
+        align-items: center;
         justify-items: center;
     }
-    .fa-brands{
-        color: #ffffff; 
-        padding:5px;
+
+    .fa-brands {
+        color: #ffffff;
+        padding: 5px;
     }
 
-    @media only screen and (max-width: 576px){
-        .row1>div{
-            width:100%;
-            text-align: center;
+    @media only screen and (max-width: 576px) {
+        .row1>div:first-child {
+            width: 10%;
         }
-        .cards{
+
+        .row1>div:last-child>button {
+            font-size: smaller;
+        }
+
+        .cards {
             grid-template-columns: 100%;
         }
-        .icons{
+
+        .icons {
             grid-template-columns: 100%;
         }
-        .blackbg{
-            height:600px;
+
+        .blackbg {
+            height: 900px;
         }
-        .head2{
+
+        .section5 {
+            padding: 300px 0;
+        }
+
+        .head2 {
             grid-template-columns: 100%;
         }
-        .head3{
+
+        .head2b>p,
+        .head2c>p,
+        .head3a>p,
+        .head3b>p,
+        .head3c>p {
+            margin-top: 100px;
+        }
+
+        .head3 {
             grid-template-columns: 100%;
         }
-        .contain{
+
+        .contain {
             grid-template-columns: 100%;
         }
-        .left2a{
+
+        .left2a {
             grid-template-columns: 100%;
         }
-        .left3{
+
+        .left2a>div {
+            width: 50%;
+        }
+
+        .left3 {
             grid-template-columns: 100%;
         }
-        .cover{
+
+        .left3>div {
+            width: 50%;
+        }
+
+        .cover {
             grid-template-columns: 100%;
         }
-        .dateicon{
+
+        .dateicon {
             grid-template-columns: 100%;
         }
-        .right2a{
+
+        .right2a {
             width: 100%;
         }
-        .right2b{
+
+        .right2b {
             width: 100%;
         }
-        .right2b1{
+
+        .right2b1 {
             grid-template-columns: 100%;
         }
-        .footer{
+
+        .footer {
             grid-template-columns: 100%;
+            padding-top: 80px;
         }
-        
-        
 
     }
-
-
-
 </style>
 
 <body>
@@ -539,14 +819,14 @@
                         <i class="fa-solid fa-bars"></i>
                     </label>
                     <label for="exit">
-                        <i class="fa-solid fa-x"></i>
+                        <i class="fa-solid fa-bars"></i>
                     </label>
                 </div>
                 <div>
                     <img src="images/headlogo.avif" alt="logoETB-1">
                 </div>
                 <div>
-                    <button><i class="fa fa-phone" aria-hidden="true"></i> &nbsp;&nbsp; get in touch</button>
+                    <button><i class="fa fa-phone" style="margin:5px;" aria-hidden="true"></i> get in touch</button>
                 </div>
             </div>
         </div>
@@ -556,48 +836,55 @@
             <li><a href="index.html">home</a></li>
             <li><a href="destination.html">destination</a></li>
             <li><a href="private-tour.html">private tour</a></li>
-            <li><a href="private-tour-popup.html">private-tour-popup</a></li>
-            <li><a href="tour-list.html">tour-list</a></li>
+            <li><a href="private-tour-popup.html">private_tour_popup</a></li>
+            <li><a href="tour-list.html">tour_list</a></li>
             <li><a href="tour-list-expand.html">tour expand</a></li>
         </ul>
     </section>
-    <header class="header2">
+    <section class="section2">
         <div class="inside">
-            <div>
+            <div class="eco_sec2">
                 <p>RECEIVE VIP TREATMENT</p>
-                <h1>Private Trips</h1>
+                <p>Private Trips</p>
             </div>
         </div>
-    </header>
+    </section>
 
-    <header class="header3">
+    <section class="section3">
         <div class="inside">
             <div class="privatize">
-                <h2>Privatize Any of Our Daytrips</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis fugiat dignissimos deserunt tempore. Esse, necessitatibus. Qui pariatur soluta tempora quasi. Molestias omnis exercitationem dolorum. Ratione harum numquam voluptas natus!</p>
+                <p>Privatize Any of Our Daytrips</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In reiciendis fugiat dignissimos deserunt
+                    tempore. Esse, necessitatibus. Qui pariatur soluta tempora quasi. Molestias omnis exercitationem
+                    dolorum. Ratione harum numquam voluptas natus!</p>
             </div>
             <div class="cards">
                 <div class="cards1">
-                    <h2>Tailor Made Trips</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint voluptates possimus delectus tenetur! Repellat corporis odit, facilis reiciendis adipisci aut sunt dicta! Rerum dolorem dolores provident neque fugiat facere.</p>
+                    <p>Tailor Made Trips</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint voluptates possimus delectus
+                        tenetur! Repellat corporis odit, facilis reiciendis adipisci aut sunt dicta! Rerum dolorem
+                        dolores provident neque fugiat facere.</p>
                 </div>
-                <div class="cards2" style="color:white; background-color: #4c5b33; padding:25px;">
-                    <h2>Groups</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint voluptates possimus delectus tenetur! Repellat corporis odit, facilis reiciendis adipisci aut sunt dicta! Rerum dolorem dolores provident neque fugiat facere.</p>
+                <div class="cards2">
+                    <p>Groups</p>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam sint voluptates possimus delectus
+                        tenetur! Repellat corporis odit, facilis reiciendis adipisci aut sunt dicta! Rerum dolorem
+                        dolores provident neque fugiat facere.</p>
                 </div>
             </div>
         </div>
-    </header>
-    <header class="header4">
+    </section>
+
+    <section class="section4">
         <div class="blackbg">
             <div class="inside">
                 <div class="getstarted">
-                    <h2>Let's get started</h2>
+                    <p>Let's get started</p>
                 </div>
                 <div class="icons">
                     <div class="exp">
-                            <i class="fa-solid fa-magnifying-glass fa-4x" style="color: #ffffff;"></i>
-                            <p>Select your travel experience</p>
+                        <i class="fa-solid fa-magnifying-glass fa-4x" style="color: #ffffff;"></i>
+                        <p>Select your travel experience</p>
                     </div>
                     <div class="dept">
                         <i class="fa-solid fa-hand-pointer fa-4x" style="color: #ffffff;"></i>
@@ -609,146 +896,157 @@
                     </div>
                 </div>
                 <div class="start">
-                    <button type="button" class="btn" id="startbtn" data-bs-toggle="modal" data-bs-target="#exampleModal">GET STARTED !</button>
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <button type="button" class="btn" id="startbtn" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">GET STARTED !</button>
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered modal-xl">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                      <label for="dropdown" class="form-label">SELECT YOUR TRAVEL EXPERIENCE</label>
-                                      <select class="form-select" id="dropdown" aria-label="Default select example">
-                                        <option selected>Discovering the Larimar and the Deep South</option>
-                                        <option value="1">One</option>
-                                        <option value="2">Two</option>
-                                        <option value="3">Three</option>
-                                      </select>
-                                    </div>
-                                    <div class="col-sm">
-                                      <label for="date" class="form-label">Select date</label>
-                                      <input type="text" class="form-control" id="date" aria-label="State">
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="adults" class="form-label">Number of adults *</label>
-                                      <input type="text" class="form-control" id="adults" aria-label="Zip">
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="child" class="form-label">Number of children *</label>
-                                      <input type="text" class="form-control" id="child" aria-label="child">
-                                    </div>
-                                </div>                            
-                            </div>
-                            <div class="modal-body">
-                                <div class="row" style=" padding: 20px 0;">
-                                    <div class="col-sm">
-                                        <label for="first" class="form-label">First name *</label>
-                                      <input type="text" class="form-control" id="first" aria-label="first">
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="last" class="form-label">Last name *</label>
-                                      <input type="text" class="form-control" id="last" aria-label="last">
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="email" class="form-label">Email *</label>
-                                      <input type="text" class="form-control" id="email" aria-label="email">
-                                    </div>
-                                    <div class="col-sm">
-                                        <label for="phone" class="form-label">Phone *</label>
-                                      <input type="text" class="form-control" id="phone" aria-label="phone">
-                                    </div>
-                                </div>
-                                <div class="row" style="padding:20px 0;">
-                                    <div class="col-sm-9">
-                                        <label for="message"> Message *</label>
-                                        <textarea class="form-control" id="message" style="height: 100px"></textarea>
-                                    </div>
-                                    <div class="from col-sm ">
-                                        <div>
-                                            <label for="from" class="form-label">I'm from *</label>
-                                            <input type="text" class="form-control" id="from" placeholder="Afghanistan" aria-label="from">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="row">
+                                        <div class="col-sm-6">
+                                            <label for="dropdown" class="form-label">SELECT YOUR TRAVEL
+                                                EXPERIENCE</label>
+                                            <select class="form-select" id="dropdown"
+                                                aria-label="Default select example">
+                                                <option selected>Discovering the Larimar and the Deep South</option>
+                                                <option value="1">One</option>
+                                                <option value="2">Two</option>
+                                                <option value="3">Three</option>
+                                            </select>
                                         </div>
                                         <div class="col-sm">
-                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                            <label class="form-check-label" for="flexCheckDefault">I have read and agree to the privacy policy</label>
+                                            <label for="date" class="form-label">Select date</label>
+                                            <input type="text" class="form-control" id="date" aria-label="State">
                                         </div>
-                                        <div>
-                                            <button type="button" class="btn" id="send">SEND TRAVEL REQUEST</button>
+                                        <div class="col-sm">
+                                            <label for="adults" class="form-label">Number of adults *</label>
+                                            <input type="text" class="form-control" id="adults" aria-label="Zip">
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="child" class="form-label">Number of children *</label>
+                                            <input type="text" class="form-control" id="child" aria-label="child">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="row" style=" padding: 20px 0;">
+                                        <div class="col-sm">
+                                            <label for="first" class="form-label">First name *</label>
+                                            <input type="text" class="form-control" id="first" aria-label="first">
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="last" class="form-label">Last name *</label>
+                                            <input type="text" class="form-control" id="last" aria-label="last">
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="email" class="form-label">Email *</label>
+                                            <input type="text" class="form-control" id="email" aria-label="email">
+                                        </div>
+                                        <div class="col-sm">
+                                            <label for="phone" class="form-label">Phone *</label>
+                                            <input type="text" class="form-control" id="phone" aria-label="phone">
+                                        </div>
+                                    </div>
+                                    <div class="row" style="padding:20px 0;">
+                                        <div class="col-sm-9">
+                                            <label for="message"> Message *</label>
+                                            <textarea class="form-control" id="message"
+                                                style="height: 100px"></textarea>
+                                        </div>
+                                        <div class="from col-sm ">
+                                            <div>
+                                                <label for="from" class="form-label">I'm from *</label>
+                                                <input type="text" class="form-control" id="from"
+                                                    placeholder="Afghanistan" aria-label="from">
+                                            </div>
+                                            <div class="col-sm">
+                                                <input class="form-check-input" type="checkbox" value=""
+                                                    id="flexCheckDefault">
+                                                <label class="form-check-label" for="flexCheckDefault">I have read and
+                                                    agree to the privacy policy</label>
+                                            </div>
+                                            <div>
+                                                <button type="button" class="btn" id="send">SEND TRAVEL REQUEST</button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <header class="header5">
+    </section>
+    <section class="section5">
         <div class="inside">
             <div class="head1">
-                <h1>Get Inspired</h1>
+                <p>Get Inspired</p>
                 <p>What kind of unique excursion do you have in mind?</p>
-                <p>We can always be reached for particular requirements and take care of additional arrangements for you.</p>
+                <p>We can always be reached for particular requirements and take care of additional arrangements for
+                    you.</p>
             </div>
             <div class="inspired">
                 <div class="head2">
                     <div class="head2a">
                         <div class="head2a1">
-                            <h1>Lorem ipsum dolor sit</h1>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim inventore soluta corporis, facere maiores facilis accusamus obcaecati nemo, eveniet quaerat voluptate sint ducimus pariatur deleniti vitae ullam reprehenderit repudiandae? Et!</p>
+                            <p>Lorem ipsum dolor sit</p>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim inventore soluta corporis,
+                                facere maiores facilis accusamus obcaecati nemo, eveniet quaerat voluptate sint ducimus
+                                pariatur deleniti vitae ullam reprehenderit repudiandae? Et!</p>
                         </div>
                     </div>
                     <div class="head2b">
-                        <h1>Dolor sit amet</h1>
+                        <p>Dolor sit amet</p>
                     </div>
                     <div class="head2c">
-                        <h1>Lorem ipsum Dolor sit </h1>
+                        <p>Lorem ipsum Dolor sit </p>
                     </div>
                 </div>
                 <div class="head3">
                     <div class="head3a">
-                        <h1>Dolor sit amet</h1>
+                        <p>Dolor sit amet</p>
                     </div>
                     <div class="head3b">
-                        <h1>Dolor sit amet</h1>
+                        <p>Dolor sit amet</p>
                     </div>
                     <div class="head3c">
-                        <h1>Lorem ipsum Dolor</h1>
+                        <p>Lorem ipsum Dolor</p>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <header class="header6">
+    </section>
+    <section class="section6">
         <div class="inside">
             <div class="contain">
                 <div class="left">
                     <div class="left1">
-                        <h2>Our Guides & Local </h2>
-                        <h2>Experts</h2>
+                        <p>Our Guides & Local </p>
+                        <p>Experts</p>
                     </div>
                     <div class="left2">
                         <div class="left2a">
                             <div>
-                                <img src="images/pic11.webp" alt="pic1">    
+                                <img src="images/pic11.webp" alt="pic1">
                             </div>
                             <div>
-                                <img src="images/pic22.webp" alt="pic1">    
+                                <img src="images/pic22.webp" alt="pic1">
                             </div>
                             <div>
-                                <img src="images/pic33.webp" alt="pic1">    
+                                <img src="images/pic33.webp" alt="pic1">
                             </div>
                         </div>
                         <div class="left3">
                             <div>
-                                <img src="images/pic22.webp" alt="pic1" >    
+                                <img src="images/pic22.webp" alt="pic1">
                             </div>
                             <div>
-                                <img src="images/pic44.webp" alt="pic1" >    
+                                <img src="images/pic44.webp" alt="pic1">
                             </div>
                             <div>
-                                <img src="images/pic11.webp" alt="pic1">    
+                                <img src="images/pic11.webp" alt="pic1">
                             </div>
                         </div>
                     </div>
@@ -758,9 +1056,11 @@
                 </div>
                 <div class="right">
                     <div class="right1">
-                        <h1>''</h1>
+                        <p>&rdquo;</p>
                         <p><b>Fantastic Experience!</b></p>
-                        <p>Our guide (Jasmine) was very knowledgable about the tour. Her English was more than perfect and she explained everything really well. We were a couple on holiday for 7 days, this was by far our best experience. I can only recommend this tour to everyone!...More</p>
+                        <p>Our guide (Jasmine) was very knowledgable about the tour. Her English was more than perfect
+                            and she explained everything really well. We were a couple on holiday for 7 days, this was
+                            by far our best experience. I can only recommend this tour to everyone!...More</p>
                         <p><b>SAMG.</b></p>
                         <div class="right1a">
                             <div>
@@ -793,17 +1093,17 @@
                 </div>
             </div>
         </div>
-    </header>
-    <header class="header7">
+    </section>
+    <section class="section7">
         <div class="inside">
             <div class="cover">
                 <div class="dateicon">
-                    <div >
+                    <div>
                         <i class="fa-solid fa-calendar-days fa-3x" style="color: #ffffff; width:100%;"></i>
                     </div>
                     <div>
-                        <h1>BOOK NOW</h1>
-                        <h2>lorem ipsum dolor sit</h2>
+                        <p>BOOK NOW</p>
+                        <p>lorem ipsum dolor sit</p>
                     </div>
                 </div>
                 <div class="bookbutton">
@@ -811,57 +1111,70 @@
                 </div>
             </div>
         </div>
-    </header>
-    <header class="header8">
+    </section>
+    <section class="section8">
         <div class="inside">
             <div class="footer">
                 <div class="footer1">
                     <img src="images/footlogo.avif" alt="footlogo">
-                    <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round trips, day trips and actvities in Southwest of Dominican Republic.</p>
+                    <p>Ecotour Barahona is your favourite specialist for authentic, unique and memorable round trips,
+                        day trips and actvities in Southwest of Dominican Republic.</p>
                     <img src="images/footlogo2.avif" alt="footlogo2">
-                    <p>Travel environmentally friendly with us and discover the main destinations of Dominican Republic.</p>
+                    <p>Travel environmentally friendly with us and discover the main destinations of Dominican Republic.
+                    </p>
                 </div>
                 <div class="footer1">
-                    <h3>ABOUT US</h3>
-                    <P>ABOUT ECOTOUR</P>
-                    <P>BARAHONA</P>
-                    <P>OUR TEAM</P>
-                    <P>GUESTBOOK</P>
-                    <P>IMPRINT</P>
+                    <p>ABOUT US</p>
+                    <div>
+                        <P>ABOUT ECOTOUR</P>
+                        <P>BARAHONA</P>
+                        <P>OUR TEAM</P>
+                        <P>GUESTBOOK</P>
+                        <P>IMPRINT</P>
+                    </div>
                 </div>
                 <div class="footer1">
-                    <h3>CUSTOMER SERVICE</h3>
-                    <P>BOOKING CONDITIONS</P>
-                    <P>CONTACT-US</P>
-                    <P>FAQ'S</P>
-                    <P>LEGAL NOTICE</P>
-                    <P>PRIVACY POLICY</P>
+                    <p>CUSTOMER SERVICE</p>
+                    <div>
+                        <P>BOOKING CONDITIONS</P>
+                        <P>CONTACT-US</P>
+                        <P>FAQ'S</P>
+                        <P>LEGAL NOTICE</P>
+                        <P>PRIVACY POLICY</P>
+                    </div>
                 </div>
                 <div class="footer2">
-                    <h3>RESERVATIONS AND BOOKINGS</h3>
-                    <p>MONDAY TO FRIDAY</p>
-                    <p>from 8:00 am to 8:00 pm</p>
-                    <p>SATURDAY TO SUNDAY</p>
-                    <p>from 9:00 am to 5:00 pm</p>
-                    <p>Atlantic Standard Time</p>
-                    <p>+1 (809) 856 2260</p>
+                    <p>RESERVATIONS AND BOOKINGS</p>
+                    <div>
+                        <p>MONDAY TO FRIDAY</p>
+                        <p>from 8:00 am to 8:00 pm</p>
+                    </div>
+                    <div>
+                        <p>SATURDAY TO SUNDAY</p>
+                        <p>from 9:00 am to 5:00 pm</p>
+                    </div>
+                    <div>
+                        <p>Atlantic Standard Time</p>
+                        <p>+1 (809) 856 2260</p>
+                    </div>
                 </div>
                 <div class="footer3">
-                    <h3>FOLLOW US</h3>
+                    <p>FOLLOW US</p>
                     <div class="follow">
                         <div>
                             <i class="fa-brands fa-facebook-f"></i>
                         </div>
-                        <div>                        
+                        <div>
                             <i class="fa-brands fa-instagram"></i>
                         </div>
                         <div>
-                            <img src="images/whitelogo3.png" alt="whitelogo3" width="25px" >
+                            <img src="images/whitelogo3.png" alt="whitelogo3" width="25px">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
+    </section>
 </body>
+
 </html>
