@@ -8,18 +8,14 @@
     <title>TOUR PAGE</title>
     <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
     <style>
-        @font-face {
-            font-family: 'NotoSansZanabazarSquare-Regular';
-            src: url(fonts/NotoSansZanabazarSquare-Regular.ttf);
-        }
-
         * {
             box-sizing: border-box;
-            font-family: sans-serif;
+            
         }
 
         body {
             margin: 0;
+            font-family: 'Times New Roman', Times, serif;
         }
 
         img {
@@ -62,6 +58,7 @@
             text-decoration: none;
             cursor: pointer;
             font-size: 1.1em;
+            font-family: sans-serif;
         }
 
         .nav a:hover {
@@ -87,11 +84,13 @@
         label[for="open"] {
             cursor: pointer;
             font-size: 2rem;
+            font-weight: bolder;
         }
 
         label[for="exit"] {
             cursor: pointer;
-            font-size: 1.5rem;
+            font-size: 2rem;
+            font-weight: bolder;
         }
 
         .container {
@@ -107,45 +106,76 @@
             padding: 15px 0;
         }
 
-        .row1>div {
-            width: 30%
+        .row1>div:first-child{
+            width: 25%;
         }
-
+        .row1>div:nth-child(2){
+            width:30%;
+        }
         .row1>div:last-child {
+            width:30%;
             text-align: right;
         }
 
         .row1>div:last-child>button {
-            border: 1px solid greenyellow;
-            padding: 10px 20px;
-            color: rgb(139, 98, 54);
+            border: 2px solid rgba(152, 205, 93);
+            padding: 10px 18px;
+            color:rgb(100, 78, 60);
             background-color: white;
+            font-size: x-small;
+            font-weight: bold;
+            font-family: sans-serif;
         }
 
+        .row1>div:last-child>button>i{
+            margin-right:10px;
+        }
         .head p {
-            font-size: 2rem;
+            font-size: x-large;
+            font-family: sans-serif;
+            margin:0;
+            letter-spacing: 2px;
         }
 
         .head h2 {
-            font-size: 4rem;
-            margin: 40px 0px;
+            font-size: 3.1rem;
+            margin: 20px 0px;
         }
 
         .main {
             background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.jpg);
             background-size: cover;
-            height: 550px;
+            height: 400px;
             color: white;
             display: flex;
             align-items: center;
             font-size: 20px;
+            position:relative;
         }
-
+        .main::after{
+            content:"";
+            background-image: url(images/splash1.webp);
+            background-size: cover;
+            position:absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            mix-blend-mode: screen;
+        }
+        .head{
+            position:relative;
+        }
         .head button {
-            padding: 8px 30px;
-            background-color: rgb(129, 187, 42);
+            position:absolute;
+            z-index: 1;
+            bottom:-60px;
+            padding: 10px 50px;
+            background-color: rgba(152, 205, 93);
             border: 0;
             color: white;
+            font-family: sans-serif;
+            font-weight: 600;
         }
 
         .smlogo {
@@ -157,7 +187,7 @@
 
         .smlogo>div {
             width: 22%;
-            background-color: rgb(167, 167, 167);
+            background-color: rgb(231, 231, 231);
             margin: 30px 0px;
         }
 
@@ -165,7 +195,7 @@
 
         .smlogo>div h3 {
             font-size: 15px;
-            font-weight: 100;
+            font-weight: 200;
         }
 
         .row2 {
@@ -173,11 +203,20 @@
             text-align: center;
             margin: auto;
             padding: 20px 0px 50px 0px;
-            font-family: 'NotoSansZanabazarSquare-Regular';
         }
-
+        .row2 h2{
+            font-size: 2rem;
+        }
+        .row2 p{
+           color: rgb(125 125 125);
+           font-size: large;
+        }
+        .row2 h4{
+            color:rgb(119 119 119);
+            font-size: large;
+        }
         section {
-            background-color: lightgray;
+            background-color: rgb(238, 238, 238);
         }
 
         .start {
@@ -243,7 +282,7 @@
         }
 
         .c1 button {
-            background-color: greenyellow;
+            background-color: rgba(152, 205, 93);
             padding: 5px 20px;
             color: white;
             border: 0;
@@ -258,7 +297,7 @@
             padding-left: 20px;
         }
 
-        input[type="radio"] {
+        #expand, #expand0, #expand1, #expand2, #expand3{
             display: none;
         }
 
@@ -350,7 +389,7 @@
         }
 
         .com:hover {
-            background-color: green;
+            background-color: rgba(152, 205, 93);
             color: white;
         }
 
@@ -362,7 +401,7 @@
         .load button {
             width: 15%;
             padding: 0px 10px;
-            background-color: green;
+            background-color: rgba(152, 205, 93);
             color: white;
             border: 0;
         }
@@ -378,6 +417,8 @@
 
         .featurebox>h2 {
             text-align: center;
+            margin-bottom:50px;
+            font-size: 40px;
         }
 
         .picrow {
@@ -397,10 +438,11 @@
             align-items: end;
             background-color: rgba(0, 0, 0, 0.509);
             height: 400px;
+            padding:20px;
         }
 
         .pad {
-            padding: 10px 80px 15px 20px;
+            padding: 10px 20px 15px 20px;
             line-height: 1.5;
         }
 
@@ -411,7 +453,7 @@
         }
 
         .pad button {
-            background-color: greenyellow;
+            background-color: rgba(152, 205, 93);
             border: none;
             color: white;
             padding: 3px 15px
@@ -423,38 +465,65 @@
         }
 
         footer {
-            background-color: #5a6941;
+            background-color: rgb(75, 91, 52);
             padding: 30px 0px;
+            font-family: sans-serif;
+            position:relative;
+        }
+        footer::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url(images/splash2.webp);
+            background-size: cover;
+            mix-blend-mode: screen;
         }
 
-        .end {
+        .end{
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
             color: white;
         }
-
-        .endcol1 {
-            width: 25%;
+        .end ul{
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            color: white;
         }
-
+        .end li{
+            padding: 10px 0;
+            font-size: 12px;
+        }
+        .endcol1 {
+            width: 20%;
+        }
+        .end h3 {
+            color:rgba(152, 205, 93);
+            margin:18px 0px;
+            font-size: small;
+            letter-spacing: 1.1px;
+        }
+        .endcol1 p{
+            font-size: x-small;
+        }
         .endcol2 {
             width: 15%;
-            line-height: 2;
+            line-height: 1.1;
         }
 
         .endcol3 {
             width: 20%;
-            line-height: 2;
+            line-height: 1.1;
         }
 
         .endcol4 {
-            width: 18%;
+            width: 14%;
         }
 
-        .endcol4>div {
-            padding: 20px 0px;
-        }
 
         .endcol5 {
             width: 12%;
@@ -466,17 +535,22 @@
             align-items: center;
         }
 
-        .end h4 {
-            color: #04f50c;
-        }
-
         .endcol5>div>div {
             width: 20%;
         }
 
         @media (max-width:576px) {
+            .row1>div:first-child{
+                width: 10%;
+            }
+            .row1>div:last-child {
+                width:40%;
+            }
+            .row1>div:last-child>button {
+                padding: 10px 0px;
+            }
             .nav>div {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
 
             .smlogo>div {
@@ -522,14 +596,14 @@
                     &#x2630
                 </label>
                 <label for="exit">
-                    <i class="fa-solid fa-x"></i>
+                    &#x2630
                 </label>
             </div>
             <div>
                 <img src="images/logoETB-1.webp" alt="">
             </div>
             <div>
-                <button>&#128222 GET IN TOUCH</button>
+                <button><i class="fa fa-phone fa-xl" aria-hidden="true"></i>GET IN TOUCH</button>
             </div>
         </div>
         <ul class="nav">
@@ -537,9 +611,10 @@
                 <li><a href="index.html">home</a></li>
                 <li><a href="destination.html">destination</a></li>
                 <li><a href="private-tour.html">private tour</a></li>
-                <li><a href="private-tour-popup.html">private-tour-popup</a></li>
-                <li><a href="tour-list.html">tour-list</a></li>
-                <li><a href="single-tour-page.html">single-tour-page</a></li>
+                <li><a href="private-tour-popup.html">private tour popup</a></li>
+                <li><a href="tour-list.html">tour list</a></li>
+                <li><a href="single-tour-page.html">single tour</a></li>
+                <li><a href="ecotour.html">ecotour</a></li>
             </div>
         </ul>
         <!-- ****************menubar-end***************** -->
@@ -601,7 +676,7 @@
                                     <div>
                                         <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                                style="color: #98cd5d; margin-right: 8px;"></i>Map</p>
                                     </div>
                                     <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
                                     <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
@@ -664,20 +739,20 @@
                                     <div class="c5">
                                         <div><img src="images/owl.png" alt=""></div>
                                         <div>
-                                            <input type="radio" name="rad26" checked>
-                                            <input type="radio" name="rad27" checked>
-                                            <input type="radio" name="rad28" checked>
-                                            <input type="radio" name="rad29" checked>
-                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                            <input type="radio" name="rad1" aria-label="Search" checked>
+                                            <input type="radio" name="rad2" aria-label="Search" checked>
+                                            <input type="radio" name="rad3" aria-label="Search" checked>
+                                            <input type="radio" name="rad4" aria-label="Search" checked>
+                                            <input type="radio" name="rad5" aria-label="Search" checked> 2756 opinions
                                         </div>
                                     </div>
                                     <div class="c6">
                                         <p><i class="fa-regular fa-file-lines fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Info</p>
                                         <p><i class="fa-solid fa-images fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Photos</p>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Map</p>
                                     </div>
                                 </div>
                             </div>
@@ -696,7 +771,7 @@
                                     <div>
                                         <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                                style="color: #98cd5d; margin-right: 8px;"></i>Map</p>
                                     </div>
                                     <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
                                     <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
@@ -758,20 +833,20 @@
                                     <div class="c5">
                                         <div><img src="images/owl.png" alt=""></div>
                                         <div>
-                                            <input type="radio" name="rad26" checked>
-                                            <input type="radio" name="rad27" checked>
-                                            <input type="radio" name="rad28" checked>
-                                            <input type="radio" name="rad29" checked>
-                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                            <input type="radio" name="rad6" aria-label="Search" checked>
+                                            <input type="radio" name="rad7" aria-label="Search" checked>
+                                            <input type="radio" name="rad8" aria-label="Search" checked>
+                                            <input type="radio" name="rad9" aria-label="Search" checked>
+                                            <input type="radio" name="rad10" aria-label="Search" checked> 2756 opinions
                                         </div>
                                     </div>
                                     <div class="c6">
                                         <p><i class="fa-regular fa-file-lines fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Info</p>
                                         <p><i class="fa-solid fa-images fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Photos</p>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Map</p>
                                     </div>
                                 </div>
                             </div>
@@ -790,7 +865,7 @@
                                     <div>
                                         <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                                style="color: #98cd5d; margin-right: 8px;"></i>Map</p>
                                     </div>
                                     <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
                                     <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
@@ -852,20 +927,20 @@
                                     <div class="c5">
                                         <div><img src="images/owl.png" alt=""></div>
                                         <div>
-                                            <input type="radio" name="rad26" checked>
-                                            <input type="radio" name="rad27" checked>
-                                            <input type="radio" name="rad28" checked>
-                                            <input type="radio" name="rad29" checked>
-                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                            <input type="radio" name="rad11" aria-label="Search" checked>
+                                            <input type="radio" name="rad12" aria-label="Search" checked>
+                                            <input type="radio" name="rad13" aria-label="Search" checked>
+                                            <input type="radio" name="rad14" aria-label="Search" checked>
+                                            <input type="radio" name="rad15" aria-label="Search" checked> 2756 opinions
                                         </div>
                                     </div>
                                     <div class="c6">
                                         <p><i class="fa-regular fa-file-lines fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Info</p>
                                         <p><i class="fa-solid fa-images fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Photos</p>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Map</p>
                                     </div>
                                 </div>
                             </div>
@@ -884,7 +959,7 @@
                                     <div>
                                         <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                                style="color: #98cd5d; margin-right: 8px;"></i>Map</p>
                                     </div>
                                     <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
                                     <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
@@ -946,20 +1021,20 @@
                                     <div class="c5">
                                         <div><img src="images/owl.png" alt=""></div>
                                         <div>
-                                            <input type="radio" name="rad26" checked>
-                                            <input type="radio" name="rad27" checked>
-                                            <input type="radio" name="rad28" checked>
-                                            <input type="radio" name="rad29" checked>
-                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                            <input type="radio" name="rad16" aria-label="Search" checked>
+                                            <input type="radio" name="rad17" aria-label="Search" checked>
+                                            <input type="radio" name="rad18" aria-label="Search" checked>
+                                            <input type="radio" name="rad19" aria-label="Search" checked>
+                                            <input type="radio" name="rad20" aria-label="Search" checked> 2756 opinions
                                         </div>
                                     </div>
                                     <div class="c6">
                                         <p><i class="fa-regular fa-file-lines fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Info</p>
                                         <p><i class="fa-solid fa-images fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Photos</p>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Map</p>
                                     </div>
                                 </div>
                             </div>
@@ -978,7 +1053,7 @@
                                     <div>
                                         <h4><b>ROUTE</b>: Barahona - Paraiso</h4>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin-right: 8px;"></i>Map</p>
+                                                style="color: #98cd5d; margin-right: 8px;"></i>Map</p>
                                     </div>
                                     <p><i class="fa-regular fa-clock"></i>Horseback riding / Duration:3-4 hours </p>
                                     <p><i class="fa-solid fa-location-dot "></i>Departing from: Barahona</p>
@@ -1040,20 +1115,20 @@
                                     <div class="c5">
                                         <div><img src="images/owl.png" alt=""></div>
                                         <div>
-                                            <input type="radio" name="rad26" checked>
-                                            <input type="radio" name="rad27" checked>
-                                            <input type="radio" name="rad28" checked>
-                                            <input type="radio" name="rad29" checked>
-                                            <input type="radio" name="rad30" checked> 2756 opinions
+                                            <input type="radio" name="rad21" aria-label="Search" checked>
+                                            <input type="radio" name="rad22" aria-label="Search" checked>
+                                            <input type="radio" name="rad23" aria-label="Search" checked>
+                                            <input type="radio" name="rad24" aria-label="Search" checked>
+                                            <input type="radio" name="rad25" aria-label="Search" checked> 2756 opinions
                                         </div>
                                     </div>
                                     <div class="c6">
                                         <p><i class="fa-regular fa-file-lines fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Info</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Info</p>
                                         <p><i class="fa-solid fa-images fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Photos</p>
                                         <p><i class="fa-solid fa-location-dot fa-lg"
-                                                style="color: #59d95b; margin:5px;"></i>Map</p>
+                                                style="color: #98cd5d; margin:5px;"></i>Map</p>
                                     </div>
                                 </div>
                             </div>
@@ -1114,52 +1189,56 @@
         </div>
     </main>
     <footer>
-        <div class="container">
-            <div class="end">
-                <div class="endcol1">
-                    <div><img src="images/logoETB-1.webp" alt="logo"></div>
-                    <p>Ecotour Barahona is your favoritew specialist for authentic , unique and memorable round
-                        trips,
-                        day trips and activities in southwerst of Dominican republic.</p>
-                    <div><img src="images/logo2.png" alt="2" /></div>
-                    <p>Travel environmentally friendly with us and discover the main destinations of the dominician
-                        republic</p>
-                </div>
-                <div class="endcol2">
-                    <h4>ABOUT US</h4>
-                    <h5>ABOUT ECOTOUR</h5>
-                    <h5>BARAHONA</h5>
-                    <h5>OUR TEAM</h5>
-                    <h5>GUEST BOOK</h5>
-                    <h5>IMPRINT</h5>
-                </div>
-                <div class="endcol3">
-                    <h4>CUSTOMER SERVICE</h4>
-                    <h5>BOOKING CONDITIONS</h5>
-                    <h5>CONTACT US</h5>
-                    <h5>FAQ'S</h5>
-                    <h5>LEGAL NOTICE</h5>
-                    <h5>PRIVACY NOTICE</h5>
-                </div>
-                <div class="endcol4">
-                    <h4>RESERVATIONS & BOOKINGS</h4>
-                    <div>MONDAY TO FRIDAY
+        <div class="container end">
+            <div class="endcol1">
+                <img src="images/footlogo.avif" alt="logo">
+                <p>Ecotour Barahona is your favoritew specialist for authentic , unique and memorable round
+                    trips,
+                    day trips and activities in southwerst of Dominican republic.</p>
+                <img src="images/logo2.png" alt="2" />
+                <p>Travel environmentally friendly with us and discover the main destinations of the dominician
+                    republic</p>
+            </div>
+            <div class="endcol2">
+                <h3>ABOUT US</h3>
+                <ul>
+                    <li>ABOUT ECOTOUR</li>
+                    <li>BARAHONA</li>
+                    <li>OUR TEAM</li>
+                    <li>GUEST BOOK</li>
+                    <li>IMPRINT</li>
+                </ul>
+            </div>
+            <div class="endcol3">
+                <h3>CUSTOMER SERVICE</h3>
+                <ul>
+                    <li>BOOKING CONDITIONS</li>
+                    <li>CONTACT US</li>
+                    <li>FAQ'S</li>
+                    <li>LEGAL NOTICE</li>
+                    <li>PRIVACY NOTICE</li>
+                </ul>
+            </div>
+            <div class="endcol4">
+                <h3>RESERVATIONS & BOOKINGS</h3>
+                <ul>
+                    <li>MONDAY TO FRIDAY
                         From 8:00 am to 8:00 pm
-                    </div>
-                    <div>SATURDAY TO SUNDAY
+                    </li>
+                    <li>SATURDAY TO SUNDAY
                         From 9:00 am to 5:00 pm
-                    </div>
-                    <div>Atlantic Standard Time
+                    </li>
+                    <li>Atlantic Standard Time
                         +001 (809) 856 2260
-                    </div>
-                </div>
-                <div class="endcol5">
-                    <h4>FOLLOW US</h4>
-                    <div>
-                        <div><i style="color: white" class="fa-brands fa-facebook "></i></div>
-                        <div><i style="color: white" class="fa-brands fa-instagram "></i></div>
-                        <div><img src="images/icon.png" alt=""></div>
-                    </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="endcol5">
+                <h3>FOLLOW US</h3>
+                <div>
+                    <div><i style="color: white" class="fa-brands fa-facebook "></i></div>
+                    <div><i style="color: white" class="fa-brands fa-instagram "></i></div>
+                    <div><img src="images/icon.png" alt=""></div>
                 </div>
             </div>
         </div>
