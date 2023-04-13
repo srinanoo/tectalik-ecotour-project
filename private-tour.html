@@ -698,7 +698,7 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {
+        @media screen and (max-width:576px) {   
             .main-head>.right {
                 width: 40%;
             }
@@ -715,7 +715,11 @@
             .speed-boat>:nth-child(2) {
                 font-size: 1.6em;
             }
-
+            .nav>div{
+                display: grid;
+                grid-template-columns: repeat(2,50%);
+                text-align: left;
+            }
             .tailor,
             .group {
                 margin: 0;
@@ -761,8 +765,12 @@
 
             .pp {
                 padding: 0;
+                gap: 10px;
             }
-
+            .pic1,.pic2{
+                grid-template-columns: 100%;
+                gap: 10px;
+            }
             .expert {
                 padding: 0;
                 grid-template-columns: 100%;
@@ -804,7 +812,7 @@
             }
 
             .foot {
-                grid-template-columns: 45% 45%;
+                grid-template-columns: 40% 50%;
                 justify-content: space-between;
             }
 
@@ -847,9 +855,9 @@
                 <li><a href="destination.html">destination</a></li>
                 <li><a href="private-tour-popup.html">private tours popup</a></li>
                 <li><a href="tour-list.html">tour list</a></li>
-                <li><a href="tour-expand.html">tour list expand</a></li>
+                <li><a href="tour-list-expand.html">tour list expand</a></li>
                 <li><a href="single-tour-page.html">single tour</a></li>
-                <li><a href="ecotour.html">Ecotour</a></li>
+                <li><a href="ecotour.html">ecotour</a></li>
             </div>
         </ul>
     </header>
