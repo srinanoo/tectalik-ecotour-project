@@ -281,7 +281,7 @@
         .alpha {
             display: grid;
             align-items: center;
-            width: 69%;
+            width: 68%;
             margin: auto;
             background-color: rgba(0, 0, 0, 0.5);
             height: 250px;
@@ -601,7 +601,7 @@
             background-color: rgb(179 220 108);
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 80px 147px;
+            padding: 80px 269px;
         }
 
         .book-now {
@@ -658,7 +658,6 @@
             text-align: justify;
             font-size: small;
         }
-{}
         ul {
             list-style: none;
             /* text-align: justify; */
@@ -701,7 +700,10 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {   
+        @media screen and (max-width:576px) {  
+            .main-head>.left{
+                font-size:0.6rem;
+            } 
             .main-head>.right {
                 width: 40%;
             }
@@ -724,6 +726,9 @@
                 grid-template-columns: 28% 32% 45%;
                 justify-content: space-between;
                 text-align: left;
+            }
+            .nav a{
+                font-size: 1rem;
             }
             .tailor,
             .group {
@@ -819,6 +824,7 @@
             }
             .book-now{
                 font-size: 1rem;
+
             }
             .foot {
                 grid-template-columns: 46% 46%;
@@ -836,6 +842,21 @@
             }
             .fee{
                 width: 7%;
+            }
+        }
+        @media screen and (max-width:320px) {
+            .nav>div{
+                grid-template-columns: 100%;
+                font-size: small;
+            }
+            .book-now{
+                font-size: 0.5em;
+            }
+            .check-dates button{
+                padding: 7px;
+            }
+            .check-dates{
+                padding: 0;
             }
         }
     </style>
