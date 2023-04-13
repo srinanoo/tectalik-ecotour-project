@@ -700,7 +700,10 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {   
+        @media screen and (max-width:576px) {  
+            .main-head>.left{
+                font-size:0.6rem;
+            } 
             .main-head>.right {
                 width: 40%;
             }
@@ -723,7 +726,9 @@
                 grid-template-columns: 28% 32% 45%;
                 justify-content: space-between;
                 text-align: left;
-                font-size: small;
+            }
+            .nav a{
+                font-size: 1rem;
             }
             .tailor,
             .group {
