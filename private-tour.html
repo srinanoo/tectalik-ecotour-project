@@ -638,9 +638,9 @@
         .foot {
 
             display: grid;
-            /* grid-template-columns: 17% 17% 20% 17% 17%; */
-            grid-template-columns: repeat(5, 1fr);
-            gap: 35px;
+            grid-template-columns: 17% 16% 22% 17% 14%;
+            /* grid-template-columns: repeat(5, 1fr); */
+            gap: 30px;
             width: 65%;
             margin: auto;
             padding: 50px 0;
@@ -698,7 +698,7 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {
+        @media screen and (max-width:576px) {   
             .main-head>.right {
                 width: 40%;
             }
@@ -715,7 +715,11 @@
             .speed-boat>:nth-child(2) {
                 font-size: 1.6em;
             }
-
+            .nav>div{
+                display: grid;
+                grid-template-columns: repeat(2,50%);
+                text-align: left;
+            }
             .tailor,
             .group {
                 margin: 0;
@@ -758,11 +762,18 @@
             .f {
                 overflow: hidden;
             }
+            .privatize>:nth-child(2){
+                width: 100%;
+            }
 
             .pp {
                 padding: 0;
+                gap: 10px;
             }
-
+            .pic1,.pic2{
+                grid-template-columns: 100%;
+                gap: 10px;
+            }
             .expert {
                 padding: 0;
                 grid-template-columns: 100%;
@@ -804,11 +815,11 @@
             }
 
             .foot {
-                grid-template-columns: 45% 45%;
+                grid-template-columns: 50% 50%;
                 justify-content: space-between;
             }
 
-            .foot-e {
+            .foot-a {
                 grid-column: span 2;
             }
             .fee{
@@ -847,9 +858,9 @@
                 <li><a href="destination.html">destination</a></li>
                 <li><a href="private-tour-popup.html">private tours popup</a></li>
                 <li><a href="tour-list.html">tour list</a></li>
-                <li><a href="tour-expand.html">tour list expand</a></li>
+                <li><a href="tour-list-expand.html">tour list expand</a></li>
                 <li><a href="single-tour-page.html">single tour</a></li>
-                <li><a href="ecotour.html">Ecotour</a></li>
+                <li><a href="ecotour.html">ecotour</a></li>
             </div>
         </ul>
     </header>
@@ -1148,7 +1159,7 @@
     <footer id="footer">
         <div class="foot">
             <div class="foot-a">
-                <div><img src="images/logoETB-1.webp" alt="logo"></div>
+                <div><img src="images/footlogo.webp" alt="logo"></div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, dicta aspernatur sapiente explicabo ea
                     repellendus accusantium? Voluptatum.</p>
                 <div style="text-align: center;"><img src="images/do.webp" alt="do"></div>
@@ -1185,9 +1196,9 @@
                 <div>
                     <h5>FOLLOW US</h5>
                     <div class="fee">
-                        <i class="fa-brands fa-facebook-f fa-2x" style="color: #fafafa;margin: 3px;"></i>
-                        <i class="fa-brands fa-instagram fa-2x" style="margin: 5px;"></i>
-                        <input type="image" src="images/ta.webp" alt="ta-lo" width="99%">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <input type="image" src="images/eye.jpg" alt="ta-lo">
                     </div>
                 </div>
             </div>
