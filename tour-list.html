@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-    <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
+    <meta name="description" content="About ecotour">
+    <meta name="keywords" content="ecotour Tour-list Budget-Friendly ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Vedha">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TOUR PAGE</title>
+    <title>Tour-list</title>
     <style>
         * {
             box-sizing: border-box;
@@ -153,9 +155,6 @@
             padding: 15px 0px;
         }
 
-        .row1>div:first-child {
-            width: 30%;
-        }
 
         .row1>div {
             width: 30%
@@ -204,7 +203,7 @@
             background-size: cover;
             mix-blend-mode: screen;
         }
-      
+
         .head button {
             position: relative;
             z-index: 1;
@@ -337,12 +336,13 @@
         }
 
         .load {
+            width: 40%;
+            margin: auto;
             text-align: center;
-            padding: 50px;
+            padding: 50px 0px;
         }
-      
+
         .load button {
-            width: 17%;
             padding: 15px 12px;
             background-color: rgb(155 205 82);
             border: 0;
@@ -350,7 +350,7 @@
             font-size: medium;
         }
 
-        
+
         main {
             padding: 30px 0px;
         }
@@ -418,7 +418,8 @@
 
         .c7 {
             display: grid;
-            grid-template-columns: 17% 17% 17% 17% 17%;
+            grid-template-columns: repeat(5, 17%);
+            justify-content: space-between;
             padding: 60px 0px;
         }
 
@@ -429,6 +430,8 @@
         .c7 h3 {
             color: rgb(155 205 82);
             margin: 10px 0px;
+            font-weight: 900;
+            font-size: small;
         }
 
         .c7>div:not(:first-child) p {
@@ -446,9 +449,13 @@
                 width: 10%;
             }
 
+            .row1>div:last-child {
+                width: 40%;
+            }
+
             .row1>div:last-child>button {
-                padding: 5px 10px;
-                font-size: small;
+                padding: 8px 5px;
+                font-size: 10px;
             }
 
             .row2 {
@@ -464,7 +471,7 @@
             }
 
             .smlogo>div {
-                width: 43%;
+                width: 100%;
             }
 
             .r1 {
@@ -475,8 +482,12 @@
                 display: grid;
             }
 
+            .load>button a {
+                padding: 0;
+            }
+
             .load button {
-                width: 42%;
+                padding: 10;
             }
 
             .picrow>div {
@@ -485,13 +496,15 @@
             }
 
             .c7 {
-                grid-template-columns: 40% 40%;
-                justify-content: space-between;
-                
+                grid-template-columns: 100%;
             }
 
             .bg {
                 top: 65px;
+            }
+
+            .bg>div a {
+                width: 50%;
             }
         }
     </style>
@@ -522,7 +535,7 @@
     </header>
     <div class="bg">
         <div class="container">
-            <a href="index.html">home page</a>
+            <a href="index.html">home</a>
             <a href="destination.html">destination</a>
             <a href="private-tour.html">private tour</a>
             <a href="private-tour-popup.html">private tour popup</a>
@@ -617,13 +630,13 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info
+                                            style="color: #59d95b; margin:5px;"></i>Info
                                     </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                            style="color: #59d95b; margin:5px;"></i>Photos
                                     </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map
+                                            style="color: #59d95b; margin:5px;"></i>Map
                                     </p>
                                 </div>
                             </div>
@@ -673,13 +686,13 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info
+                                            style="color: #59d95b; margin:5px;"></i>Info
                                     </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                            style="color: #59d95b; margin:5px;"></i>Photos
                                     </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map
+                                            style="color: #59d95b; margin:5px;"></i>Map
                                     </p>
                                 </div>
                             </div>
@@ -729,11 +742,11 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info</p>
+                                            style="color: #59d95b; margin:5px;"></i>Info</p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map</p>
+                                            style="color: #59d95b; margin:5px;"></i>Map</p>
                                 </div>
                             </div>
                         </div>
@@ -782,11 +795,11 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info</p>
+                                            style="color: #59d95b; margin:5px;"></i>Info</p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos</p>
+                                            style="color: #59d95b; margin:5px;"></i>Photos</p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map</p>
+                                            style="color: #59d95b; margin:5px;"></i>Map</p>
                                 </div>
                             </div>
                         </div>
@@ -835,13 +848,13 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info
+                                            style="color: #59d95b; margin:5px;"></i>Info
                                     </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                            style="color: #59d95b; margin:5px;"></i>Photos
                                     </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map
+                                            style="color: #59d95b; margin:5px;"></i>Map
                                     </p>
                                 </div>
                             </div>
@@ -891,13 +904,13 @@
                                 </div>
                                 <div class="c6">
                                     <p><i class="fa-regular fa-file-lines fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Info
+                                            style="color: #59d95b; margin:5px;"></i>Info
                                     </p>
                                     <p><i class="fa-solid fa-images fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Photos
+                                            style="color: #59d95b; margin:5px;"></i>Photos
                                     </p>
                                     <p><i class="fa-solid fa-location-dot fa-lg"
-                                        style="color: #59d95b; margin:5px;"></i>Map
+                                            style="color: #59d95b; margin:5px;"></i>Map
                                     </p>
                                 </div>
                             </div>

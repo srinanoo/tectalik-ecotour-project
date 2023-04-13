@@ -104,7 +104,7 @@
     .menusection {
         display: none;
         position: sticky;
-        top: 90px;
+        top: 88px;
         z-index: 2;
 
     }
@@ -126,7 +126,11 @@
 
     }
 
-    .menusection>ul {
+    .menusection {
+        background-color: rgba(152, 205, 93);
+    }
+
+    .menusection ul {
         list-style: none;
         margin: 0;
         padding: 0;
@@ -137,7 +141,7 @@
 
     }
 
-    .menusection>ul>li>a {
+    .menusection ul>li>a {
         display: inline-block;
         text-decoration: none;
         color: black;
@@ -250,7 +254,7 @@
     /* section4 */
 
     .blackbg {
-        background-image: url('images/started1.avif');
+        background-image: url('images/imgce2.webp');
         height: 630px;
         background-position: center;
         color: white;
@@ -381,7 +385,7 @@
     }
 
     .head2a {
-        background-image: url('images/boating.avif');
+        background-image: url('images/boat.webp');
         background-size: cover;
     }
 
@@ -397,7 +401,7 @@
     }
 
     .head2b {
-        background-image: url('images/horses.avif');
+        background-image: url('images/forest.webp');
         display: flex;
         align-items: end;
         background-size: cover;
@@ -411,7 +415,7 @@
     }
 
     .head2c {
-        background-image: url('images/island.avif');
+        background-image: url('images/1.webp');
         display: flex;
         align-items: end;
         background-size: cover;
@@ -428,7 +432,7 @@
     }
 
     .head3a {
-        background-image: url('images/house.avif');
+        background-image: url('images/5.webp');
         display: flex;
         align-items: end;
         background-size: cover;
@@ -451,7 +455,7 @@
     }
 
     .head3c {
-        background-image: url('images/ship.avif');
+        background-image: url('images/3.webp');
         display: flex;
         align-items: end;
         background-size: cover;
@@ -725,7 +729,16 @@
         }
 
         .row1>div:last-child>button {
-            font-size: smaller;
+            font-size: 6px;
+            padding: 5px;
+        }
+
+        .row1>div:last-child>button i {
+            font-size: 7px;
+        }
+
+        .privatize {
+            padding: 30px;
         }
 
         .cards {
@@ -741,7 +754,11 @@
         }
 
         .section5 {
-            padding: 300px 0;
+            padding: 30px;
+        }
+
+        .section6 {
+            padding: 150px 0;
         }
 
         .head2 {
@@ -758,10 +775,19 @@
 
         .head3 {
             grid-template-columns: 100%;
+            height: 600px;
         }
 
         .contain {
             grid-template-columns: 100%;
+        }
+
+        .left {
+            text-align: center;
+        }
+
+        .left2 {
+            grid-template-columns: 50% 50%;
         }
 
         .left2a {
@@ -770,6 +796,7 @@
 
         .left2a>div {
             width: 50%;
+            text-align: center;
         }
 
         .left3 {
@@ -786,14 +813,15 @@
 
         .dateicon {
             grid-template-columns: 100%;
+            text-align: center;
         }
 
         .right2a {
-            width: 100%;
+            width: 50%;
         }
 
         .right2b {
-            width: 100%;
+            width: 50%;
         }
 
         .right2b1 {
@@ -805,6 +833,17 @@
             padding-top: 80px;
         }
 
+        .footer>div:nth-child(2),
+        .footer>div:nth-child(3) {
+            text-align: left;
+            width: 100%;
+        }
+
+        .footer2,
+        .footer3 {
+            text-align: left;
+            width: 100%;
+        }
     }
 </style>
 
@@ -823,7 +862,7 @@
                     </label>
                 </div>
                 <div>
-                    <img src="images/headlogo.avif" alt="logoETB-1">
+                    <img src="images/logoETB-1.webp" alt="logoETB-1">
                 </div>
                 <div>
                     <button><i class="fa fa-phone" style="margin:5px;" aria-hidden="true"></i> get in touch</button>
@@ -832,16 +871,18 @@
         </div>
     </header>
     <section class="menusection">
-        <ul class="menu">
-            <li><a href="index.html">home</a></li>
-            <li><a href="destination.html">destination</a></li>
-            <li><a href="private-tour.html">private tour</a></li>
-            <li><a href="private-tour-popup.html">private_tour_popup</a></li>
-            <li><a href="tour-list.html">tour_list</a></li>
-            <li><a href="tour-list-expand.html">tour expand</a></li>
-            <li><a href="ecotour.html">ecotour</a></li>
-            <li><a href="single-tour-page.html">single tour</a></li>
-        </ul>
+        <div class="container1">
+            <ul class="menu">
+                <li><a href="index.html">home</a></li>
+                <li><a href="destination.html">destination</a></li>
+                <li><a href="private-tour.html">private tour</a></li>
+                <li><a href="private-tour-popup.html">private tour popup</a></li>
+                <li><a href="tour-list.html">tour list</a></li>
+                <li><a href="tour-list-expand.html">tour expand</a></li>
+                <li><a href="ecotour.html">ecotour</a></li>
+                <li><a href="single-tour-page.html">single tour</a></li>
+            </ul>
+        </div>
     </section>
     <section class="section2">
         <div class="inside">
@@ -1066,10 +1107,10 @@
                         <p><b>SAMG.</b></p>
                         <div class="right1a">
                             <div>
-                                <img src="images/triplogo.avif " alt="triplogo" width="40px">
+                                <img src="images/triplogo.webp " alt="triplogo" width="40px">
                             </div>
                             <div>
-                                <img src="images/review.avif " alt="review" width="80px">
+                                <img src="images/review.webp " alt="review" width="80px">
                             </div>
                             <div>
                                 <p>Reviewed 1 week ago</p>
@@ -1078,13 +1119,13 @@
                     </div>
                     <div class="right2">
                         <div class="right2a">
-                            <img src="images/triplogo2.avif" alt="triplogo2" width="110px">
+                            <img src="images/triplogo2.webp" alt="triplogo2" width="110px">
                         </div>
                         <div class="right2b">
                             <p><b>Ecotour Barahona</b></p>
                             <div class="right2b1">
                                 <div>
-                                    <img src="images/review2.avif" alt="review2" width="80px">
+                                    <img src="images/review2.webp" alt="review2" width="80px">
                                 </div>
                                 <div>
                                     <p>50 Reviews</p>

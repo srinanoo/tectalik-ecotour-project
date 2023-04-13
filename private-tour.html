@@ -82,13 +82,13 @@
             color: #4b5b34;
             padding: 0;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 500;
         }
 
         .right button {
             border: solid 1px #9bcd52;
             background-color: white;
-            padding: 0 5px 5px 5px;
+            /* padding: 0 5px 5px 5px; */
         }
 
         /* .main-head a {
@@ -106,19 +106,19 @@
         }
 
         .main-head>.left {
-            width: 9%;
+            /* width: 9%; */
             display: flex;
             justify-content: center;
         }
 
         .main-head>.right {
-            width: 19%;
+            /* width: 19%; */
             display: flex;
             justify-content: center;
         }
 
         .main-head>.middle {
-            width: 50%;
+            width: 30%;
         }
 
 
@@ -281,7 +281,7 @@
         .alpha {
             display: grid;
             align-items: center;
-            width: 69%;
+            width: 68%;
             margin: auto;
             background-color: rgba(0, 0, 0, 0.5);
             height: 250px;
@@ -448,6 +448,7 @@
         .a>div,
         .f>div {
             background-color: rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
 
         .b {
@@ -486,7 +487,7 @@
         }
 
         .d {
-            background-image: url(images/4.webp);
+            background-image: url(images/nature.webp);
             background-repeat: no-repeat;
             background-size: cover;
             padding: 10px;
@@ -495,7 +496,7 @@
         }
 
         .e {
-            background-image: url(images/2.webp);
+            background-image: url(images/headback.webp);
             background-repeat: no-repeat;
             background-size: cover;
             padding: 10px;
@@ -596,10 +597,11 @@
         }
 
         .foot-bg {
-            background-color: rgb(114, 173, 26);
+            /* background-color: rgb(114, 173, 26); */
+            background-color: rgb(179 220 108);
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 80px 147px;
+            padding: 80px 269px;
         }
 
         .book-now {
@@ -638,9 +640,9 @@
         .foot {
 
             display: grid;
-            /* grid-template-columns: 17% 17% 20% 17% 17%; */
-            grid-template-columns: repeat(5, 1fr);
-            gap: 35px;
+            grid-template-columns:20% 13% 18% 20% 14%;
+            /* grid-template-columns: repeat(5, 1fr); */
+            gap: 30px;
             width: 65%;
             margin: auto;
             padding: 50px 0;
@@ -648,7 +650,7 @@
 
         }
 
-        .foot h5 {
+        .foot h6 {
             color: #9bcd52;
         }
 
@@ -656,16 +658,16 @@
             text-align: justify;
             font-size: small;
         }
-
         ul {
             list-style: none;
-            text-align: justify;
+            /* text-align: justify; */
             padding: 0;
             line-height: 1.5;
         }
 
         li {
             padding: 10px 0;
+            font-size: smaller;
         }
 
         .foot-d div {
@@ -698,10 +700,13 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {
-            .main-head>.right {
+        @media screen and (max-width:576px) {  
+            .main-head>.left{
+                font-size:0.6rem;
+            } 
+            /* .main-head>.right {
                 width: 40%;
-            }
+            } */
 
             .right a {
                 font-size: 0.7rem;
@@ -715,7 +720,16 @@
             .speed-boat>:nth-child(2) {
                 font-size: 1.6em;
             }
-
+            .nav>div{
+                display: grid;
+                /* grid-template-columns: repeat(2,50%); */
+                grid-template-columns:30% 30% 40%;
+                justify-content: space-between;
+                text-align: left;
+            }
+            .nav a{
+                font-size: 1rem;
+            }
             .tailor,
             .group {
                 margin: 0;
@@ -758,11 +772,18 @@
             .f {
                 overflow: hidden;
             }
+            .privatize>:nth-child(2){
+                width: 100%;
+            }
 
             .pp {
                 padding: 0;
+                gap: 10px;
             }
-
+            .pic1,.pic2{
+                grid-template-columns: 100%;
+                gap: 10px;
+            }
             .expert {
                 padding: 0;
                 grid-template-columns: 100%;
@@ -787,10 +808,9 @@
             }
             .check-dates {
                 justify-content: center;
-                font-size: 0.6rem;
+                font-size: 0.4rem;
                 padding: 10px;
             }
-
             .fant-box {
                 padding: 0;
             }
@@ -799,20 +819,43 @@
                 grid-template-columns: 100%;
             }
             .foot-bg {
-                grid-template-columns: 100%;
                 padding: 10px;
             }
+            .book-now{
+                font-size: 0.8rem;
 
+            }
             .foot {
-                grid-template-columns: 45% 45%;
+                grid-template-columns: 46% 46%;
                 justify-content: space-between;
+                /* font-size: medium; */
+                gap:17px;
+
+            }
+            #footer{
+                font-size: small;
             }
 
-            .foot-e {
+            .foot-a {
                 grid-column: span 2;
             }
             .fee{
                 width: 7%;
+            }
+        }
+        @media screen and (max-width:320px) {
+            .nav>div{
+                grid-template-columns: 100%;
+                font-size: small;
+            }
+            .book-now{
+                font-size: 0.5em;
+            }
+            .check-dates button{
+                padding: 7px;
+            }
+            .check-dates{
+                padding: 0;
             }
         }
     </style>
@@ -837,19 +880,18 @@
                 <div><img src="images/logoETB-1.webp" alt=""></div>
             </div>
             <div class="right">
-                <div><button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
+                <button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
                             TOUCH</a></button></div>
-            </div>
         </div>
         <ul class="nav">
             <div class="nav-div">
                 <li><a href="index.html">home page</a></li>
                 <li><a href="destination.html">destination</a></li>
-                <li><a href="private-tour-popup.html">private tours popup</a></li>
+                <li><a href="private-tour-popup.html">private tour popup</a></li>
                 <li><a href="tour-list.html">tour list</a></li>
-                <li><a href="tour-expand.html">tour list expand</a></li>
                 <li><a href="single-tour-page.html">single tour</a></li>
-                <li><a href="ecotour.html">Ecotour</a></li>
+                <li><a href="tour-list-expand.html">tour list expand</a></li>
+                <li><a href="ecotour.html">ecotour</a></li>
             </div>
         </ul>
     </header>
@@ -1051,9 +1093,7 @@
                 <div class="f">
                     <div>
                         <h3>Lorem ipsum Dolar Sit</h3>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur ipsum
-                            vero, suscipit iusto dolore at consequatur ipsa dolores, consectetur quibusdam libero. Sequi
-                            explicabo soluta, est doloremque modi rem?</div>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur </div>
                     </div>
                 </div>
             </div>
@@ -1130,7 +1170,7 @@
             <div class="check-book">
                 <div class="book-now">
                     <div>
-                        <img src="images/calendar.webp" alt="cal">
+                        <img src="images/col.webp" alt="cal">
                     </div>
                     <div>
                         <div style="color: white;">Book Now</div>
@@ -1148,14 +1188,14 @@
     <footer id="footer">
         <div class="foot">
             <div class="foot-a">
-                <div><img src="images/logoETB-1.webp" alt="logo"></div>
+                <div><img src="images/footlogo.webp" alt="logo"></div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, dicta aspernatur sapiente explicabo ea
                     repellendus accusantium? Voluptatum.</p>
                 <div style="text-align: center;"><img src="images/do.webp" alt="do"></div>
                 <div>Travel environmently with us and discover the main destinationbof dominan Republic</div>
             </div>
             <div class="foot-b">
-                <h5>ABOUT US</h3>
+                <h6>ABOUT US</h6>
                     <ul>
                         <li>ABOUT ECOTOUR</li>
                         <li>BARHONA</li>
@@ -1165,7 +1205,7 @@
                     </ul>
             </div>
             <div class="foot-c">
-                <h5>CUSTOMER SERVICE</h5>
+                <h6>CUSTOMER SERVICE</h6>
                 <ul>
                     <li>BOOKING CONDITION</li>
                     <li>CONTACT-US</li>
@@ -1175,19 +1215,19 @@
                 </ul>
             </div>
             <div class="foot-d">
-                <h5>RESERVATIONS & BOOKINGS</h5>
+                <h6>RESERVATIONS & BOOKINGS</h6>
                 <ul>
-                    <li>MONDAY TO FRIDAY<br>From8.00amto8.00pm</li>
-                    <li>SATURDAYTOSUNDAY<br>From9.00amto5.00pm</li>
-                    <li>Atlantic Standard<br>Time+1(809)856 2260</li>
+                    <li>MONDAY TO FRIDAY From8.00am to 8.00pm</li>
+                    <li>SATURDAYTOSUNDAY From9.00am to 5.00pm</li>
+                    <li>Atlantic Standard Time +1(809)856 2260</li>
             </div>
             <div class="foot-e">
                 <div>
-                    <h5>FOLLOW US</h5>
+                    <h6>FOLLOW US</h6>
                     <div class="fee">
-                        <i class="fa-brands fa-facebook-f fa-2x" style="color: #fafafa;margin: 3px;"></i>
-                        <i class="fa-brands fa-instagram fa-2x" style="margin: 5px;"></i>
-                        <input type="image" src="images/ta.webp" alt="ta-lo" width="99%">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <input type="image" src="images/eye.jpg" alt="ta-lo">
                     </div>
                 </div>
             </div>

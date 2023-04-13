@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Ecotour, tour, tripadvisor">
+    <meta name="description" content="in this website you can book your travel plan">
+    <meta name="author" content="KEERTHANA">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOUR PAGE</title>
     <script src="https://kit.fontawesome.com/8d92229b07.js" crossorigin="anonymous"></script>
@@ -37,7 +40,7 @@
 
 
         .nav {
-            list-style: none;
+            list-style-type: none;
             background-color: rgba(152, 205, 93);
             margin: 0;
             padding: 15px 0px;
@@ -54,14 +57,17 @@
             justify-content: space-between;
         }
 
-        .nav a {
-            color: rgb(0 0 0);
+        .nav li {
             display: inline-block;
             font-variant: small-caps;
-            text-decoration: none;
             cursor: pointer;
             font-size: 1.1em;
             font-family: sans-serif;
+        }
+
+        .nav a {
+            color: rgb(0 0 0);
+            text-decoration: none;
         }
 
         .nav a:hover {
@@ -407,7 +413,7 @@
 
         .load {
             text-align: center;
-            padding: 50px;
+            padding: 50px 0px;
         }
 
         .load button {
@@ -563,6 +569,10 @@
                 width: 10%;
             }
 
+            .row1>div:nth-child(2) {
+                width: 40%;
+            }
+
             .row1>div:last-child {
                 width: 40%;
             }
@@ -571,8 +581,9 @@
                 padding: 10px 0px;
             }
 
-            .nav>div {
-                grid-template-columns: repeat(3, 1fr);
+            .nav li {
+                width: 50%;
+                font-size: 0.8em;
             }
 
             .smlogo>div {
@@ -585,7 +596,7 @@
             }
 
             .load button {
-                width: 30%;
+                width: 50%;
             }
 
             .picrow>div {
@@ -599,9 +610,12 @@
             }
 
             .endcol3,
-            .endcol4,
+            .endcol4 {
+                width: 40%;
+            }
+
             .endcol5 {
-                width: 30%;
+                width: 50%;
             }
         }
     </style>
