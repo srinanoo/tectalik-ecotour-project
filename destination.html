@@ -51,7 +51,7 @@
             padding: 15px 0;
         }
 
-        .row1>div {
+        .row1>div:nth-child(2) {
             width: 30%
         }
 
@@ -68,11 +68,14 @@
             list-style: none;
             background-color: rgb(162 205 93);
             margin: 0;
+            padding: 0;
             display: none;
             text-align: center;
         }
 
         .nav>div {
+            width: 80%;
+            margin: auto;
             justify-content: space-between;
         }
 
@@ -130,6 +133,7 @@
             background-image: url(images/header-bg.webp);
             background-size: cover;
             height: 50vh;
+            background-position: top;
             position: relative;
             color: white;
         }
@@ -142,7 +146,7 @@
             top: 0;
             left: 0;
             background-image: url(images/splash21.webp);
-            /* background-size: cover; */
+            background-size: cover;
             background-position: bottom;
             mix-blend-mode: screen;
 
@@ -285,8 +289,6 @@
             text-align: center;
             font-size: 1.6rem;
             font-weight: 100;
-            /* height: 60vh; */
-            /* padding-top: 100px; */
         }
 
         .sec4 h3 {
@@ -473,19 +475,6 @@
                 font-size: 14px;
             }
 
-            .row1>div:first-child {
-                width: 10%;
-            }
-
-            .row1>div:nth-child(2) {
-                width: 40%;
-            }
-
-            .row1>div:nth-child(3) {
-                width: 30%;
-
-            }
-
             .sec1,
             .sec7>div,
             .sec4>div {
@@ -532,7 +521,6 @@
 
             footer>div {
                 grid-template-columns: repeat(2, 45%);
-                row-gap: 50px;
             }
 
             footer>div>div:first-child {
@@ -545,73 +533,14 @@
                 font-size: 12px;
             }
 
-            .row1>div:first-child {
-                width: 10%;
-            }
-
-            .row1>div:nth-child(2) {
-                width: 40%;
-            }
-
-            .row1>div:nth-child(3) {
-                width: 30%;
-
-            }
-
-            .main {
-                background-position: center;
-            }
-
-            .sec1,
-            .sec7>div,
-            .sec4>div {
-                width: 70%;
-            }
 
             .nav>div li {
                 width: 50%;
 
             }
 
-            .nav a {
-                text-align: left;
-            }
-
-            .sec3 h3 {
-                grid-column: span 1;
-            }
-
-            .sec3>div,
-            .sec5,
-            .sec6>div {
-                grid-template-columns: 100%;
-                row-gap: 20px;
-            }
-
             .sec6 {
                 height: 600px;
-            }
-
-            .sec6>div>div:first-child {
-                left: 0;
-            }
-
-            .sec7 {
-                padding: 50px 0 20px;
-            }
-
-            .sec7>div>div:first-child {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
-            footer>div {
-                grid-template-columns: repeat(2, 45%);
-                row-gap: 50px;
-            }
-
-            footer>div>div:first-child {
-                grid-column: span 2;
             }
         }
 
@@ -620,31 +549,8 @@
                 font-size: 10px;
             }
 
-            .row1>div:first-child {
-                width: 10%;
-            }
-
-            .row1>div:nth-child(2) {
-                width: 70%;
-            }
-
-            .row1>div:nth-child(3) {
-                margin-top: 10px;
-                width: 100%;
-            }
-
-            .nav>div li {
-                width: 50%;
-
-            }
-
             .nav a {
                 font-size: 1.5rem;
-                text-align: left;
-            }
-
-            .main {
-                background-position: center;
             }
 
             .sec1,
@@ -659,38 +565,6 @@
                 row-gap: 20px;
             }
 
-            .sec3>div,
-            .sec5,
-            .sec6>div {
-                grid-template-columns: 100%;
-                row-gap: 20px;
-            }
-
-            .sec3 h3 {
-                grid-column: span 1;
-            }
-
-            .sec6>div>div:first-child {
-                left: 0;
-            }
-
-            .sec7 {
-                padding: 50px 0 20px;
-            }
-
-            .sec7>div>div:first-child {
-                width: 100%;
-                margin-bottom: 30px;
-            }
-
-            footer>div {
-                grid-template-columns: repeat(2, 45%);
-                row-gap: 30px;
-            }
-
-            footer>div>div:first-child {
-                grid-column: span 2;
-            }
         }
     </style>
 </head>
@@ -717,7 +591,7 @@
             </div>
         </div>
         <ul class="nav">
-            <div class="box flexed">
+            <div class="flexed">
                 <li><a href="index.html">home page</a></li>
                 <li><a href="private-tour.html">private tour</a></li>
                 <li><a href="private-tour-popup.html">private tour popup</a></li>
