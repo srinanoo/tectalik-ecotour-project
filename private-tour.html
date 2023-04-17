@@ -82,13 +82,13 @@
             color: #4b5b34;
             padding: 0;
             font-size: 1rem;
-            font-weight: 700;
+            font-weight: 500;
         }
 
         .right button {
             border: solid 1px #9bcd52;
             background-color: white;
-            padding: 0 5px 5px 5px;
+            padding: 7px;
         }
 
         /* .main-head a {
@@ -106,19 +106,20 @@
         }
 
         .main-head>.left {
-            width: 9%;
+            /* width: 9%; */
             display: flex;
             justify-content: center;
+            font-size: 0.8rem;
         }
 
         .main-head>.right {
-            width: 19%;
+            /* width: 19%; */
             display: flex;
             justify-content: center;
         }
 
         .main-head>.middle {
-            width: 50%;
+            width: 30%;
         }
 
 
@@ -141,6 +142,7 @@
 
         }
 
+
         .nav {
             list-style: none;
             background-color: rgb(162 205 93);
@@ -151,12 +153,16 @@
         }
 
         .nav>div {
-            width: 90%;
+            width: 100%;
             margin: auto;
             display: flex;
             /* grid-template-columns: repeat(4, 15%); */
             justify-content: space-evenly;
             z-index: 2;
+        }
+
+        .nav-div li {
+            padding: 0;
         }
 
         .nav a {
@@ -193,7 +199,7 @@
         }
 
         .speed {
-            width: 80%;
+            width: 90%;
             height: 331px;
             margin: auto;
             display: grid;
@@ -214,7 +220,7 @@
         }
 
         .privatize {
-            width: 80%;
+            width: 90%;
             margin: auto;
             text-align: center;
             padding: 50px 0;
@@ -227,7 +233,7 @@
         }
 
         .tg {
-            width: 70%;
+            width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: 50% 50%;
@@ -235,7 +241,7 @@
         }
 
         .tailor {
-            width: 95%;
+            width: 100%;
             margin: auto 20px auto auto;
             background-color: #9bcd52;
             color: white;
@@ -243,7 +249,7 @@
         }
 
         .group {
-            width: 95%;
+            width: 100%;
             margin: auto auto auto 20px;
             background-color: #4b5b34;
             color: white;
@@ -281,7 +287,7 @@
         .alpha {
             display: grid;
             align-items: center;
-            width: 68%;
+            width: 90%;
             margin: auto;
             background-color: rgba(0, 0, 0, 0.5);
             height: 250px;
@@ -423,11 +429,11 @@
         .pp {
             display: grid;
             gap: 2px;
-            padding: 0 105px 60px 105px;
+            /* padding: 0 105px 60px 105px; */
         }
 
         .pic1 {
-            width: 80%;
+            width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: 40% 29% 30%;
@@ -478,7 +484,7 @@
         }
 
         .pic2 {
-            width: 80%;
+            width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: 30% 29% 40%;
@@ -517,11 +523,11 @@
             background-color: #f0efed;
             display: grid;
             grid-template-columns: 50% 50%;
-            padding: 0 142px;
+            /* padding: 0 142px; */
         }
 
         .last>:first-child {
-            padding: 40px 90px;
+            padding: 40px 74px;
         }
 
         .guide {
@@ -533,7 +539,7 @@
         }
 
         .meet-guides {
-            margin: 0 0 20px 89px;
+            margin: 0 0 20px 86px;
         }
 
         .expert button {
@@ -544,15 +550,16 @@
         }
 
         .fant-box {
-            width: 80%;
+            width: 90%;
             margin: auto;
             padding: 97px 0 0 0;
             color: gray;
         }
 
         .fant-box2 {
+            width: 93%;
             background-color: white;
-            padding: 30px;
+            padding: 10px;
         }
 
         .fant-box2>:first-child {
@@ -605,7 +612,7 @@
         }
 
         .book-now {
-            width: 80%;
+            width: 90%;
             margin: auto;
             display: grid;
             grid-template-columns: 30% 70%;
@@ -640,14 +647,13 @@
         .foot {
 
             display: grid;
-            grid-template-columns:20% 13% 18% 20% 14%;
+            /* grid-template-columns:20% 13% 18% 20% 14%; */
+            grid-template-columns: 18% 15% 18% 20% 12%;
             /* grid-template-columns: repeat(5, 1fr); */
-            gap: 30px;
-            width: 65%;
+            width: 90%;
             margin: auto;
             padding: 50px 0;
-
-
+            justify-content: space-between;
         }
 
         .foot h6 {
@@ -658,6 +664,7 @@
             text-align: justify;
             font-size: small;
         }
+
         ul {
             list-style: none;
             /* text-align: justify; */
@@ -700,16 +707,26 @@
             mix-blend-mode: screen;
         }
 
-        @media screen and (max-width:576px) {  
-            .main-head>.left{
-                font-size:0.6rem;
-            } 
-            .main-head>.right {
-                width: 40%;
+        @media screen and (max-width:576px) {
+            .main-head>.left {
+                font-size: 0.6rem;
             }
+
+            .main-head>.right {
+                font-size: 0.8rem;
+            }
+
+            /* .main-head>.right {
+                width: 40%;
+            } */
 
             .right a {
                 font-size: 0.7rem;
+                padding: 5px;
+            }
+
+            .right button {
+                padding: 0;
             }
 
             .tg {
@@ -720,16 +737,23 @@
             .speed-boat>:nth-child(2) {
                 font-size: 1.6em;
             }
-            .nav>div{
+
+            .nav>div {
                 display: grid;
                 /* grid-template-columns: repeat(2,50%); */
-                grid-template-columns: 28% 32% 45%;
+                grid-template-columns: 30% 30% 40%;
                 justify-content: space-between;
                 text-align: left;
             }
-            .nav a{
-                font-size: 1rem;
+
+            .nav {
+                padding: 0;
             }
+
+            .nav a {
+                font-size: 0.6rem;
+            }
+
             .tailor,
             .group {
                 margin: 0;
@@ -751,10 +775,15 @@
 
             #date,
             #an,
-            #cn,#select,#fn,#ln,#mail,#ph{
+            #cn,
+            #select,
+            #fn,
+            #ln,
+            #mail,
+            #ph {
                 width: 100%;
             }
-           
+
 
             .grey {
                 grid-template-columns: 48% 48%;
@@ -765,14 +794,17 @@
                 width: 100%;
                 height: 100px;
             }
-            .getin{
+
+            .getin {
                 width: 100%;
             }
+
             .a,
             .f {
                 overflow: hidden;
             }
-            .privatize>:nth-child(2){
+
+            .privatize>:nth-child(2) {
                 width: 100%;
             }
 
@@ -780,10 +812,13 @@
                 padding: 0;
                 gap: 10px;
             }
-            .pic1,.pic2{
+
+            .pic1,
+            .pic2 {
                 grid-template-columns: 100%;
                 gap: 10px;
             }
+
             .expert {
                 padding: 0;
                 grid-template-columns: 100%;
@@ -798,17 +833,19 @@
                 padding: 10px;
                 row-gap: 30px;
             }
-            .last>:first-child{
+
+            /* .last>:first-child {
                 padding: 20px 40px;
-            }
+            } */
 
             .meet-guides {
                 margin: 20px;
                 text-align: center;
             }
+
             .check-dates {
                 justify-content: center;
-                font-size: 0.6rem;
+                font-size: 0.4rem;
                 padding: 10px;
             }
 
@@ -816,47 +853,69 @@
                 padding: 0;
             }
 
-            .fant-box3{
+            .fant-box2 {
+                width: 100%;
+            }
+
+            .fant-box3 {
                 grid-template-columns: 100%;
             }
+
             .foot-bg {
                 padding: 10px;
             }
-            .book-now{
-                font-size: 1rem;
 
+            .book-now {
+                font-size: 0.9rem;
+                align-items: center;
             }
+
+            .book-now img {
+                margin: 5px;
+            }
+
             .foot {
                 grid-template-columns: 46% 46%;
                 justify-content: space-between;
                 /* font-size: medium; */
-                gap:17px;
+                gap: 17px;
 
             }
-            #footer{
+
+            #footer {
                 font-size: small;
             }
 
             .foot-a {
                 grid-column: span 2;
             }
-            .fee{
+
+            .fee {
                 width: 7%;
             }
         }
+
         @media screen and (max-width:320px) {
-            .nav>div{
+            .nav>div {
                 grid-template-columns: 100%;
                 font-size: small;
             }
-            .book-now{
+
+            .book-now {
                 font-size: 0.5em;
+                align-items: center;
             }
-            .check-dates button{
+
+            .check-dates button {
                 padding: 7px;
             }
-            .check-dates{
+
+            .check-dates {
                 padding: 0;
+            }
+
+            .grey {
+                grid-template-columns: 100%;
             }
         }
     </style>
@@ -881,8 +940,8 @@
                 <div><img src="images/logoETB-1.webp" alt=""></div>
             </div>
             <div class="right">
-                <div><button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
-                            TOUCH</a></button></div>
+                <button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
+                        TOUCH</a></button>
             </div>
         </div>
         <ul class="nav">
@@ -1095,7 +1154,8 @@
                 <div class="f">
                     <div>
                         <h3>Lorem ipsum Dolar Sit</h3>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur </div>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1198,13 +1258,13 @@
             </div>
             <div class="foot-b">
                 <h6>ABOUT US</h6>
-                    <ul>
-                        <li>ABOUT ECOTOUR</li>
-                        <li>BARHONA</li>
-                        <li>OUR TEAM</li>
-                        <li>GUESTBOOK</li>
-                        <li>IMPRINT</li>
-                    </ul>
+                <ul>
+                    <li>ABOUT ECOTOUR</li>
+                    <li>BARHONA</li>
+                    <li>OUR TEAM</li>
+                    <li>GUESTBOOK</li>
+                    <li>IMPRINT</li>
+                </ul>
             </div>
             <div class="foot-c">
                 <h6>CUSTOMER SERVICE</h6>
