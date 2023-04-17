@@ -36,7 +36,7 @@
         header {
             position: sticky;
             top: 0;
-            z-index: 1;
+            z-index: 10;
             background-color: white;
         }
 
@@ -49,10 +49,6 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
-        }
-
-        .row1>div:nth-child(2) {
-            width: 30%
         }
 
         /************************menubar-start******************************* */
@@ -334,12 +330,13 @@
             display: grid;
             grid-template-columns: repeat(2, 50%);
             align-items: center;
+            padding-top: 70px;
         }
 
         .sec6>div>div:first-child {
             background-color: white;
-            position: relative;
-            left: 5rem;
+            width: 115%;
+            z-index: 1;
         }
 
         .sec6>div>div:first-child>div {
@@ -376,7 +373,7 @@
         }
 
         .sec7>div {
-            width: 60%;
+            width: 55%;
             margin: auto;
             justify-content: space-between;
             align-items: center;
@@ -393,11 +390,12 @@
         .sec7 h3 {
             color: white;
             margin: 0;
-            font-size: 2rem;
+            font-size: 2.4rem;
+            line-height: 0.8em;
         }
 
         .sec7 h4 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin: 0;
             font-weight: 200;
             color: rgb(62, 95, 62);
@@ -406,7 +404,8 @@
         .sec7 a {
             background-color: aliceblue;
             color: rgb(31, 72, 38);
-            font-weight: 600;
+            font-weight: 700;
+            padding: 0 40px;
         }
 
         footer {
@@ -438,7 +437,7 @@
 
         footer p {
             color: white;
-            font-size: x-small;
+            font-size: 0.72rem;
         }
 
         footer h4 {
@@ -471,9 +470,6 @@
         }
 
         @media (max-width:992px) {
-            html {
-                font-size: 14px;
-            }
 
             .sec1,
             .sec7>div,
@@ -496,57 +492,67 @@
 
             .sec3>div,
             .sec5,
-            .sec6>div {
+            .sec6>div,
+            footer>div {
                 grid-template-columns: 100%;
                 row-gap: 20px;
             }
 
+            .sec6>div {
+                padding-top: 30px;
+            }
+
             .sec6 {
-                height: 700px;
+                height: 800px;
             }
 
             .sec6>div>div:first-child {
                 margin-top: 40px;
-                left: 0;
+                width: 100%;
             }
 
             .sec7 {
                 padding: 50px 0 20px;
             }
 
+            .sec7>div {
+                justify-content: center;
+            }
+
             .sec7>div>div:first-child {
                 width: 100%;
                 margin-bottom: 30px;
             }
-
-            footer>div {
-                grid-template-columns: repeat(2, 45%);
-            }
-
-            footer>div>div:first-child {
-                grid-column: span 2;
-            }
         }
 
         @media (max-width:768px) {
-            html {
-                font-size: 12px;
-            }
-
 
             .nav>div li {
                 width: 50%;
 
             }
-
-            .sec6 {
-                height: 600px;
-            }
         }
 
         @media (max-width:576px) {
-            html {
-                font-size: 10px;
+            .call {
+                display: none;
+            }
+
+            .main h3 {
+                font-size: 1.4rem;
+            }
+
+            .main h1 {
+                font-size: 3rem;
+            }
+
+            .row1 {
+                justify-content: left;
+                column-gap: 25px;
+            }
+
+            .row1>div:nth-child(2) {
+                width: 70%
             }
 
             .nav a {
@@ -559,12 +565,28 @@
                 width: 80%;
             }
 
+            .sec6>div {
+                grid-template-columns: 100%;
+                row-gap: 40px;
+            }
+
             .sec2 {
                 grid-template-columns: repeat(1, 80%);
                 justify-content: center;
                 row-gap: 20px;
             }
 
+            .sec6>div {
+                padding-top: 50px;
+            }
+
+            .sec7 h4 {
+                font-size: 1.78rem;
+            }
+
+            .imge {
+                display: none;
+            }
         }
     </style>
 </head>
