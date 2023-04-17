@@ -19,7 +19,6 @@
     }
 
     body {
-        /* margin: 20px; */
         padding: 0px;
     }
 
@@ -31,6 +30,7 @@
         position: sticky;
         top: 0;
         z-index: 1;
+        background-color: white;
         
         
     }
@@ -43,14 +43,14 @@
     }
 
      .row3 {
-        display: flex;
+        display: none;
         flex-wrap: nowrap;
         justify-content: space-around;
         background-color: #9bcd52;
         color: black;
         height: 60px;
-    
     }
+        
 
     .row4 .a:hover {
         color: white;
@@ -68,8 +68,6 @@
         font-size: 0.9rem;
         margin-left: 130px;
         align-items: center;
-        
-        
     }
 
 
@@ -157,19 +155,20 @@
     .row4 a:hover{
         color: white;
     }
-    
-    .ph>button{
+    .ph{
         margin-top: 20px;
-        text-align: right;
-        padding: 10px 20px;
-        border: solid 2px #9bcd52;
+
+    }
+    
+    .ph>a{
+        border: rgb(162 205 93) 1px solid;
         background-color: white;
-        font-weight: bold;
-        font-size: medium;
-        color:rgb(100,78,60);
-        font-family: sans-serif;
-        line-height: .04167rem;
-        vertical-align: -0.125em;
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(100 78 60);
+        
+
+       
     }
 
 
@@ -221,7 +220,7 @@
     }
 
     .About {
-        width: 80%;
+        width: 60%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
@@ -233,6 +232,7 @@
 
     .About>div {
         width: 50%;
+        justify-content: space-between;
     }
 
     .display {
@@ -399,7 +399,8 @@
                     <img src="images/logoETB-1.webp" alt="">
                 </div>
                 <div class="ph">
-                    <button><i class="fa-solid  fa-phone"  ></i>Get in touch</button>
+                    <a href="#touch"><i class="fa-solid fa-phone" style="margin-right: 10px;"></i>Get in touch</a>
+                    
                 </div>
             </div>
             <div class="row3">
