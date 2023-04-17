@@ -30,7 +30,9 @@
     .grid-header {
         position: sticky;
         top: 0;
-        z-index: 1
+        z-index: 1;
+        
+        
     }
 
     .row1 {
@@ -85,8 +87,6 @@
         display: none;
     }
 
-
-
     #open:checked~.row3,
     #open:checked~.row1 [for="exit"] {
         display: block;
@@ -94,18 +94,12 @@
 
 
     .row3>div {
-        margin-top: 15px;
-    }
-
-    .phone {
-        border: solid 2px #9bcd52;
+        margin-top:5px;
     }
 
     .grid-header .row2 {
         border-color: none;
         color: #4b5b34;
-
-
     }
 
     .photo {
@@ -117,6 +111,11 @@
         text-align: center;
         color: white;
         background-color: rgba (50%, 50%, 50%, 0.5);
+        padding:0px 30px 30px 30px;
+        
+    }
+    .outer{
+        padding:8px 8px 0px 8px;
     }
 
     .grid-footerA {
@@ -145,26 +144,35 @@
         margin: auto;
         display: grid;
         grid-template-columns: repeat(5, 20%);
-        justify-content: space-between;
     }
 
+    
     .row2 {
         color: white;
     }
-     /* .row4{
-        width:80%;
-        text-align: center;
-    } */
+    
     .row4 a{
         color:black;
     }
     .row4 a:hover{
         color: white;
     }
-    .ph {
+    
+    .ph>button{
         margin-top: 20px;
-
+        text-align: right;
+        padding: 10px 20px;
+        border: solid 2px #9bcd52;
+        background-color: white;
+        font-weight: bold;
+        font-size: medium;
+        color:rgb(100,78,60);
+        font-family: sans-serif;
+        line-height: .04167rem;
+        vertical-align: -0.125em;
     }
+
+
     .fa-phone:before {
             margin-right: 5px;
         }
@@ -288,7 +296,7 @@
     }
 
     .article {
-        width: 80%;
+        width: 60%;
         text-align: center;
         margin: auto;
     }
@@ -391,18 +399,18 @@
                     <img src="images/logoETB-1.webp" alt="">
                 </div>
                 <div class="ph">
-                    <button><i class="fa-solid  fa-phone"></i>Get in touch</button>
+                    <button><i class="fa-solid  fa-phone"  ></i>Get in touch</button>
                 </div>
             </div>
             <div class="row3">
                 <div class="row4">
-                    <a href="Index.html" style=" text-decoration: none;">HOME</a>
-                    <a href="destination.html" style="text-decoration: none;"> DESTINATION</a>
-                    <a href="private-tour.html" style="text-decoration: none;">PRIVATE TOUR</a>
-                    <a href="single-tour-page.html" style="text-decoration: none;">SINGLE TOUR</a>
-                    <a href="private-tour-popup.html" style="text-decoration: none;">PRIVATE TOUR POPUP</a>
-                    <a href="tour-list.html" style="text-decoration: none;">TOURLIST</a>
-                    <a href="tour-list-expand.html" style="text-decoration: none;">TOURLIST EXPAND</a>
+                    <a href="Index.html" style=" text-decoration: none;margin-top: 20px;font-weight: bold;">HOME</a>
+                    <a href="destination.html" style="text-decoration: none;margin-top:20px;font-weight:bold;"> DESTINATION</a>
+                    <a href="private-tour.html" style="text-decoration: none;margin-top: 20px;font-weight:bold;">PRIVATE TOUR</a>
+                    <a href="single-tour-page.html" style="text-decoration: none;margin-top: 20px;font-weight:bold;">SINGLE TOUR</a>
+                    <a href="private-tour-popup.html" style="text-decoration: none;margin-top: 20px;font-weight:bold;">PRIVATE TOUR POPUP</a>
+                    <a href="tour-list.html" style="text-decoration: none;margin-top: 20px;font-weight:bold;">TOURLIST</a>
+                    <a href="tour-list-expand.html" style="text-decoration: none;margin-top: 20px;font-weight:bold;">TOURLIST EXPAND</a>
                 </div>
             </div>
 
@@ -412,8 +420,8 @@
         <div class="grid">
             <div class="inside">
                 <p style="width:50%;margin: 30px; left: 30px;">ONE ISLAND-MANY FACES</p>
-                <h3 style="width:50%;margin: 30px; left: 30px;font-family: serif;color:white;"> Andaman & Nicobar
-                    Islands</h3>
+                <h1 style="width:50%;margin: 30px; left: 30px;font-family: serif;color:white;"> Andaman & Nicobar
+                    Islands</h1>
             </div>
 
         </div>
@@ -423,9 +431,9 @@
             <div class="about">
                 <h4 style="color: #4b5b34;">Paradise Andaman</h4>
                 <p>Both Andaman and Nicobar are home to about 300 islands and are known for their beautiful white-sand
-                    beaches, tropical rainforests, mangrove rainforests, and palm-lined beaches.</p><br>
+                    beaches, tropical rainforests, mangrove rainforests, and palm-lined beaches.The only volcano in India, Barren Island, is located in Andaman and Nicobar.</p><br>
                 <p> Beautiful coral reefs are also present here which house Sharks, Rays, and all sorts of marine life
-                    thus a paradise for diving and snorkeling.</p>
+                    thus a paradise for diving and snorkeling.About 270 species of birds are found in the Andaman and Nicobar Islands, 14 species of which are endemic. </p>
             </div>
 
         </div>
@@ -464,7 +472,7 @@
             </div>
             <div class="img">
                 <img src="images/a&n.avif.avif"
-                    style=" width:100%;height:50%;margin-top: 30px;margin-right: 30px;"><br><br>
+                    style="height:50%;margin-top: 30px;margin-right: 30px;"><br><br>
                 <div
                     style="font-size: 10px;background-color: white; margin-top: 65px; margin-right:30px;text-align: center;">
                     The Andaman and Nicobar Islands is a union territory of India consisting of 572 islands, of which 37
@@ -476,8 +484,7 @@
         </div>
         <div class="display">
             <div class="inner">
-                <p
-                    style="width:50%;font-family:serif;margin: auto; margin-top: 10%;text-align: center;font-weight: bold;">
+                <p style="width:50%;font-family:serif;margin: auto; margin-top: 10%;text-align: center;font-weight: bold;">
                     Take vacations, go as many places as you can. You can always make money , You can't always make
                     memories... </p>
             </div>
@@ -522,7 +529,7 @@
                 </h4>
                 <p style="color:#43621e;">Enjoy your weekend happily</p>
             </div>
-            <div class="column2" style="text-align: center;">
+            <div class="column2" style="align-items: start;">
                 <input type="button" value="CHECK THE DATES"
                     style="background-color:white; padding: 0px 20px;color: rgb(89, 85, 85);">
             </div>
@@ -534,19 +541,19 @@
                 <div class="foot">
                     <img src="images/footlogo.webp" alt="">
 
-                    <p>Ecotour Barahona is your facourite specialist for authentic , unique and memorable round trips ,
+                    <p style="font-size: 1rem;text-align: left;">Ecotour Barahona is your facourite specialist for authentic , unique and memorable round trips ,
                         day
                         trips snd activities in Southwest of Dominician Republic .</p>
 
                     <img src="images/dr.avif">
 
-                    <p>Travel environmentally friendly with us and discover the
+                    <p style="font-size: 1rem;text-align: left;">Travel environmentally friendly with us and discover the
                         main
                         destinations of Dominican Republic.</p>
                 </div>
-                <div>
-                    <p style="color: #9bcd52;font-size: 0.9rem;">ABOUT US </p>
-                    <div style="color:White;font-size: 0.9rem;">
+                <div style="margin-left: 7%;">
+                    <p style="color: #9bcd52;font-size: 0.9rem;text-align: left;">ABOUT US </p>
+                    <div style="color:White;font-size: 0.9rem;text-align: left;">
                         <p>ABOUT ECOTOUR</p>
                         <p>BARAHONA</p>
                         <p>OUR TEAM</p>
@@ -557,8 +564,8 @@
                 </div>
 
                 <div>
-                    <p style="color:#9bcd52;font-size: 0.9rem;">CUSTOMER SERVICE</p>
-                    <div style="color:white;font-size: 0.9rem;">
+                    <p style="color:#9bcd52;font-size: 0.9rem;text-align: left;">CUSTOMER SERVICE</p>
+                    <div style="color:white;font-size: 0.9rem;text-align: left;">
                         <p>BOOKING CONDITIONS</p>
                         <p>CONTACT-US</p>
                         <p>FAQ'S</p>
@@ -570,8 +577,8 @@
 
 
                 <div>
-                    <p style="color:#9bcd52;font-size: 0.9rem;">RESERVATIONS & BOOKINGS </p>
-                    <div style="color:white;font-size: 0.9rem;">
+                    <p style="color:#9bcd52;font-size: 0.9rem;text-align: left;">RESERVATIONS & BOOKINGS </p>
+                    <div style="color:white;font-size: 0.9rem;text-align: left;">
                         <p> MONDAY TO FRIDAY</p>
                         <p>From 8:00 am to 8:00pm</p>
                         <p>SATURDAY TO SUNDAY</p>
