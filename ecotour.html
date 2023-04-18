@@ -44,11 +44,11 @@
 
      .row3 {
         display: none;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-around;
         background-color: #9bcd52;
         color: black;
-        height: 60px;
+
     }
         
 
@@ -60,13 +60,12 @@
     .row4 {
         width: 80%;
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-around;
         background-color: #9bcd52;
         color: black;
-        height: 40px;
         font-size: 0.9rem;
-        margin-left: 130px;
+        margin-left: 70px;
         align-items: center;
     }
 
@@ -105,6 +104,11 @@
     }
 
     .photoA {
+        height: 100%;
+        background-image: url(images/pexels-pixabay-86695.avif);
+        background-size: cover;
+        display: grid;
+        grid-template-columns: 30% 70%;
         align-items: start;
         text-align: center;
         color: white;
@@ -311,7 +315,7 @@
         width: 100%;
         height: 250px;
         position: relative;
-        background-image: url(images/a1.1.avif);
+        background-image: url(images/a1.1.webp);
         background-size: cover;
     }
 
@@ -339,12 +343,7 @@
     }
 
     .photoA {
-        width: 100%;
-        height: 100%;
-        background-image: url(images/pexels-pixabay-86695.avif);
-        background-size: cover;
-        display: grid;
-        grid-template-columns: 30% 70%;
+        
     }
 
     .core {
@@ -378,6 +377,94 @@
     .foot {
         color: white;
     }
+    .footA p{
+        margin-left: 7%;
+    }
+    .footA>div{
+        margin-left: 7%;
+
+    }
+    @media(max-width:579px){
+        .row1>div:first-child{
+            margin-right: 25px;
+        }
+        .ph{
+            display: none;
+        }
+        .row4 a{
+            width:50%;
+        }
+        .pictures>div{
+            width:100%;
+
+        }
+        .photoA{
+
+            grid-template-columns: 100%;
+            padding-top: 30px;
+
+        }
+        .row5>h2 p{
+            width:100%;
+        }
+        .aside{
+            grid-template-columns: 100%;
+        }
+        .img{
+            width:100%;
+            margin-left: 25%;
+        }
+        
+
+
+        .outer{
+            width:100%;
+            margin:0;
+        }
+        .core{
+            width:100%;
+            margin-left: 20px;
+        }
+        .footerC{
+            grid-template-columns: 100%;
+            margin-left: 0px;
+        }
+        .footerC>div{
+            margin-top: 20px;
+        }
+        .footA>p{
+            margin-left:0px;
+        }
+        .footA div>p{
+            margin-left: 0px;
+        }
+
+        
+        .item1{
+            text-align: left;
+        }
+        .item2{
+            text-align: left;
+        }
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </style>
 
 <body>
@@ -442,13 +529,13 @@
 
         <div class="pictures">
             <div style="width: 33.333333% ;">
-                <img src="images/p1.avif" alt="">
+                <img src="images/p1.webp" alt="">
             </div>
             <div style="width:33.333333%;">
-                <img src="images/p3.1.avif" alt="" height="100%;">
+                <img src="images/p3.1.webp" alt="" height="100%;">
             </div>
             <div style="width:33.333333%;">
-                <img src="images/p2.avif" alt="">
+                <img src="images/p2.webp" alt="">
             </div>
         </div>
 
@@ -472,10 +559,8 @@
                 </div>
             </div>
             <div class="img">
-                <img src="images/a&n.avif.avif"
-                    style="height:50%;margin-top: 30px;margin-right: 30px;"><br><br>
-                <div
-                    style="font-size: 10px;background-color: white; margin-top: 65px; margin-right:30px;text-align: center;">
+                <img src="images/a&n.webp"style="height:50%;margin-top: 30px;margin-right: 30px;"><br><br>
+                <div style="font-size: 10px;background-color: white; margin-top: 65px; margin-right:30px;text-align: center;">
                     The Andaman and Nicobar Islands is a union territory of India consisting of 572 islands, of which 37
                     are inhabited, at the junction of the Bay of Bengal and the Andaman Sea.The territory's capital is
                     the city of Port Blair.
@@ -519,7 +604,7 @@
                 <div class="corner">SHOW ALL TOURS</div>
             </div>
             <div class="core">
-                <img src="images/a1.avif">
+                <img src="images/a1.webp">
             </div>
         </div>
 
@@ -546,15 +631,15 @@
                         day
                         trips snd activities in Southwest of Dominician Republic .</p>
 
-                    <img src="images/dr.avif">
+                    <img src="images/dr.webp">
 
                     <p style="font-size: 1rem;text-align: left;">Travel environmentally friendly with us and discover the
                         main
                         destinations of Dominican Republic.</p>
                 </div>
-                <div style="margin-left: 7%;">
+                <div class="footA">
                     <p style="color: #9bcd52;font-size: 0.9rem;text-align: left;">ABOUT US </p>
-                    <div style="color:White;font-size: 0.9rem;text-align: left;">
+                    <div style="color:White;margin:0;font-size: 0.9rem;text-align: left;">
                         <p>ABOUT ECOTOUR</p>
                         <p>BARAHONA</p>
                         <p>OUR TEAM</p>
