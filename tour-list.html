@@ -115,9 +115,7 @@
         .bg {
             background-color: rgb(155 205 82);
             display: none;
-            position: sticky;
-            top: 90px;
-            z-index: 2;
+            padding: 8px 0px;
         }
 
         .bg>div a {
@@ -140,7 +138,7 @@
         }
 
         #open:checked~header label[for="exit"],
-        #open:checked~.bg {
+        #open:checked~header .bg {
             display: block;
         }
 
@@ -153,11 +151,7 @@
 
         .row1 {
             padding: 15px 0px;
-        }
-
-
-        .row1>div {
-            width: 30%
+            flex-wrap: nowrap;
         }
 
         .row1>div:last-child {
@@ -436,12 +430,12 @@
 
         .c7>div:not(:first-child) p {
             line-height: 2;
+            letter-spacing: 2px;
         }
 
         .foot {
-            display: grid;
-            grid-template-columns: 20% 20% 30%;
-            justify-items: start;
+            display: flex;
+            column-gap: 10px;
         }
 
         @media(max-width:576px) {
@@ -450,7 +444,12 @@
             }
 
             .row1>div:last-child {
-                width: 40%;
+                display: none;
+            }
+
+            .row1 {
+                justify-content: flex-start;
+                column-gap: 25px;
             }
 
             .row1>div:last-child>button {
@@ -499,6 +498,14 @@
                 grid-template-columns: 100%;
             }
 
+            .c7>div:first-child {
+                margin-top: 50px;
+            }
+
+            .c7 h3 {
+                margin-top: 50px;
+            }
+
             .bg {
                 top: 65px;
             }
@@ -506,6 +513,15 @@
             .bg>div a {
                 width: 50%;
             }
+
+            footer::before {
+                top: -2px
+            }
+
+            .main::after {
+                top: 1px
+            }
+
         }
     </style>
 </head>
@@ -532,18 +548,18 @@
                 </div>
             </div>
         </div>
-    </header>
-    <div class="bg">
-        <div class="container">
-            <a href="index.html">home</a>
-            <a href="destination.html">destination</a>
-            <a href="private-tour.html">private tour</a>
-            <a href="private-tour-popup.html">private tour popup</a>
-            <a href="tour-list-expand.html">tour expand</a>
-            <a href="single-tour-page.html">single tour</a>
-            <a href="ecotour.html">ecotour</a>
+        <div class="bg">
+            <div class="container">
+                <a href="index.html">home</a>
+                <a href="destination.html">destination</a>
+                <a href="private-tour.html">private tour</a>
+                <a href="private-tour-popup.html">private tour popup</a>
+                <a href="tour-list-expand.html">tour expand</a>
+                <a href="single-tour-page.html">single tour</a>
+                <a href="ecotour.html">ecotour</a>
+            </div>
         </div>
-    </div>
+    </header>
     <div class="main">
         <div class="container">
             <div class="head">
