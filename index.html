@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="About ecotour">
@@ -35,7 +36,7 @@
             background-color: white;
             position: sticky;
             top: 0;
-            z-index: 1;
+            z-index: 5;
         }
 
         header a {
@@ -67,15 +68,12 @@
 
         .row1 {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            column-gap: 10px;
             padding: 15px 0;
         }
 
-        .row1>div {
-            width: 30%;
-        }
 
         .fa-phone:before {
             margin-right: 5px;
@@ -118,7 +116,7 @@
         .main {
             background: url(images/50161-Barahona-Enriquillo-Coastal-Highway.webp);
             background-size: cover;
-            height: 601px;
+            height: 603px;
             color: white;
             display: flex;
             align-items: center;
@@ -205,19 +203,18 @@
         .sec>div {
             height: 80vh;
             display: grid;
-            grid-template-columns: repeat(2, 50%);
+            grid-template-columns: 45% auto;
             align-items: center;
         }
 
         .sec>div>div:first-child {
             background-color: white;
-            position: relative;
-            width: 85%;
-            left: 10rem;
+            width: 120%;
+            z-index: 4;
         }
 
         .sec>div>div:first-child>div {
-            padding-left: 20px;
+            padding-left: 50px;
         }
 
         .sec>div>div:first-child>div button {
@@ -235,6 +232,11 @@
 
         .sec h3 {
             margin-bottom: 0;
+            padding-right: 10px;
+        }
+
+        .sec p {
+            padding-right: 10px;
         }
 
         main h2,
@@ -381,6 +383,7 @@
         .bgcolor {
             background-color: rgb(176 218 106);
             padding: 10px 0px;
+            margin-top: 30px;
         }
 
         .booking>div {
@@ -416,13 +419,14 @@
             background-color: rgb(75 91 52);
             position: relative;
             padding: 50px 0px;
+            font-family: sans-serif;
         }
 
         footer::after {
             content: '';
             background: url(images/footer.webp);
+            background-repeat: no-repeat;
             position: absolute;
-            background-size: cover;
             width: 100%;
             height: 100%;
             top: 0;
@@ -435,6 +439,11 @@
             flex-wrap: wrap;
             justify-content: space-between;
 
+        }
+
+        .lstrow>div:not(:first-child) h4,
+        .lstrow>div:not(:first-child) li {
+            letter-spacing: 2px;
         }
 
         .lstrow>div {
@@ -450,22 +459,29 @@
         .lstrow>div h4 {
             color: rgb(176 218 106);
             padding-right: 6px;
+            font-size: 0.8rem;
+            font-weight: 900;
         }
 
         .lstrow>div ul {
             list-style: none;
             color: white;
             padding: 0 25px 0 0;
-            font-size: 13px;
+            font-size: 11px;
             font-family: font;
             padding-right: 20px;
         }
 
+        .lstrow>div li {
+            font-size: 0.7rem;
+            font-weight: 900;
+        }
+
         .foot {
-            display: grid;
-            grid-template-columns: 15% 15% 18%;
+            display: flex;
             align-items: center;
             justify-items: center;
+            column-gap: 10px;
 
         }
 
@@ -474,17 +490,10 @@
                 font-size: 12px;
             }
 
-            .row1>div:first-child {
-                width: 10%;
-            }
-
-            .row1>div:last-child {
-                width: 40%;
-            }
-
             .row1>div:last-child>button {
                 padding: 1px 5px;
                 font-size: 13px;
+                display: none;
             }
 
             .middle {
@@ -493,16 +502,32 @@
 
             .cent-cont,
             .sec>div>div:first-child,
-            .smlogo>div,
             .middle>div>div,
+            .lstrow>div,
             .foot1>div,
-            .lstrow>div {
+            .twocols>div:last-child {
                 width: 100%;
+            }
+
+
+            .twocols>div:last-child {
+                width: 100%;
+                font-size: 1.3rem;
+            }
+
+            .smlogo>div {
+                width: 100%;
+                text-align: center;
             }
 
             .sec {
                 height: 100vh;
                 padding-top: 20px;
+            }
+
+            .bg>div a {
+                width: 50%;
+                padding: 7px 0px;
             }
 
             .sec>div,
@@ -513,6 +538,19 @@
 
             .sec>div>div:first-child {
                 left: 0;
+            }
+
+            .foot1 {
+                text-align: center;
+            }
+
+            .lstrow>div h4 {
+                font-size: 1rem;
+            }
+
+            .twocols>div:first-child,
+            section::after {
+                display: none;
             }
 
             .booking>div:first-child {
@@ -535,15 +573,18 @@
             .booking>div button {
                 margin: 0 0px 20px;
                 padding: 1px 10px;
+                left: 0;
             }
 
             .booking>div {
                 width: 100%;
                 padding: 0;
+                text-align: center;
             }
         }
     </style>
 </head>
+
 <body>
     <header>
         <input type="radio" name="menu" id="open">
@@ -605,7 +646,7 @@
         <div class="container">
             <div>
                 <div>
-                    <h2>Welcome to the Deep Southwest</h2>
+                    <h2>Welcome to the Deep<br> Southwest</h2>
                     <h3>Discover with EcoTour Barahona, your specialist in Ecotourism a new face of the Dominican
                         Republic, more human, more authentic!</h3>
                     <p>We have artistically designed unique excursions for you, accompanied by professional and
@@ -806,4 +847,5 @@
         crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/81a9fb04d8.js" crossorigin="anonymous"></script>
 </body>
+
 </html>
