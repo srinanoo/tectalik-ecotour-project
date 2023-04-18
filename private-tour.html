@@ -81,14 +81,15 @@
         .right a {
             color: #4b5b34;
             padding: 0;
-            font-size: 1rem;
-            font-weight: 500;
+            /* font-size: 1rem; */
+            font-size: small;
+            font-weight: 700;
         }
 
         .right button {
             border: solid 1px #9bcd52;
             background-color: white;
-            padding: 7px;
+            padding: 7px 12px 7px 7px;
         }
 
         /* .main-head a {
@@ -118,9 +119,9 @@
             justify-content: center;
         }
 
-        .main-head>.middle {
+        /* .main-head>.middle {
             width: 30%;
-        }
+        } */
 
 
         .main-head>.left div {
@@ -153,7 +154,7 @@
         }
 
         .nav>div {
-            width: 100%;
+            width: 98%;
             margin: auto;
             display: flex;
             /* grid-template-columns: repeat(4, 15%); */
@@ -200,13 +201,14 @@
 
         .speed {
             width: 90%;
-            height: 331px;
+            height: 400px;
             margin: auto;
             display: grid;
             grid-template-columns: 100%;
             align-items: center;
             font-size: 1.5em;
             color: white;
+            letter-spacing: 2px;
         }
 
         .speed-boat>:nth-child(2) {
@@ -215,8 +217,10 @@
             /* width: 50%; */
             font-size: 2.5em;
             padding: 10px 0 0 0;
-            font-weight: 800;
+            font-weight: 600;
             font-family: initial;
+            letter-spacing: 0;
+
         }
 
         .privatize {
@@ -224,6 +228,13 @@
             margin: auto;
             text-align: center;
             padding: 50px 0;
+        }
+
+        .privatize h3 {
+            font-size: 2.3em;
+            font-family: initial;
+            color: rgb(75 90 47);
+            font-weight: 600;
         }
 
         .privatize>:nth-child(2) {
@@ -245,7 +256,7 @@
             margin: auto 20px auto auto;
             background-color: #9bcd52;
             color: white;
-            padding: 20px 40px;
+            padding: 60px;
         }
 
         .group {
@@ -253,7 +264,7 @@
             margin: auto auto auto 20px;
             background-color: #4b5b34;
             color: white;
-            padding: 20px 40px;
+            padding: 60px;
         }
 
         .nature {
@@ -446,15 +457,16 @@
             background-image: url(images/1.webp);
             background-repeat: no-repeat;
             background-size: cover;
-            padding: 10px;
+            /* padding: 10px; */
             color: #f0efed;
             height: 200px;
         }
 
-        .a>div,
-        .f>div {
+        .a>div {
             background-color: rgba(0, 0, 0, 0.1);
             padding: 20px;
+            height: 400px;
+
         }
 
         .b {
@@ -478,7 +490,8 @@
         .b,
         .c,
         .d,
-        .e {
+        .e,
+        .f {
             display: flex;
             align-items: end;
         }
@@ -511,10 +524,10 @@
         }
 
         .f {
-            display: flex;
             background-image: url(images/3.webp);
             background-repeat: no-repeat;
             background-size: cover;
+            padding: 10px;
             color: #f0efed;
             height: 200px;
         }
@@ -526,16 +539,21 @@
             /* padding: 0 142px; */
         }
 
-        .last>:first-child {
+        .last h3 {
             padding: 40px 74px;
+            font-size: 3rem;
+            font-family: initial;
+            color: #4b5b34;
         }
 
         .guide {
             display: grid;
             grid-template-columns: 31% 31% 31%;
-            gap: 73px 19px;
+            /* gap: 73px 19px; */
             /* padding: 0 0 0 70px; */
+            gap: 20px;
             margin: 0 0 31px 79px;
+            padding: 10px;
         }
 
         .meet-guides {
@@ -546,7 +564,12 @@
             background-color: yellowgreen;
             color: white;
             border: none;
-            padding: 10px;
+            padding: 10px 35px;
+            /* font-variant: small-caps; */
+            font-family: sans-serif;
+            font-size: small;
+            font-weight: 600;
+
         }
 
         .fant-box {
@@ -559,13 +582,17 @@
         .fant-box2 {
             width: 93%;
             background-color: white;
-            padding: 10px;
+            padding: 50px;
         }
 
         .fant-box2>:first-child {
-            font-size: 2em;
-            color: #9bcd52;
+            font-family: initial;
+            font-size: 4em;
+            color: rgb(75 91 52);
+            line-height: 0.9rem;
+            margin-top: 20px;
         }
+
 
         /* .fant-box2>:nth-child(2){
             margin: -49px 0;
@@ -578,10 +605,14 @@
 
         .review>div {
             width: 5%;
-            height: 20px;
+            height: 30px;
             border-radius: 50%;
-            border: solid #18d677;
-            background-color: #18d677
+            border: solid rgb(0 166 128);
+            background-color: rgb(0 166 128)
+        }
+
+        .fant-box3 .review>div {
+            height: 20px;
         }
 
         .fant-box img {
@@ -591,7 +622,7 @@
 
         .fant-box3 {
             display: grid;
-            padding: 30px 0;
+            padding: 64px 0;
             grid-template-columns: 30% 70%;
         }
 
@@ -648,7 +679,7 @@
 
             display: grid;
             /* grid-template-columns:20% 13% 18% 20% 14%; */
-            grid-template-columns: 18% 15% 18% 20% 12%;
+            grid-template-columns: 20% 15% 18% 20% 12%;
             /* grid-template-columns: repeat(5, 1fr); */
             width: 90%;
             margin: auto;
@@ -708,9 +739,9 @@
         }
 
         @media screen and (max-width:576px) {
-            .main-head>.left {
+            /* .main-head>.left {
                 font-size: 0.6rem;
-            }
+            } */
 
             .main-head>.right {
                 font-size: 0.8rem;
@@ -726,7 +757,14 @@
             }
 
             .right button {
+                display: none;
                 padding: 0;
+
+            }
+
+            .main-head {
+                justify-content: start;
+                column-gap: 25px;
             }
 
             .tg {
@@ -750,9 +788,9 @@
                 padding: 0;
             }
 
-            .nav a {
+            /* .nav a {
                 font-size: 0.6rem;
-            }
+            } */
 
             .tailor,
             .group {
@@ -819,24 +857,29 @@
                 gap: 10px;
             }
 
+            .last h3{
+                padding: 0;
+                font-size: 2em;
+            }
             .expert {
                 padding: 0;
                 grid-template-columns: 100%;
             }
 
             .guide {
-                margin-right: 79px;
+                /* margin-right: 79px;
                 margin-left: 70px;
-                /* width: 100%; */
                 grid-template-columns: 50% 50%;
-                /* margin: 50px; */
-                padding: 10px;
+                padding: 10px; */
+                padding: 0 78px;
+                margin-left: 0;
                 row-gap: 30px;
             }
 
-            /* .last>:first-child {
-                padding: 20px 40px;
-            } */
+            .last>:first-child {
+                padding: 40px;
+                text-align: center;
+            }
 
             .meet-guides {
                 margin: 20px;
@@ -845,8 +888,8 @@
 
             .check-dates {
                 justify-content: center;
-                font-size: 0.4rem;
-                padding: 10px;
+                font-size: 0.5rem;
+                /* padding: 10px; */
             }
 
             .fant-box {
@@ -858,7 +901,8 @@
             }
 
             .fant-box3 {
-                grid-template-columns: 100%;
+                /* grid-template-columns: 100%; */
+                margin: 0 0 0 65px;
             }
 
             .foot-bg {
@@ -875,27 +919,31 @@
             }
 
             .foot {
-                grid-template-columns: 46% 46%;
-                justify-content: space-between;
-                /* font-size: medium; */
-                gap: 17px;
+                grid-template-columns: 100%;
+                row-gap: 17px;
+            }
 
+            /* .foot-a,.foot-b,.foot-c,.foot-d,.foot-e{
+                margin-top: 50px;
+            } */
+            .foot-b {
+                margin-top: 20px;
             }
 
             #footer {
                 font-size: small;
             }
 
-            .foot-a {
+            /* .foot-a {
                 grid-column: span 2;
-            }
+            } */
 
             .fee {
                 width: 7%;
             }
         }
 
-        @media screen and (max-width:320px) {
+        /* @media screen and (max-width:320px) {
             .nav>div {
                 grid-template-columns: 100%;
                 font-size: small;
@@ -917,7 +965,7 @@
             .grey {
                 grid-template-columns: 100%;
             }
-        }
+        } */
     </style>
 </head>
 
@@ -940,7 +988,8 @@
                 <div><img src="images/logoETB-1.webp" alt=""></div>
             </div>
             <div class="right">
-                <button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;"></i>GET IN
+                <button><a href="#telephone"><i class="fa-solid fa-phone" style="margin: 5px;padding-right:5px"></i>GET
+                        IN
                         TOUCH</a></button>
             </div>
         </div>
@@ -1153,9 +1202,7 @@
                 </div>
                 <div class="f">
                     <div>
-                        <h3>Lorem ipsum Dolar Sit</h3>
-                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus deleniti, consequuntur
-                        </div>
+                        <h3>Lorem Dolar Sit</h3>
                     </div>
                 </div>
             </div>
@@ -1178,7 +1225,7 @@
                         <div><img src="images/pic11.webp" alt="11"></div>
                     </div>
                     <div class="meet-guides">
-                        <button>Meet Our Guides</button>
+                        <button>MEET OUR GUIDES</button>
                     </div>
                 </div>
                 <div class="fant">
@@ -1253,7 +1300,7 @@
                 <div><img src="images/footlogo.webp" alt="logo"></div>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. A, dicta aspernatur sapiente explicabo ea
                     repellendus accusantium? Voluptatum.</p>
-                <div style="text-align: center;"><img src="images/do.webp" alt="do"></div>
+                <div><img src="images/do.webp" alt="do"></div>
                 <div>Travel environmently with us and discover the main destinationbof dominan Republic</div>
             </div>
             <div class="foot-b">
@@ -1280,7 +1327,7 @@
                 <h6>RESERVATIONS & BOOKINGS</h6>
                 <ul>
                     <li>MONDAY TO FRIDAY From8.00am to 8.00pm</li>
-                    <li>SATURDAYTOSUNDAY From9.00am to 5.00pm</li>
+                    <li>SATURDAY TO SUNDAY From9.00am to 5.00pm</li>
                     <li>Atlantic Standard Time +1(809)856 2260</li>
             </div>
             <div class="foot-e">
