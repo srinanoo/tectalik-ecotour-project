@@ -45,7 +45,6 @@
             margin: 0;
             padding: 15px 0px;
             display: none;
-            text-align: center;
             position: sticky;
             top: 90px;
             z-index: 2;
@@ -109,22 +108,13 @@
 
         .row1 {
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
+            column-gap: 25px;
             padding: 15px 0;
         }
 
-        .row1>div:first-child {
-            width: 25%;
-        }
-
-        .row1>div:nth-child(2) {
-            width: 30%;
-        }
-
         .row1>div:last-child {
-            width: 30%;
             text-align: right;
         }
 
@@ -383,8 +373,9 @@
         }
 
         .c5 {
-            display: grid;
-            grid-template-columns: 20% 80%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
         }
 
         .c5 input[type=radio] {
@@ -393,11 +384,12 @@
         }
 
         .c5>div:first-child {
+            width:20%;
             padding-right: 10px;
         }
 
         .c5>div:nth-child(2) {
-            margin-top: 10px;
+            margin: 10px 0px;
         }
 
         .com {
@@ -478,13 +470,16 @@
         }
 
         .c6 {
-            display: grid;
-            grid-template-columns: 30% 40% 30%;
-        }
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+                
+            }
 
         footer {
             background-color: rgb(75, 91, 52);
-            padding: 30px 0px;
+            padding: 60px 0px;
             font-family: sans-serif;
             position: relative;
         }
@@ -527,7 +522,7 @@
         .end h3 {
             color: rgba(152, 205, 93);
             margin: 18px 0px;
-            font-size: small;
+            font-size: 0.8rem;
             letter-spacing: 1.1px;
         }
 
@@ -565,29 +560,28 @@
         }
 
         @media (max-width:576px) {
+            .row1{
+                justify-content: start;
+            }
             .row1>div:first-child {
                 width: 10%;
             }
 
-            .row1>div:nth-child(2) {
-                width: 40%;
-            }
-
             .row1>div:last-child {
-                width: 40%;
-            }
-
-            .row1>div:last-child>button {
-                padding: 10px 0px;
+                display: none;
             }
 
             .nav li {
                 width: 50%;
-                font-size: 0.8em;
+                margin:10px 0px;
             }
 
             .smlogo>div {
-                width: 43%;
+                width: 100%;
+            }
+            
+            .tor>.container {
+                width: 100%;
             }
 
             .r1>div:first-child,
@@ -598,25 +592,36 @@
             .load button {
                 width: 50%;
             }
-
+            
             .picrow>div {
                 width: 100%;
                 margin-bottom: 20px;
             }
-
+            .end li{
+                letter-spacing: 2px;
+            }
             .endcol1,
-            .endcol2 {
-                width: 40%;
-            }
-
+            .endcol2,
             .endcol3,
-            .endcol4 {
-                width: 40%;
+            .endcol4,
+            .endcol5 {
+                width: 100%;
+            }
+            .endcol1{
+                margin-top:50px;
+            }
+            .endcol4 ul{
+                width:48%;
             }
 
-            .endcol5 {
-                width: 50%;
+            .endcol5>div>div {
+                width: 6%;
             }
+            .end h3{
+                margin-top: 50px;
+            }
+            
+
         }
     </style>
 </head>
@@ -666,7 +671,7 @@
             </div>
         </div>
     </div>
-    <div>
+    <div class="tor">
         <div class="container">
             <div class="row2">
                 <h2>Our Tours</h2>
