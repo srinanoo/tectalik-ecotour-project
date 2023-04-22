@@ -149,17 +149,17 @@
             list-style: none;
             background-color: rgb(162 205 93);
             margin: 0;
-            padding: 10px;
+            padding: 10px 0;
             display: none;
             text-align: center;
         }
 
         .nav>div {
-            width: 85%;
+            width: 80%;
             margin: auto;
             display: flex;
             /* grid-template-columns: repeat(4, 15%); */
-            justify-content: space-evenly;
+            justify-content: space-between;
             z-index: 2;
         }
 
@@ -172,8 +172,9 @@
             font-size: large;
             display: block;
             border-radius: 50%;
-            font-weight: 400;
-            font-size: 1.3rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            padding: 0;
         }
 
         .nav a:hover {
@@ -779,6 +780,7 @@
             }
 
             .nav>div {
+                width: 86%;
                 display: grid;
                 /* grid-template-columns: repeat(2,50%); */
                 grid-template-columns:50% 50%;
@@ -791,7 +793,7 @@
             }
 
             .nav {
-                padding: 15px 0;
+                padding: 15px 21px;
             }
 
             /* .nav a {
@@ -986,10 +988,10 @@
             <div class="left">
                 <div>
                     <label for="tap1">
-                        &#x2630
+                        <i class="fa-solid fa-bars"></i>
                     </label>
                     <label for="tap2">
-                        &#x2630
+                        <i class="fa-solid fa-bars"></i>
                     </label>
                 </div>
             </div>
